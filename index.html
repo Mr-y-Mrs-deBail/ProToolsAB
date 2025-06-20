@@ -146,11 +146,13 @@
                             <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--layer); color: var(--primary-color); z-index: 0;"></div> 
                                 <div class="banner-info" style="position: relative; z-index: 1;"> 
                                     <div class="container"> 
-                                        <div class="banner-info-bg"> 
-                                            <h5 class="title1 display-4 text-white">Carpentry Tools</h5> 
-                                            <p class="mt-4"> Discover our extensive selection of carpentry tools, designed for both experienced professionals and enthusiastic hobbyists. </p> 
-                                            <div class="more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms"> 
-                                                <a class="btn btnbuy mt-sm-5 mt-4 hvr-curl-bottom-right" id="leerMasCarpinteria" href="#products"> Read More</a> 
+                                        <div class="row">
+                                            <div class="col-log-8"> 
+                                                <h5 class="title1 display-4 text-white">Carpentry Tools</h5> 
+                                                <p class="mt-4 text-white"> Discover our extensive selection of carpentry tools, designed for both experienced professionals and enthusiastic hobbyists. </p> 
+                                                <div class="more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms"> 
+                                                    <a class="btn btnbuy mt-sm-5 mt-4 hvr-curl-bottom-right" id="leerMasCarpinteria" href="#products"> Read More</a> 
+                                                </div>
                                             </div> 
                                         </div> 
                                     </div> 
@@ -800,28 +802,22 @@
                         </a>
                     </div>
                 </div>
-                <br>
-                <div class="row row-cols-3 g-2">
-                    <div class="col">
-                        <div class="info text-center text-md-start small-text-mobile">
-                            <h3>Delivery Methods</h3>
-                            <p>Home delivery</p>
-                            <ul class="social-icon list-unstyled justify-content-center">
-                                <li class="icon-elem">
-                                    <a href="#footer" class="icon entrega">
-                                        <i class="bi bi-truck"></i>
-                                    </a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                <div class="row row-cols-2 g-2">
                     <div class="col">
                         <div class="info text-center text-md-start small-text-mobile">
                             <h3>Operating Hours</h3>
-                            <p class="text-center">Monday - Saturday 08:00 am - 08:00 pm <br>
-                                Sunday 08:00 am - 12:00 pm</p>
-                            </div>
+                            <p class="text-center">
+                                <span class="d-md-none">
+                                    Monday - Saturday <br> 08:00 am - 08:00 pm <br>
+                                    Sunday <br> 08:00 am - 12:00 pm
+                                </span>
+                                <span class="d-none d-md-block">
+                                    Monday - Saturday 08:00 am - 08:00 pm <br>
+                                    Sunday 08:00 am - 12:00 pm
+                                </span>
+                            </p>
                         </div>
+                    </div>
                         <div class="col">
                             <div class="info text-center text-md-start small-text-mobile">
                                 <h3>Payment Methods</h3>
@@ -829,7 +825,21 @@
                             </div>
                         </div>
                     </div>
-                    <div class="row mt-4">
+                    <br>
+                    <div class="col">
+                        <div class="info text-center text-md-start small-text-mobile">
+                            <h3>Delivery Methods</h3>
+                            <p>Home delivery <i class="pago bi bi-truck"></i></p>
+                            <ul class="social-icon list-unstyled justify-content-center">
+                                <!-- <li class="icon-elem">
+                                    <a href="#footer" class="icon entrega">
+                                        <i class="bi bi-truck"></i>
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
                         <div class="col-12 text-center">
                             <ul class="social-icon list-unstyled d-flex justify-content-center flex-wrap">
                                 <li><a href="#footer" class="icon"><ion-icon name="logo-youtube"></ion-icon></a></li>
@@ -1071,7 +1081,7 @@
         });
     </script> -->
 
-    <!-- <script>
+    <script>
         document.addEventListener('DOMContentLoaded', function() {
             let tabLinks = document.querySelectorAll('#pills-tab1 .nav-link');
             let currentIndex = 0;
@@ -1083,7 +1093,7 @@
                 targetTab.show(); 
             }
     
-            intervalId = setInterval(simulateClick, 3000);
+            intervalId = setInterval(simulateClick, 6000);
     
             tabLinks.forEach(function(link) {
                 link.addEventListener('click', function() {
@@ -1091,7 +1101,7 @@
                 });
             });
         });
-    </script> -->
+    </script>
     
     <script type="text/javascript ">
         $(function () {
@@ -1172,7 +1182,7 @@
             const imageBoxes = document.querySelectorAll('.img-box-vertical');
             let activeBox = null;
             const originalWidths = {}; 
-            const expandedWidth = '230px'; 
+            const expandedWidth = '180px'; 
             const horizontalTextInitialTransform = 'translateX(-100%)';
             imageBoxes.forEach(box => {
                 originalWidths[box] = box.offsetWidth;
