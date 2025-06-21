@@ -1177,89 +1177,96 @@
         });
     </script>
 
-   <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const imageBoxes = document.querySelectorAll('.img-box-vertical');
-            let activeBox = null;
-            const originalWidths = {}; 
-            const expandedWidth = '180px'; 
-            const horizontalTextInitialTransform = 'translateX(-100%)';
-            imageBoxes.forEach(box => {
-                originalWidths[box] = box.offsetWidth;
-                const horizontalTextElement = box.querySelector('.horizontal-text');
-                const verticalTextElement = box.querySelector('.vertical-text');
-                if (horizontalTextElement) {
-                    horizontalTextElement.style.opacity = '0';
-                    horizontalTextElement.style.transform = horizontalTextInitialTransform;
-                }
-                box.addEventListener('click', function(event) {
-                    event.stopPropagation();
-                    if (this === activeBox) {
-                        this.classList.remove('open');
-                        if (verticalTextElement) {
-                            verticalTextElement.style.opacity = '1';
-                        }
-                        if (horizontalTextElement) {
-                            horizontalTextElement.style.opacity = '0';
-                            horizontalTextElement.style.transform = horizontalTextInitialTransform;
-                        }
-                        activeBox = null;
-                    } else {
-                        if (activeBox) {
-                            activeBox.classList.remove('open');
-                            const prevVerticalText = activeBox.querySelector('.vertical-text');
-                            const prevHorizontalText = activeBox.querySelector('.horizontal-text');
-                            if (prevVerticalText) {
-                                prevVerticalText.style.opacity = '1';
-                            }
-                            if (prevHorizontalText) {
-                                prevHorizontalText.style.opacity = '0';
-                                prevHorizontalText.style.transform = horizontalTextInitialTransform;
-                            }
-                        }
-                        this.classList.add('open');
-                        if (verticalTextElement) {
-                            verticalTextElement.style.opacity = '0';
-                        }
-                        if (horizontalTextElement) {
-                            horizontalTextElement.style.opacity = '1';
-                            horizontalTextElement.style.transform = 'translateX(0)';
-                        }
-                        activeBox = this;
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const imageBoxes = document.querySelectorAll('.img-box-vertical');
+        let activeBox = null;
+        const originalWidths = {};
+        const expandedWidth = '150px';
+        const horizontalTextInitialTransform = 'translateX(-100%)';
+
+        imageBoxes.forEach(box => {
+            originalWidths[box] = box.offsetWidth;
+            const horizontalTextElement = box.querySelector('.horizontal-text');
+            const verticalTextElement = box.querySelector('.vertical-text');
+
+            if (horizontalTextElement) {
+                horizontalTextElement.style.opacity = '0';
+                horizontalTextElement.style.transform = horizontalTextInitialTransform;
+            }
+
+            box.addEventListener('click', function(event) {
+                event.stopPropagation();
+                if (this === activeBox) {
+                    this.classList.remove('open');
+                    if (verticalTextElement) {
+                        verticalTextElement.style.opacity = '1';
                     }
-                });
-                box.addEventListener('mouseenter', function() {
-                    if (!this.classList.contains('open')) {
-                        this.style.width = expandedWidth;
-                        this.classList.add('hovered'); 
-                    }
-                });
-                box.addEventListener('mouseleave', function() {
-                    if (!this.classList.contains('open')) {
-                        this.style.width = originalWidths[this] + 'px';
-                        this.classList.remove('hovered');
-                    }
-                });
-            });
-            
-            document.addEventListener('click', function(event) {
-                if (activeBox && !activeBox.contains(event.target)) {
-                    activeBox.classList.remove('open');
-                    activeBox.style.width = originalWidths[activeBox] + 'px';
-                    const verticalText = activeBox.querySelector('.vertical-text');
-                    const horizontalText = activeBox.querySelector('.horizontal-text');
-                    if (verticalText) {
-                        verticalText.style.opacity = '1';
-                    }
-                    if (horizontalText) {
-                        horizontalText.style.opacity = '0';
-                        horizontalText.style.transform = horizontalTextInitialTransform;
+                    if (horizontalTextElement) {
+                        horizontalTextElement.style.opacity = '0';
+                        horizontalTextElement.style.transform = horizontalTextInitialTransform;
                     }
                     activeBox = null;
+                } else {
+                    if (activeBox) {
+                        activeBox.classList.remove('open');
+                        const prevVerticalText = activeBox.querySelector('.vertical-text');
+                        const prevHorizontalText = activeBox.querySelector('.horizontal-text');
+                        if (prevVerticalText) {
+                            prevVerticalText.style.opacity = '1';
+                        }
+                        if (prevHorizontalText) {
+                            prevHorizontalText.style.opacity = '0';
+                            prevHorizontalText.style.transform = horizontalTextInitialTransform;
+                        }
+                        activeBox.style.width = originalWidths[activeBox] + 'px';
+                    }
+
+                    this.classList.add('open');
+                    if (verticalTextElement) {
+                        verticalTextElement.style.opacity = '0';
+                    }
+                    if (horizontalTextElement) {
+                        horizontalTextElement.style.opacity = '1';
+                        horizontalTextElement.style.transform = 'translateX(0)';
+                    }
+                    activeBox = this; 
+                }
+            });
+
+            box.addEventListener('mouseenter', function() {
+                if (!this.classList.contains('open')) {
+                    this.style.width = expandedWidth;
+                    this.classList.add('hovered');
+                }
+            });
+
+            box.addEventListener('mouseleave', function() {
+                if (!this.classList.contains('open')) {
+                    this.style.width = originalWidths[this] + 'px';
+                    this.classList.remove('hovered');
                 }
             });
         });
-    </script>
+
+        document.addEventListener('click', function(event) {
+            if (activeBox && !activeBox.contains(event.target)) {
+                activeBox.classList.remove('open');
+                activeBox.style.width = originalWidths[activeBox] + 'px';
+                const verticalText = activeBox.querySelector('.vertical-text');
+                const horizontalText = activeBox.querySelector('.horizontal-text');
+                if (verticalText) {
+                    verticalText.style.opacity = '1';
+                }
+                if (horizontalText) {
+                    horizontalText.style.opacity = '0';
+                    horizontalText.style.transform = horizontalTextInitialTransform;
+                }
+                activeBox = null;
+            }
+        });
+    });
+</script>
 
 </body>
 </html>
