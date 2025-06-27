@@ -21,92 +21,89 @@
 
     <!--header-->
     
-    <header id="site-header" class="fixed-top">
-        <div class="container">
-            <nav class="navbar navbar-expand-lg stroke px-0 pt-lg-0">
-                <a class="navbar-brand" href="#">
-                    <h1 class="logo01">
-                        ProToolsAB<img src="img/logo.png" alt="logo"/>
-                    </h1>
-                </a>
+<header id="site-header" class="fixed-top">
+    <div class="container">
+        <nav class="navbar navbar-expand-lg stroke px-0 pt-lg-0">
+            <a class="navbar-brand" href="#">
+                <h1 class="logo01">
+                    ProToolsAB<img src="img/logo.png" alt="logo"/>
+                </h1>
+            </a>
+            
+            <div class="mobile-position"> 
+                <input type="checkbox" id="btn-menu" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false">
+                <label for="btn-menu" class="lbl-menu navbar-toggler"> 
+                    <span id="spn1"></span>
+                    <span id="spn2"></span>
+                    <span id="spn3"></span>
+                </label>
+            </div>
+            
+            <ul class="nav-item @@carrito__active order-lg-1 carrito001"> 
+                <li>
+                    <a class="nav-link carrito001" href="#">
+                        <img class="car" src="img/carrito.png" alt="Carrito de compras">
+                        <span id="cantidad-carrito" class="carrito-cantidad"> 0</span> 
+                    </a>
+                </li>
+            </ul>
+
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav mx-lg-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="index.html">Home<span class="visually-hidden">(current)</span></a>
+                    </li>
+                    <li class="nav-item text-center">
+                        <a class="nav-link" href="#Offers">New & Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services">Services</a>
+                    </li>
+                    <li class="nav-item @@contact__active">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
                 
-                <div class="mobile-position"> 
-                    <input type="checkbox" id="btn-menu" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false">
-                    <label for="btn-menu" class="lbl-menu navbar-toggler"> 
-                        <span id="spn1"></span>
-                        <span id="spn2"></span>
-                        <span id="spn3"></span>
-                    </label>
-                </div>          
+                <div class="search">
+                    <a href="#" title="search"><span class="fa fa-search search1" aria-hidden="true"></span></a>
+                    <!-- <div id="search" class="pop-overlay">
+                        <div class="popup">
+                            <form action="error.html" method="GET" class="search-box">
+                                <input type="search" id="search-input" placeholder="Search" name="search" required="required" autofocus="">
+                                <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
+                                <ul id="suggestions" class="search-suggestions"></ul>
+                            </form>
+                                <div id="search-results" class="search-results-container"></div> 
+                        </div>
+                        <a class="close" href="#close">X</a> -->
+                    <!-- </div> -->
+                </div>
                 
-                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                    <ul class="navbar-nav mx-lg-auto">
-                        <li class="nav-item active">
-                            <a class="nav-link" href="index.html">Home<span class="visually-hidden">(current)</span></a>
-                        </li>
-                        <li class="nav-item text-center">
-                            <a class="nav-link" href="#Offers">New & Offers</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#products">Products</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#services">Services</a>
-                        </li>
-                        <li class="nav-item @@contact__active">
-                            <!-- <a class="nav-link" href="contact.html">Contact</a> -->
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
-                    </ul>
-                    
-                    <ul class="nav-item @@carrito__active">
-                        <li>
-                            <!-- <a class="nav-link" href="carrito.html"> -->
-                            <a class="nav-link" href="#">
-                                <img class="car" src="img/carrito.png" alt="Carrito de compras">
-                                <span id="cantidad-carrito" class="carrito-cantidad"> 0</span> 
-                            </a>
-                        </li>    
-                    </ul>
-                    
-                    <div class="search-right">
-                        <!-- <a href="#search" title="search"><span class="fa fa-search" aria-hidden="true"></span></a> -->
-                        <a href="#" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
-                        <div id="search" class="pop-overlay">
-                            <div class="popup">
-                                <form action="error.html" method="GET" class="search-box">
-                                    <input type="search" id="search-input" placeholder="Search" name="search" required="required" autofocus="">
-                                    <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
-                                    <ul id="suggestions" class="search-suggestions"></ul>
-                                </form>
-                                    <div id="search-results" class="search-results-container"></div> 
+                <button class="buynow">
+                    <span class="front-text">Buy Now</span>
+                    <span class="car-icon"><i class="bi bi-cart3"></i></span>
+                </button>
+            </div>
+            
+            <div class="mobile-position">
+                <nav class="navigation">
+                    <div class="theme-switch-wrapper">
+                        <label class="theme-switch" for="checkbox">
+                            <input type="checkbox" id="checkbox">
+                            <div class="mode-container">
+                                <i class="gg-sun"></i>
+                                <i class="bi bi-moon-stars"></i>
                             </div>
-                            <a class="close" href="#close">×</a>
-                        </div>
+                        </label>
                     </div>
-                    
-                    <button class="buynow">
-                        <span class="front-text">Buy Now</span>
-                        <span class="car-icon"><i class="bi bi-cart3"></i></span>
-                    </button>
-                </div>
-                
-                <div class="mobile-position">
-                    <nav class="navigation">
-                        <div class="theme-switch-wrapper">
-                            <label class="theme-switch" for="checkbox">
-                                <input type="checkbox" id="checkbox">
-                                <div class="mode-container">
-                                    <i class="gg-sun"></i>
-                                    <i class="bi bi-moon-stars"></i>
-                                </div>
-                            </label>
-                        </div>
-                    </nav>
-                </div>
-            </nav>
-        </div>
-    </header>
+                </nav>
+            </div>
+        </nav>
+    </div>
+</header>
 
     <!-- Banner____________________________________________________________________________________________________________________________ -->
     
@@ -200,120 +197,150 @@
     
     <!-- Productos en Oferta_______________________________________________________________________________________________________________ -->
      
-    <section class="team py-4" id="team">
-        <div class="container py-lg-3 py-md-3 py-2">
-            <ul class="nav nav-pills" id="pills-tab1" role="tablist">
-                <li class="nav-item1">
-                    <a class="nav-link1 active" id="pills-team1-tab" data-bs-toggle="pill" href="#pills-team1" role="tab" aria-controls="pills-team1" aria-selected="true"><img src="img/todo.png" class="img-fluid" alt="" /></a>
-                </li>
-                <li class="nav-item1">
-                    <a class="nav-link1" id="pills-team2-tab" data-bs-toggle="pill" href="#pills-team2" role="tab" aria-controls="pills-team2" aria-selected="false"><img src="img/luz.png" class="img-fluid" alt="" /></a>
-                </li>
-                <li class="nav-item1">
-                    <a class="nav-link1" id="pills-team3-tab" data-bs-toggle="pill" href="#pills-team3" role="tab" aria-controls="pills-team3" aria-selected="false"><img src="img/carpinteria.png" class="img-fluid" alt="" /></a>
-                </li>
-                <li class="nav-item1">
-                    <a class="nav-link1" id="pills-team5-tab" data-bs-toggle="pill" href="#pills-team4" role="tab" aria-controls="pills-team4" aria-selected="false"><img src="img/jardinero.png" class="img-fluid" alt="" /></a>
-                </li>
-            </ul>
-    
-            <div class="tab-content" id="pills-tabContent1">
-                <div class="tab-pane fade show active" id="pills-team1" role="tabpanel" aria-labelledby="pills-team1-tab">
-                    <div class="team-grids row">
-                         <div class="offerts-container">
-                                <div class="offerts-ribbon offerts-badge">Offer</div> 
-                            </div>
-                        <div class="col-lg-6">
-                            <img src="img/nivelador01.png" class="img-fluid imgOferta" alt="" />
-                        </div>
-                        <div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">
-                            <h4 class="productosOffer01">Foldable Level
-                                <span class="mt-md-3 mt-2">$31.99</span>
-                            </h4>
-                            <a href="#foldable" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
-                            
-                            <div class="d-flex flex-md-row justify-content-center justify-content-md-start gap-2 mt-md-4 mt-3">
-                                <button href="#buy" class="btn btn-style btnbuy btnCarrito">Buy Now</button>
-                                <a id="add-to-cart-1" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="31.99">
-                                    Add to Cart <i class="buycar bi bi-cart3"></i>
-                                </a>
-                            </div>
+   <section class="team py-4" id="team">
+    <div class="container py-lg-3 py-md-3 py-2">
+        <ul class="image-nav" id="custom-tab-nav">
+            <li class="nav-item-custom">
+                <a class="nav-link-custom active" data-target="content-todo"><img src="img/todo.png" class="img-fluid" alt="" /></a>
+            </li>
+            <li class="nav-item-custom">
+                <a class="nav-link-custom" data-target="content-luz"><img src="img/luz.png" class="img-fluid" alt="" /></a>
+            </li>
+            <li class="nav-item-custom">
+                <a class="nav-link-custom" data-target="content-carpinteria"><img src="img/carpinteria.png" class="img-fluid" alt="" /></a>
+            </li>
+            <li class="nav-item-custom">
+                <a class="nav-link-custom" data-target="content-jardinero"><img src="img/jardinero.png" class="img-fluid" alt="" /></a>
+            </li>
+        </ul>
+
+        <div class="tab-content-custom" id="custom-tab-content">
+            <div class="tab-pane-custom active" id="content-todo">
+                <div class="team-grids row">
+                    <div class="offerts-container">
+                        <div class="offerts-ribbon offerts-badge">Offer</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="img/nivelador01.png" class="img-fluid imgOferta" alt="" />
+                    </div>
+                    <div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">
+                        <h4 class="productosOffer01">Foldable Level
+                            <span class="mt-md-3 mt-2">$31.99</span>
+                        </h4>
+                        <a href="#foldable" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
+
+                        <div class="d-flex flex-md-row justify-content-center justify-content-md-start gap-2 mt-md-4 mt-3">
+                            <button href="#buy" class="btn btn-style btnbuy btnCarrito">Buy Now</button>
+                            <a id="add-to-cart-1" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="31.99">
+                                Add to Cart <i class="buycar bi bi-cart3"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-    
-                <div class="tab-pane fade" id="pills-team2" role="tabpanel" aria-labelledby="pills-team2-tab">
-                    <div class="team-grids row">
-                        <div class="offerts-container">
-                                <div class="offerts-ribbon offerts-badge">Offer</div> 
-                            </div>
-                        <div class="col-lg-6">
-                            <img src="img/circuit1.png" class="img-fluid imgOferta" alt="" />
-                        </div>
-                        <div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">
-                            <h4 class="productosOffer01">Circuit Breaker Finder kit 
-                            <span class="mt-md-3 mt-2">$79.99</span></h4>
-                            
-                            <a href="#circuit" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
+            </div>
 
-                            <div class="d-flex flex-md-row justify-content-center justify-content-md-start gap-2 mt-md-4 mt-3">
-                                <button href="#buy" class="btn btn-style btnbuy btnCarrito">Buy Now</button>
-                                <a id="add-to-cart-2" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="79.99">
-                                    Add to Cart <i class="buycar bi bi-cart3"></i>
-                                </a>
-                            </div>
+            <div class="tab-pane-custom" id="content-luz">
+                <div class="team-grids row">
+                    <div class="offerts-container">
+                        <div class="offerts-ribbon offerts-badge">Offer</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="img/circuit1.png" class="img-fluid imgOferta" alt="" />
+                    </div>
+                    <div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">
+                        <h4 class="productosOffer01">Circuit Breaker Finder kit
+                            <span class="mt-md-3 mt-2">$79.99</span>
+                        </h4>
+                        <a href="#circuit" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
+
+                        <div class="d-flex flex-md-row justify-content-center justify-content-md-start gap-2 mt-md-4 mt-3">
+                            <button href="#buy" class="btn btn-style btnbuy btnCarrito">Buy Now</button>
+                            <a id="add-to-cart-2" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="79.99">
+                                Add to Cart <i class="buycar bi bi-cart3"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="tab-pane fade" id="pills-team3" role="tabpanel" aria-labelledby="pills-team3-tab">
-                    <div class="team-grids row">
-                        <div class="offerts-container">
-                                <div class="offerts-ribbon offerts-badge">Best Seller</div> 
-                            </div>
-                        <div class="col-lg-6">
-                            <img src="img/garlopa01.png" class="img-fluid imgOferta" alt="" />
-                        </div>
-                        <div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">
-                            <h4 class="productosOffer01">Brushless planer
-                                <span class="mt-md-3 mt-2">$163.99</span></h4>
-                                
-                            <a href="#garlopa" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
+            <div class="tab-pane-custom" id="content-carpinteria">
+                <div class="team-grids row">
+                    <div class="offerts-container">
+                        <div class="offerts-ribbon offerts-badge">Best Seller</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="img/garlopa01.png" class="img-fluid imgOferta" alt="" />
+                    </div>
+                    <div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">
+                        <h4 class="productosOffer01">Brushless planer
+                            <span class="mt-md-3 mt-2">$163.99</span>
+                        </h4>
+                        <a href="#garlopa" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
 
-                            <div class="d-flex flex-md-row justify-content-center justify-content-md-start gap-2 mt-md-4 mt-3">
-                                <button href="#buy" class="btn btn-style btnbuy btnCarrito">Buy Now</button>
-                                <a id="add-to-cart-3" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="163.99">
-                                    Add to Cart <i class="buycar bi bi-cart3"></i>
-                                </a>
-                            </div>
+                        <div class="d-flex flex-md-row justify-content-center justify-content-md-start gap-2 mt-md-4 mt-3">
+                            <button href="#buy" class="btn btn-style btnbuy btnCarrito">Buy Now</button>
+                            <a id="add-to-cart-3" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="163.99">
+                                Add to Cart <i class="buycar bi bi-cart3"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <div class="tab-pane fade" id="pills-team4" role="tabpanel" aria-labelledby="pills-team4-tab">
-                    <div class="team-grids row">
-                        <div class="offerts-container">
-                                <div class="offerts-ribbon offerts-badge">New</div> 
-                            </div>
-                        <div class="col-lg-6">
-                            <img src="img/jardineria01.png" class="img-fluid imgOferta" alt="" />
-                        </div>
-                        <div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">
-                            <h4 class="productosOffer01">Garden Tool Set
-                                <span class="mt-md-3 mt-2">$27.99</span></h4>
-                            <a href="#jardin" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
-                            <div class="d-flex flex-md-row justify-content-center justify-content-md-start gap-2 mt-md-4 mt-3">
-                                <button href="#buy" class="btn btn-style btnbuy btnCarrito">Buy Now</button>
-                                <a id="add-to-cart-4" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="27.99">
-                                    Add to Cart <i class="buycar bi bi-cart3"></i>
-                                </a>
-                            </div>
+            <div class="tab-pane-custom" id="content-jardinero">
+                <div class="team-grids row">
+                    <div class="offerts-container">
+                        <div class="offerts-ribbon offerts-badge">New</div>
+                    </div>
+                    <div class="col-lg-6">
+                        <img src="img/jardineria01.png" class="img-fluid imgOferta" alt="" />
+                    </div>
+                    <div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">
+                        <h4 class="productosOffer01">Garden Tool Set
+                            <span class="mt-md-3 mt-2">$27.99</span>
+                        </h4>
+                        <a href="#jardin" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
+                        <div class="d-flex flex-md-row justify-content-center justify-content-md-start gap-2 mt-md-4 mt-3">
+                            <button href="#buy" class="btn btn-style btnbuy btnCarrito">Buy Now</button>
+                            <a id="add-to-cart-4" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="27.99">
+                                Add to Cart <i class="buycar bi bi-cart3"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const navLinks = document.querySelectorAll('.nav-link-custom');
+        const tabPanes = document.querySelectorAll('.tab-pane-custom');
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+
+                // Remove 'active' class from all nav links and tab panes
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                tabPanes.forEach(pane => pane.classList.remove('active'));
+
+                // Add 'active' class to the clicked nav link
+                this.classList.add('active');
+
+                // Get the target tab content ID from the data-target attribute
+                const targetId = this.dataset.target;
+                const targetPane = document.getElementById(targetId);
+
+                // Add 'active' class to the corresponding tab pane
+                if (targetPane) {
+                    targetPane.classList.add('active');
+                }
+            });
+        });
+    });
+</script>
 
    <!--  card de Productos ___________________________________________________________________________________________________ -->
    <section class="w3l-homeblock py-4" id="products">
