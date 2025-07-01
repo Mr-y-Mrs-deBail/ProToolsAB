@@ -1,0 +1,1286 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- <meta name="title" content="ProToolsAB"/>
+        <meta name="description" content="Su destino único para herramientas de calidad y servicios profesionales para el hogar."/> -->
+        <!-- Open Graph / Facebook -->
+        <!-- <meta property="og:type" content="website"/>
+        <meta property="og:url" content="https://metatags.io/"/>
+        <meta property="og:title" content="ProToolsAB"/>
+        <meta property="og:description" content="Su destino único para herramientas de calidad y servicios profesionales para el hogar."/> -->
+        <!-- <meta property="og:url" /> -->
+        <!-- <meta property="og:image" content="https:" /> -->
+        <!-- x -->
+        <!-- <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://metatags.io/" />
+        <meta property="twitter:title" content="ProToolsAB"/>
+        <meta property="twitter:description" content="Su destino único para herramientas de calidad y servicios profesionales para el hogar."/>
+        <meta property="twitter:image" content="https:" /> -->
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/paveldogreat/theme-change@v2.0.3/theme-change.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>       
+        <link href="css/animate.min.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="icon" href="img/logoprincipal.png"> -->
+        <title>ProToolsAB</title>
+    </head>
+    
+    <body>
+
+    <!--header_____________________________________________________________________-->
+    
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke px-0 pt-lg-0">
+                <a class="navbar-brand logo001" href="#">
+                    <h1 class="logo01">
+                        ProToolsAB<img src="img/logo.png" alt="logo"/>
+                    </h1>
+                </a>
+                
+                <div class="mobile-position"> 
+                    <input type="checkbox" id="btn-menu" data-toggle="collapse" data-target="#navbartogglermv" aria-controls="navbartogglermv" aria-expanded="false">
+                    <label for="btn-menu" class="lbl-menu navbar-toggler"> 
+                        <span id="spn1"></span>
+                        <span id="spn2"></span>
+                        <span id="spn3"></span>
+                    </label>
+                </div>          
+                
+                <div class="collapse navbar-collapse" id="navbartogglermv">
+                    <ul class="navbar-nav mx-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home<span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href="#Offers">New & Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item @@contact__active">
+                            <!-- <a class="nav-link" href="contact.html">Contact</a> -->
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="search-right">
+                        <!-- <a href="#search" title="search"><span class="fa fa-search" aria-hidden="true"></span></a> -->
+                        <a href="#" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
+                        <div id="search" class="pop-overlay">
+                            <div class="popup">
+                                <form action="error.html" method="GET" class="search-box">
+                                    <input type="search" id="search-input" placeholder="Search" name="search" required="required" autofocus="">
+                                    <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
+                                    <ul id="suggestions" class="search-suggestions"></ul>
+                                </form>
+                                    <div id="search-results" class="search-results-container"></div> 
+                            </div>
+                            <a class="close" href="#close">×</a>
+                        </div>
+                    </div>                                    
+                    <button class="buynow">
+                        <span class="front-text">Buy Now</span>
+                        <span class="car-icon"><i class="bi bi-cart3"></i></span>
+                    </button>
+                </div>
+
+                <ul class="nav-item carrito001 @@carrito__active">
+                        <li>
+                            <!-- <a class="nav-link" href="carrito.html"> -->
+                            <a class="nav-link" href="#">
+                                <img class="car" src="img/carrito.png" alt="Carrito de compras">
+                                <span id="cantidad-carrito" class="carrito-cantidad"> 0</span> 
+                            </a>
+                        </li>    
+                    </ul>
+                
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <label class="theme-switch" for="checkbox">
+                                <input type="checkbox" id="checkbox">
+                                <div class="mode-container">
+                                    <i class="gg-sun"></i>
+                                    <i class="bi bi-moon-stars"></i>
+                                </div>
+                            </label>
+                        </div>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Banner____________________________________________________________________________________________________________________________ -->
+    
+    <section class="w3l-main-slider" id="home">
+        <div class="companies20-content">
+            <div class="owl-one owl-carousel owl-theme">
+    
+                <div class="item">
+                    <li>
+                        <div class="slider-info banner-view banner-top1 bg bg2 align-items-center">                            
+                           <div class="banner-info">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <h5 class="title1 animated fadeInLeftBig display-4 text-white" data-wow-duration="1000ms" data-wow-delay="300ms">Take Advantage of Our Amazing Offers</h5>
+                                            <p class="mt-4 text-white">
+                                                Discover exclusive discounts and special promotions on a wide range of high-quality products. Don't miss the chance to enjoy unbeatable prices!
+                                            </p>
+                                            <div class="more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                                <a class="btn btnbuy mt-sm-5 mt-4 hvr-curl-bottom-right" href="#Offers"> Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+    
+                <div class="item"> 
+                    <li> 
+                        <div class="slider-info banner-view bg bg2 align-items-center" style="position: relative; overflow: hidden;"> 
+                            <video autoplay muted loop playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;"> 
+                                <source src="video/video.mp4" type="video/mp4"> 
+                                Tu navegador no soporta HTML5 video. 
+                            </video> 
+                            <div class="video-overlay" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: var(--layer); color: var(--primary-color); z-index: 0;"></div> 
+                                <div class="banner-info" style="position: relative; z-index: 1;"> 
+                                    <div class="container"> 
+                                        <div class="row">
+                                            <div class="col-log-8"> 
+                                                <h5 class="title1 display-4 text-white">Carpentry Tools</h5> 
+                                                <p class="mt-4 text-white"> Discover our extensive selection of carpentry tools, designed for both experienced professionals and enthusiastic hobbyists. </p> 
+                                                <div class="more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms"> 
+                                                    <a class="btn btnbuy mt-sm-5 mt-4 hvr-curl-bottom-right" id="leerMasCarpinteria" href="#products"> Read More</a> 
+                                                </div>
+                                            </div> 
+                                        </div> 
+                                    </div> 
+                                </div> 
+                            </div> 
+                        </li> 
+                    </div>
+    
+                <div class="item">
+                    <li>
+                        <div class="slider-info banner-view banner-top2 bg bg2 align-items-center">
+                            <div class="banner-info">
+                                <div class="container">
+                                    <div class="row">
+                                        <div class="col-lg-8">
+                                            <h5 class="title1 display-4 text-white">Quality Tools for Every Home Project</h5>
+                                            <p class="mt-4 text-white">
+                                                Discover our wide selection of tools designed for electrical work, carpentry, gardening, and much more. Whether you are renovating your home, embarking on new ventures, or building new spaces, our range of reliable tools is designed to meet all your needs.
+                                            </p>
+                                            <div class="more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms">
+                                                <a class="btn btnbuy mt-sm-5 mt-4 hvr-curl-bottom-right" href="#products"> Read More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <button class="up" onclick="topFunction()" id="movetop" title="Go to top" style="display: none; position: fixed; bottom: 20px; right: 30px; z-index: 99; outline: none;"></button>
+
+    <!-- titulo de ofertas _______________________________________________________________________________________________________________ -->
+
+    <section class="w3l-about-breadcrumb" id="Offers">
+        <div class="breadcrumb-bg breadcrumb-bg-about py-3 d-flex align-items-center">
+            <div class="container py-2 wow fadeInRightBig" data-wow-duration="400ms" data-wow-delay="200ms">
+                <h2 class="title title2">Take advantage of our offers</h2>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Productos en Oferta_______________________________________________________________________________________________________________ -->
+     
+    <section class="team py-4" id="team-carousel">
+        <div class="container py-lg-3 py-md-3 py-2">
+            <div id="productCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators custom-carousel-indicators justify-content-center">
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1">
+                        <img src="img/todo.png" class="img-fluid" alt="Todo"/>
+                    </button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="1" aria-label="Slide 2">
+                        <img src="img/luz.png" class="img-fluid" alt="Luz"/>
+                    </button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="2" aria-label="Slide 3">
+                        <img src="img/carpinteria.png" class="img-fluid" alt="Carpinteria"/>
+                    </button>
+                    <button type="button" data-bs-target="#productCarousel" data-bs-slide-to="3" aria-label="Slide 4">
+                        <img src="img/jardinero.png" class="img-fluid" alt="Jardinero"/>
+                    </button>
+                </div>
+        
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="team-grids row">
+                            <div class="offerts-container">
+                                <div class="offerts-ribbon offerts-badge">Offer</div>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="img/nivelador01.png" class="img-fluid imgOferta" alt="Foldable Level" />
+                            </div>
+                            <div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">
+                                <h4 class="productosOffer01">Foldable Level
+                                    <span class="mt-md-3 mt-2">$31.99</span>
+                                </h4>
+                                <a href="#foldable" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
+                                <div class="d-flex flex-row flex-md-row justify-content-center justify-content-md-start gap-2 mt-md-4 mt-3">
+                                    <button class="btn btn-style btnbuy btnCarrito">Buy Now</button>
+                                    <a id="add-to-cart-1" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="31.99">
+                                        Add to Cart <i class="buycar bi bi-cart3"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                    <div class="carousel-item">               
+                        <div class="team-grids row">               
+                            <div class="offerts-container">             
+                                <div class="offerts-ribbon offerts-badge">Offer</div>             
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="img/circuit1.png" class="img-fluid imgOferta" alt="Circuit Breaker Finder kit" />
+                            </div>
+                            <div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">
+                                <h4 class="productosOffer01">Circuit Breaker Finder kit
+                                    <span class="mt-md-3 mt-2">$79.99</span>
+                                </h4>
+                                <a href="#circuit" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
+                                <div class="d-flex flex-row flex-md-row justify-content-center justify-content-md-start gap-2 mt-md-4 mt-3">
+                                    <button class="btn btn-style btnbuy btnCarrito">Buy Now</button>
+                                    <a id="add-to-cart-2" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="79.99">
+                                        Add to Cart <i class="buycar bi bi-cart3"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                
+                    <div class="carousel-item">                
+                        <div class="team-grids row">                
+                            <div class="offerts-container">                
+                                <div class="offerts-ribbon offerts-badge">Best Seller</div>                
+                            </div>                
+                            <div class="col-lg-6">                
+                                <img src="img/garlopa01.png" class="img-fluid imgOferta" alt="Brushless planer" />                
+                            </div>                
+                            <div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">               
+                                <h4 class="productosOffer01">Brushless planer               
+                                    <span class="mt-md-3 mt-2">$163.99</span>
+                                </h4>                    
+                                <a href="#garlopa" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>                
+                                <div class="d-flex flex-row flex-md-row justify-content-center justify-content-md-start gap-2 mt-md-4 mt-3">                
+                                    <button class="btn btn-style btnbuy btnCarrito">Buy Now</button>                
+                                    <a id="add-to-cart-3" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="163.99">                
+                                        Add to Cart <i class="buycar bi bi-cart3"></i>                
+                                    </a>                
+                                </div>                
+                            </div>                
+                        </div>                
+                    </div>
+                        
+                    <div class="carousel-item">
+                        <div class="team-grids row">
+                            <div class="offerts-container">
+                                <div class="offerts-ribbon offerts-badge">New</div>
+                            </div>
+                            <div class="col-lg-6">
+                                <img src="img/jardineria01.png" class="img-fluid imgOferta" alt="Garden Tool Set" />
+                            </div>
+                            <div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">
+                                <h4 class="productosOffer01">Garden Tool Set
+                                    <span class="mt-md-3 mt-2">$27.99</span>
+                                </h4>
+                                <a href="#jardin" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
+                                <div class="d-flex flex-row flex-md-row justify-content-center justify-content-md-start gap-2 mt-md-4 mt-3">
+                                    <button class="btn btn-style btnbuy btnCarrito">Buy Now</button>
+                                    <a id="add-to-cart-4" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="27.99">                
+                                        Add to Cart <i class="buycar bi bi-cart3"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>           
+                </div> 
+            </div>
+        </div>
+    </section>
+
+   <!--  card de Productos ___________________________________________________________________________________________________ -->
+   <section class="w3l-homeblock py-4" id="products">
+        <div class="py-3">
+            <div class="container py-lg-3 py-md-3 py-2">
+                <div class="title-content">
+                    <h5 class="title-small text-center mb-1 perfect wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">Find Your Perfect Product</h5>
+                    <h3 class="title-big text-center mb-md-4 mb-2 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">Our Products</h3>
+                    <div class="botones-productos text-center mb-0">
+                        <div class="row justify-content-center">
+                            <div class="col-12 col-md-auto mb-2 more wow fadeInUp" data-wow-duration="700ms" data-wow-delay="400ms">
+                                <button class="todos btn btn-style btnbuy">All</button>
+                            </div>
+                            <div class="col-6 col-md-auto mb-2 more wow fadeInUp" data-wow-duration="700ms" data-wow-delay="400ms">
+                                <button class="electricidad btn btn-style btnbuy">Electrical</button>
+                            </div>
+                            <div class="col-6 col-md-auto mb-2 more wow fadeInUp" data-wow-duration="700ms" data-wow-delay="400ms">
+                                <button class="herramientas btn btn-style btnbuy">Tools</button>
+                            </div>
+                            <div class="col-6 col-md-auto mb-2 more wow fadeInUp" data-wow-duration="700ms" data-wow-delay="400ms">
+                                <button class="carpinteria btn btn-style btnbuy">Carpentry</button>
+                            </div>
+                            <div class="col-6 col-md-auto mb-2 more wow fadeInUp" data-wow-duration="700ms" data-wow-delay="400ms">
+                                <button class="jardineria btn btn-style btnbuy">Gardening</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <div class="gallery_agile row">
+            <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="electricidad">
+
+                <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+                    <div id="circuit" class="card shadow-sm" style="width: 20rem;">
+                        <div class="offer-container">
+                            <div class="offert-ribbon offer-badge">Offer</div> 
+                        </div>
+                        <h5 class="card-title pt-2 text-center textoCard">Circuit Breaker Finder Kit</h5>
+                    <div class="owl-carousel owl-theme imgcarrusel">
+                        <div class="item img-productos"><img src="img/circuit1.png" class="img-fluid" alt="Circuit Image 1"></div>
+                        <div class="item img-productos"><img src="img/circuit2.webp" class="img-fluid" alt="Circuit Image 2"></div>
+                        <div class="item img-productos"><img src="img/circuit3.webp" class="img-fluid" alt="Circuit Image 3"></div>
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text text-gray-50 description">
+                            GFCI Outlet and Receptacle Tester Kit, Multimeter, NCVT, Outlet Tester, Wires, 6-Piece
+                        </p>
+                        <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>                                
+                        <h5 class="textPrecio text-dark text-center">
+                            <span class="precio-principal">
+                                <span class="dolar small" translate="no">US$</span>79<span class="centavos small"><sup>99</sup></span>
+                            </span>
+                            <span class="precio-descuento">
+                                <span class="text-decoration-line-through text-muted me-2" translate="no">US$99<sup>99</sup></span>
+                            </span>
+                        </h5>
+                        <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                            <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                            <a id="add-to-cart-producto-1" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/circuit1.png" data-product-id="1" data-product-name="Circuit Breaker Finder Kit" data-product-price="79.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="electricidad">
+        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+            <div id="destornillador" class="card shadow-sm" style="width: 20rem;">
+                <h5 class="card-title pt-2 text-center textoCard">13-Piece Insulated Screwdriver Set</h5>
+                <div class="owl-carousel owl-theme">
+                    <div class="item img-productos"><img src="img/destornillador1.webp" class="img-fluid img-thumbnail" alt="Destornillador Image 1"></div>
+                    <div class="item img-productos"><img src="img/destornillador2.webp" class="img-fluid img-thumbnail" alt="Destornillador Image 2"></div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-gray-50 description">Hurricane 1000V Insulated Electrician Screwdriver Set, All-in-One Premium Professional 13-pieces CR-V Magnetic Phillips Slotted Pozidriv Torx Screwdriver.</p>
+                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>                                <h5 class="textPrecio text-dark text-center">
+                        <span class="precio-principal">
+                            <span class="dolar small" translate="no">US$</span>23<span class="centavos small"><sup>69</sup></span>
+                        </span>
+                    </h5>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                        <a id="add-to-cart-producto-2" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/destornillador1.webp" data-product-id="2" data-product-name="13-Piece Insulated Screwdriver Set" data-product-price="23.69">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            
+    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="electricidad">
+        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+            <div id="multimeter" class="card shadow-sm" style="width: 20rem;">
+                <h5 class="card-title pt-2 text-center textoCard">Multimeter Kit</h5>
+                <div class="owl-carousel owl-theme">
+                    <div class="item img-productos"><img src="img/kit1.webp" class="img-fluid img-thumbnail" alt="Kit Image 1"></div>
+                    <div class="item img-productos"><img src="img/kit2.webp" class="img-fluid img-thumbnail" alt="Kit Image 2"></div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-gray-50 description">Electrical Test Kit with Digital Multimeter, Non-Contact Voltage Tester and Electrical Outlet Tester, Leads and Batteries.</p>
+                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>                                <h5 class="textPrecio text-dark text-center">
+                        <span class="precio-principal">
+                            <span class="dolar small" translate="no">US$</span>39<span class="centavos small"><sup>97</sup></span>
+                        </span>
+                    </h5>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                        <a id="add-to-cart-producto-3" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/kit1.webp" data-product-id="3" data-product-name="Multimeter Kit" data-product-price="39.97">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            
+    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="electricidad">
+        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+            <div class="card shadow-sm" style="width: 20rem;">
+                <h5 class="card-title pt-2 text-center textoCard">Crimper + Stripper Kit</h5>
+                <div class="owl-carousel owl-theme">
+                    <div class="item img-productos"><img src="img/pelacables1.webp" class="img-fluid img-thumbnail" alt="Pelacables Image 1"></div>
+                    <div class="item img-productos"><img src="img/pelacables2.webp" class="img-fluid img-thumbnail" alt="Pelacables Image 2"></div>
+                    <div class="item img-productos"><img src="img/pelacables3.webp" class="img-fluid img-thumbnail" alt="Pelacables Image 3"></div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-gray-50 description">Klein Tools 80013 Wire Stripper / Ratcheting Crimper, Electrical Crimping Tool Kit with Automatic Wire Stripper and Ratcheting Insulated Terminal Crimper, 2-Piece.</p>
+                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>                                
+                    <h5 class="textPrecio text-dark text-center">
+                        <span class="precio-principal">
+                            <span class="dolar small" translate="no">US$</span>41<span class="centavos small"><sup>99</sup></span>
+                        </span>
+                    </h5>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                        <a id="add-to-cart-producto-4" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/pelacables1.webp" data-product-id="4" data-product-name="Crimper + Stripper Kit" data-product-price="41.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Herramientas -->
+
+    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
+        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+            <div class="card shadow-sm" style="width: 20rem;">
+                <h5 class="card-title pt-2 text-center textoCard">Tape Measure</h5>
+                <div class="owl-carousel owl-theme img-productos">
+                    <div class="item"><img src="img/metro1.webp" class="img-fluid img-thumbnail" alt="Metro Image 1"></div>
+                    <div class="item"><img src="img/metro2.webp" class="img-fluid img-thumbnail" alt="Metro Image 2"></div>
+                    <div class="item"><img src="img/metro3.webp" class="img-fluid img-thumbnail" alt="Metro Image 3"></div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-gray-50 description">
+                        DEWALT Atomic Compact Series 30 ft. Tape Measure (DWHT381305).
+                    </p>
+                    <h5 class="textPrecio text-dark text-center">
+                        <span class="precio-principal">
+                            <span class="dolar small" translate="no">US$</span>23<span class="centavos small"><sup>96</sup></span>
+                        </span>
+                    </h5>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                        <a id="add-to-cart-producto-5" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/metro1.webp" data-product-id="5" data-product-name="Tape Measure" data-product-price="23.96">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            
+    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
+        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+            <div class="card shadow-sm" style="width: 20rem;">
+                <h5 class="card-title pt-2 text-center textoCard">Hand Tool Set</h5>
+                <div class="owl-carousel owl-theme img-productos">
+                    <div class="item"><img src="img/caja1.png" class="img-fluid img-thumbnail" alt="Caja Image 1"></div>
+                    <div class="item"><img src="img/caja2.webp" class="img-fluid img-thumbnail" alt="Caja Image 2"></div>
+                    <div class="item"><img src="img/caja3.webp" class="img-fluid img-thumbnail" alt="Caja Image 3"></div>
+                    <div class="item"><img src="img/caja4.webp" class="img-fluid img-thumbnail" alt="Caja Image 4"></div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-gray-50 description">
+                        168 piese Professional Household Hand Tool Set with Plastic Storage Toolbox, Portable Complete Repair Tool Box fot Home Maintenance and DIY Projects (14*10*3in).
+                    </p>
+                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                    <h5 class="textPrecio text-dark text-center">
+                        <span class="precio-principal">
+                            <span class="dolar small" translate="no">US$</span>37<span class="centavos small"><sup>89</sup></span>
+                        </span>
+                    </h5>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                        <a id="add-to-cart-producto-6" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/caja1.png" data-product-id="6" data-product-name="Hand Tool Set" data-product-price="37.89">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
+        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+            <div class="card shadow-sm" style="width: 20rem;">
+                <h5 class="card-title pt-2 text-center textoCard">Drill Bit Set TItanium</h5>
+                <div class="owl-carousel owl-theme img-productos">
+                    <div class="item"><img src="img/drill1.webp" class="img-fluid img-thumbnail" alt="Drill Image 1"></div>
+                    <div class="item"><img src="img/drill2.webp" class="img-fluid img-thumbnail" alt="Drill Image 2"></div>
+                    <div class="item"><img src="img/drill3.webp" class="img-fluid img-thumbnail" alt="Drill Image 3"></div>
+                    <div class="item"><img src="img/drill4.webp" class="img-fluid img-thumbnail" alt="Drill Image 4"></div>
+                    <div class="item"><img src="img/drill5.webp" class="img-fluid img-thumbnail" alt="Drill Image 4"></div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-gray-50 description">
+                        6Pcs 1/4 Inch HEx Shank HSS Combination Tap and Drill Bit Set Titanium Coated Screw Tap Drill Bit M3 M4 M5 M6 M8 M10.
+                    </p>
+                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                    <h5 class="textPrecio text-dark text-center">
+                        <span class="precio-principal">
+                            <span class="dolar small" translate="no">US$</span>8<span class="centavos small"><sup>59</sup></span>
+                        </span>
+                    </h5>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                        <a id="add-to-cart-producto-7" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/drill1.webp" data-product-id="7" data-product-name="Drill Bit Set TItanium" data-product-price="8.59">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
+        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+            <div id="foldable" class="card shadow-sm" style="width: 20rem;">
+                <div class="offer-container">
+                    <div class="offert-ribbon offer-badge">Offer</div> 
+                </div>
+                <h5 class="card-title pt-2 text-center textoCard">Foldable Level</h5>
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><img src="img/nivelador1.webp" class="img-fluid img-thumbnail" alt="Nivelador Image 1"></div>
+                    <div class="item"><img src="img/nivelador2.webp" class="img-fluid img-thumbnail" alt="Nivelador Image 2"></div>
+                    <div class="item"><img src="img/nivelador3.webp" class="img-fluid img-thumbnail" alt="Nivelador Image 3"></div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-gray-50 description">
+                        Saker Multi-funtion FOldable Level 28-Inch Leveler Tool, Gifts for Men, Multi-Angle Measurement Woodworking Tools, Precise Leveling in Any Position, Folding Level Tool To Save Your Precious Time.
+                    </p>
+                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                    <h5 class="textPrecio text-dark text-center">
+                        <span class="precio-principal">
+                            <span class="dolar small" translate="no">US$</span>31<span class="centavos small"><sup>99</sup></span>
+                        </span>
+                        <span class="precio-descuento">
+                            <span class="text-decoration-line-through text-muted me-2" translate="no">US$39<sup>99</sup></span>
+                        </span>
+                    </h5>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                        <a id="add-to-cart-producto-8" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/nivelador1.webp" data-product-id="8" data-product-name="Foldable Level" data-product-price="31.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            
+    <!-- Carpinteria -->
+    
+    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="carpinteria">
+        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+            <div id="garlopa" class="card shadow-sm" style="width: 20rem;">
+                <h5 class="card-title pt-2 text-center textoCard">Brushless planer</h5>
+                <div class="best position-absolute bg-warning text-dark px-2 py-1">Best Seller</div>
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><img src="img/garlopa1.webp" class="img-fluid img-thumbnail" alt="Garlopa Image 1"></div>
+                    <div class="item"><img src="img/garlopa2.webp" class="img-fluid img-thumbnail" alt="Garlopa Image 2"></div>
+                    <div class="item"><img src="img/garlopa3.webp" class="img-fluid img-thumbnail" alt="Garlopa Image 3"></div>
+                    <div class="item"><img src="img/garlopa4.webp" class="img-fluid img-thumbnail" alt="Garlopa Image 4"></div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-gray-50 description">
+                        DEWALT 20V MAX Planer, 30,000 Cuts PEr Minute, 2 mm Cut Depth, Brushless Motor, Bare Tool Only (DCP580B).
+                    </p>
+                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                    <h5 class="textPrecio text-dark text-center">
+                        <span class="precio-principal">
+                            <span class="dolar small" translate="no">US$</span>163<span class="centavos small"><sup>99</sup></span>
+                        </span>
+                        <span class="precio-descuento">
+                            <span class="text-decoration-line-through text-muted me-2" translate="no">US$249<sup>99</sup></span>
+                        </span>
+                    </h5>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                        <a id="add-to-cart-producto-9" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/garlopa1.webp" data-product-id="9" data-product-name="Brushless planer" data-product-price="163.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="carpinteria">
+        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+            <div class="card shadow-sm" style="width: 20rem;">
+                <h5 class="card-title pt-2 text-center textoCard">Trimmer</h5>
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><img src="img/recortadora1.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 1"></div>
+                    <div class="item"><img src="img/recortadora2.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 2"></div>
+                    <div class="item"><img src="img/recortadora3.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 3"></div>
+                    <div class="item"><img src="img/recortadora4.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 4"></div>
+                    <div class="item"><img src="img/recortadora5.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 5"></div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-gray-50 description">
+                        Edge Banding Trimmer -2025 Upgraded Mini Edge Band Trimmer & Cutter, Stainless Steel Blade Veneer Edge Trimmer for Wooodworking, Durable Edgebanding Trimming Tool for Wood, Veneer, PVC, ABS.
+                    </p>
+                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                    <h5 class="textPrecio text-dark text-center">
+                        <span class="precio-principal">
+                            <span class="dolar small" translate="no">US$</span>7<span class="centavos small"><sup>99</sup></span>
+                        </span>
+                        <span class="precio-descuento">
+                            <span class="text-decoration-line-through text-muted me-2" translate="no">US$9<sup>99</sup></span>
+                        </span>
+                    </h5>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                        <a id="add-to-cart-producto-10" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/recortadora.webp" data-product-id="10" data-product-name="Trimmer" data-product-price="7.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+            
+    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="carpinteria">
+        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+            <div class="card shadow-sm" style="width: 20rem;">
+                <h5 class="card-title pt-2 text-center textoCard">3D Milti-Angle Measuring Ruler</h5>
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><img src="img/regla1.webp" class="img-fluid img-thumbnail" alt="Regla Image 1"></div>
+                    <div class="item"><img src="img/regla2.webp" class="img-fluid img-thumbnail" alt="Regla Image 2"></div>
+                    <div class="item"><img src="img/regla3.webp" class="img-fluid img-thumbnail" alt="Regla Image 3"></div>
+                    <div class="item"><img src="img/regla4.webp" class="img-fluid img-thumbnail" alt="Regla Image 4"></div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-gray-50 description">
+                        45/90 Degree Aluminum Alloy Woodworking Square Protractor, Drawing Line Ruler, Miter Triangle Ruler High Precision Layout Measuring Tool for Engineer Carpenter, R.
+                    </p>
+                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                    <h5 class="textPrecio text-dark text-center">
+                        <span class="precio-principal">
+                            <span class="dolar small" translate="no">US$</span>13<span class="centavos small"><sup>99</sup></span>
+                        </span>
+                    </h5>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                        <a id="add-to-cart-producto-11" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/regla1.webp" data-product-id="11" data-product-name="3D Milti-Angle Measuring Ruler" data-product-price="13.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                
+    <!-- Jardineria -->
+     
+    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="jardineria">
+        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+            <div id="jardin" class="card shadow-sm" style="width: 20rem;">
+                <h5 class="card-title pt-2 text-center textoCard">Garden Tool Set</h5>
+                <div class="badges-container">
+                    <div class="badge-ribbon new-badge">New</div>
+                </div>
+                <div class="owl-carousel owl-theme">
+                    <div class="item"><img src="img/jardineria1.webp" class="img-fluid img-thumbnail" alt="Jardineria Image 1"></div>
+                    <div class="item"><img src="img/jardineria2.webp" class="img-fluid img-thumbnail" alt="Jardineria Image 2"></div>
+                    <div class="item"><img src="img/jardineria3.webp" class="img-fluid img-thumbnail" alt="Jardineria Image 3"></div>
+                    <div class="item"><img src="img/jardineria4.webp" class="img-fluid img-thumbnail" alt="Jardineria Image 4"></div>
+                </div>
+                <div class="card-body">
+                    <p class="card-text text-gray-50 description">
+                        YAUNGEL Gardening Tools - 10 Pcs Garden Tool Set Heavy Duty Stainless Steel Garden Supplies Hand Tools with Wooden Handle, Storage Tote Bag, Gardening Gifts for Women and Men.
+                    </p>
+                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                    <h5 class="textPrecio text-dark text-center">
+                        <span class="precio-principal">
+                            <span class="dolar small" translate="no">US$</span>27<span class="centavos small"><sup>99</sup></span>
+                        </span>
+                        <span class="precio-descuento">
+                            <span class="text-decoration-line-through text-muted me-2" translate="no">US$40<sup>99</sup></span>
+                        </span>
+                    </h5>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                        <a id="add-to-cart-producto-12" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/jardineria1.webp" data-product-id="12" data-product-name="Garden Tool Set" data-product-price="27.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Servicios Profesionales____________________________________________________________________________________________________________ -->
+     
+    <section class="w3l-servicesblock py-5" id="services">
+        <div class="container py-lg-5 py-md-4 py-2 wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0 text-container">
+                    <span class="title-small mb-2">Everything you need in one place.</span>
+                    <h3 class="title-big mx-0">Consulting and Construction</h3>
+                    <p class="mt-lg-4 mt-3">I specialize in transforming houses into unique spaces that reflect your style and needs. As a renovation expert, I not only offer personalized consulting but also take action to build, repair, and bring to life every detail of your home. With tailored solutions, I help you create the perfect place you've always dreamed of.</p>
+                    <br>
+                    <!-- <a href="contact.html" class="infoService-link"> -->
+                    <a href="#services" class="infoService-link">
+                        <span class="infoService">Contact us for more information <i class="bi bi-arrow-right-circle"></i></span>
+                    </a><br><br>
+                    <a href="tel:+15104444444" class="btncontact learn-more" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="+1 510-444-4444" id="callButton" tabindex="0">
+                        <span aria-hidden="true" class="circle">
+                            <i class="tel bi bi-telephone"></i>
+                        </span>
+                        <span class="button-text">Call Us</span>
+                    </a>
+                </div>
+    
+                <div class="col-lg-6 d-flex justify-content-center">
+                    <div class="gallery-vertical" style="flex-direction: column; align-items: flex-start;">
+                        <div style="display: flex; margin-bottom: 10px;">
+                            <div class="img-box-vertical" style="background-image: url('img/servicio1.jpg');" data-horizontal-text="Remodeling">
+                                <h3 class="vertical-text">Remodeling</h3>
+                                <span class="horizontal-text">Remodeling</span>
+
+                            </div>
+                            <div class="img-box-vertical" style="background-image: url('img/servicio2.jpg');" data-horizontal-text="Paint">
+                                <h3 class="vertical-text">Paint</h3>
+                                <span class="horizontal-text">Paint</span>
+
+                            </div>
+                            <div class="img-box-vertical" style="background-image: url('img/servicio3.jpg');" data-horizontal-text="Electrical">
+                                <h3 class="vertical-text">Electrical</h3>
+                                <span class="horizontal-text">Electrical</span>
+
+                            </div>
+                            <div class="img-box-vertical" style="background-image: url('img/servicio4.jpg');" data-horizontal-text="Flooring">
+                                <h3 class="vertical-text">Flooring</h3>
+                                <span class="horizontal-text">Flooring</span>
+
+                            </div>
+                        </div>
+                        <div style="display: flex;">
+                            <div class="img-box-vertical" style="background-image: url('img/servicio5.jpg');" data-horizontal-text="Moving">
+                                <h3 class="vertical-text">Moving</h3>
+                                <span class="horizontal-text">Moving</span>
+
+                            </div>
+                            <div class="img-box-vertical" style="background-image: url('img/servicio6.jpg');" data-horizontal-text="Plumbing">
+                                <h3 class="vertical-text">Plumbing</h3>
+                                <span class="horizontal-text">Plumbing</span>
+
+                            </div>
+                            <div class="img-box-vertical" style="background-image: url('img/servicio7.jpg');" data-horizontal-text="Drywall">
+                                <h3 class="vertical-text">Drywall</h3>
+                                <span class="horizontal-text">Drywall</span>
+
+                            </div>
+                            <div class="img-box-vertical" style="background-image: url('img/servicio8.jpg');" data-horizontal-text="Cabinets">
+                                <h3 class="vertical-text">Cabinets</h3>
+                                <span class="horizontal-text">Cabinets</span>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+  <!-- footer _____________________________________________________________________________________________________________________________ -->
+   
+   
+    <section class="w3l-footer-29-main" id="footer">
+        <div class="footer-29 py-5">
+            <div class="container wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
+                <div class="row">
+                    <div class="col-12 mb-4 text-lg-start">
+                        <a href="#" class="logofooter">
+                            <h1>
+                                ProToolsAB<img src="img/logo.png" alt="logo"/>
+                            </h1>
+                        </a>
+                    </div>
+                </div>
+                <div class="row row-cols-2 g-2">
+                    <div class="col">
+                        <div class="info text-center text-md-start small-text-mobile">
+                            <h3>Operating Hours</h3>
+                            <p class="text-center">
+                                <span class="d-md-none">
+                                    Monday - Saturday <br> 08:00 am - 08:00 pm <br>
+                                    Sunday <br> 08:00 am - 12:00 pm
+                                </span>
+                                <span class="d-none d-md-block">
+                                    Monday - Saturday 08:00 am - 08:00 pm <br>
+                                    Sunday 08:00 am - 12:00 pm
+                                </span>
+                            </p>
+                        </div>
+                    </div>
+                        <div class="col">
+                            <div class="info text-center text-md-start small-text-mobile">
+                                <h3>Payment Methods</h3>
+                                <p class="text-center">Credit/Debit Card <i class="pago bi bi-credit-card"></i><br>Cash  <i class="pago bi bi-cash-coin"></i><br>Bank Transfer <i class="pago bi bi-bank"></i></p>
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="col">
+                        <div class="info text-center text-md-start small-text-mobile">
+                            <h3>Delivery Methods</h3>
+                            <p>Home delivery <i class="pago bi bi-truck"></i></p>
+                            <ul class="social-icon list-unstyled justify-content-center">
+                                <!-- <li class="icon-elem">
+                                    <a href="#footer" class="icon entrega">
+                                        <i class="bi bi-truck"></i>
+                                    </a>
+                                </li> -->
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-12 text-center">
+                            <ul class="social-icon list-unstyled d-flex justify-content-center flex-wrap">
+                                <li><a href="#footer" class="icon"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                                <li><a href="#footer" class="icon"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                                <li><a href="#footer" class="icon"><i class="bi bi-envelope-at"></i></a></li>
+                                <li><a href="#footer" class="icon"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                                <li><a href="#footer" class="icon"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                                <li><a href="#footer" class="icon"><i class="bi bi-twitter-x"></i></a></li>
+                            </ul>
+                            <p class="text mt-3">&copy; 2025 All Rights Reserved ProToolsAB</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Js / Scripts______________________________________________________________________________________________________________________ -->
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/principal.js"></script>
+    <script src="js/java.js"></script>
+    <script src="js/animation.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+    <!-- <script src="js/search.js"></script> -->
+    
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    
+   <script>
+        $(document).ready(function () {
+            const owl = $('.owl-one'); 
+            owl.owlCarousel({
+                loop: true,
+                margin: 0,
+                nav: false,
+                responsiveClass: true,
+                autoplay: true,
+                autoplayTimeout: 18000, 
+                autoplaySpeed: 1500,    
+                autoplayHoverPause: false, 
+                responsive: {
+                    0: { items: 1, nav: false },
+                    480: { items: 1, nav: false },
+                    667: { items: 1, nav: false },
+                    1000: { items: 1, nav: false }
+                }
+            });
+            owl.on('mousedown', function() {
+                owl.trigger('stop.owl.autoplay'); 
+            });
+            owl.on('mouseup', function() {
+                owl.trigger('play.owl.autoplay'); 
+            });
+            owl.on('touchstart', function() {
+                owl.trigger('stop.owl.autoplay'); 
+            });
+            owl.on('touchend', function() {
+                owl.trigger('play.owl.autoplay'); 
+            });
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const moveTopButton = document.getElementById("movetop");
+            const sections = ["home", "Offers", "products", "services", "footer"];
+            let currentSectionIndex = 0;
+            let isClicking = false;
+            let navigationDirection = 1; 
+            let lastScrollY = 0; 
+            function scrollToSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+            function updateButtonVisibility() {
+                if (moveTopButton) {
+                    moveTopButton.style.display = "block";
+                }
+            }
+            function navigateSections(direction) {
+                currentSectionIndex += direction;
+                if (currentSectionIndex < 0) {
+                    currentSectionIndex = 0;
+                } else if (currentSectionIndex >= sections.length) {
+                    currentSectionIndex = sections.length - 1;
+                }
+                scrollToSection(sections[currentSectionIndex]);
+                updateButtonIcon(navigationDirection); 
+            }
+            function updateButtonIcon(direction) {
+                if (moveTopButton) {
+                    if (direction === -1) {
+                        moveTopButton.innerHTML = '<i class="bi bi-chevron-up"></i>';
+                    } else if (direction === 1) {
+                        moveTopButton.innerHTML = '<i class="bi bi-chevron-down"></i>';
+                    }
+                }
+            }
+            updateButtonVisibility();
+            updateButtonIcon(navigationDirection); 
+            if (moveTopButton) {
+                moveTopButton.addEventListener('click', function() {
+                    if (isClicking) {
+                        return;
+                    }
+                    isClicking = true;
+                    const isAtFooter = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50;
+                    const isAtHome = window.scrollY < document.getElementById("Offers").offsetTop / 2; 
+                    if (isAtFooter) {
+                        navigationDirection = -1; 
+                    } else if (isAtHome) {
+                        navigationDirection = 1; 
+                    }
+                    navigateSections(navigationDirection);
+                    setTimeout(() => {
+                        isClicking = false;
+                    }, 300);
+                });
+            }
+            window.addEventListener('scroll', function() {
+                updateButtonVisibility(); 
+                const currentScrollY = window.scrollY;
+                if (currentScrollY > lastScrollY) {
+                    if (navigationDirection !== 1) {
+                        navigationDirection = 1;
+                        updateButtonIcon(navigationDirection);
+                    }
+                } else if (currentScrollY < lastScrollY) {
+                    if (navigationDirection !== -1) {
+                        navigationDirection = -1;
+                        updateButtonIcon(navigationDirection);
+                    }
+                }
+                lastScrollY = currentScrollY;
+                const isAtFooter = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50;
+                const isAtHome = window.scrollY < document.getElementById("Offers").offsetTop / 2;
+                if (isAtFooter) {
+                    currentSectionIndex = sections.length - 1;
+                    if (navigationDirection !== -1) { 
+                        navigationDirection = -1;
+                        updateButtonIcon(navigationDirection);
+                    }
+                } else if (isAtHome) {
+                    currentSectionIndex = 0;
+                    if (navigationDirection !== 1) { 
+                        navigationDirection = 1;
+                        updateButtonIcon(navigationDirection);
+                    }
+                } else {
+                    for (let i = 0; i < sections.length; i++) {
+                        const section = document.getElementById(sections[i]);
+                        if (section) {
+                            const sectionTop = section.offsetTop;
+                            const sectionHeight = section.offsetHeight;
+                            if (currentScrollY >= sectionTop && currentScrollY < (sectionTop + sectionHeight)) {
+                                currentSectionIndex = i;
+                                break;
+                            }
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+    
+    <script type="text/javascript ">
+        $(function () {
+            $('.w3_agile_portfolio_grid a').Chocolat();
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const cards = document.querySelectorAll('.producto');
+            cards.forEach(card => {
+                const description = card.querySelector('.description');
+                const readMoreBtn = card.querySelector('.read-more-btn');
+                if (description && readMoreBtn) {
+                    const maxHeight = 50;
+                    if (description.offsetHeight > maxHeight) {
+                        description.classList.add('collapsed');
+                        description.style.maxHeight = maxHeight + 'px';
+                        readMoreBtn.style.display = 'block';
+                        readMoreBtn.innerHTML = 'Read more <i class="bi bi-arrow-down-circle"></i>';
+                        readMoreBtn.addEventListener('click', function() {
+                            description.classList.toggle('collapsed');
+                            if (description.classList.contains('collapsed')) {
+                                description.style.maxHeight = maxHeight + 'px';
+                                readMoreBtn.innerHTML = 'Read more <i class="bi bi-arrow-down-circle"></i>';
+                            } else {
+                                description.style.maxHeight = description.scrollHeight + 'px';
+                                readMoreBtn.innerHTML = 'Read less <i class="bi bi-arrow-up-circle"></i>';
+                            }
+                        });
+                    } else {
+                        readMoreBtn.style.display = 'none';
+                    }
+                }
+            });
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const callButton = document.getElementById('callButton');
+            const tooltip = new bootstrap.Tooltip(callButton, {
+                placement: 'bottom',
+                title: '+1 510-444-4444',
+                customClass: 'tooltip-green'
+            });
+            let isTooltipVisible = false;
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+            callButton.addEventListener('click', function(event) {
+                if (!isMobile) {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    callButton.classList.toggle('active'); 
+                    if (isTooltipVisible) {
+                        tooltip.hide();
+                        isTooltipVisible = false;
+                    } else {
+                        tooltip.show();
+                        isTooltipVisible = true;
+                    }
+                }
+            });
+            
+            document.addEventListener('click', function(event) {
+                if (!isMobile && isTooltipVisible && event.target !== callButton && !callButton.contains(event.target)) {
+                    tooltip.hide();
+                    callButton.classList.remove('active');
+                    isTooltipVisible = false;
+                } else if (!isMobile && !isTooltipVisible && callButton.classList.contains('active') && event.target !== callButton && !callButton.contains(event.target)) {
+                    callButton.classList.remove('active');
+                }
+            });
+        });
+    </script>
+    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const imageBoxes = document.querySelectorAll('.img-box-vertical');
+            let activeBox = null;
+            const originalWidths = {};
+            const expandedWidth = '150px';
+            const horizontalTextInitialTransform = 'translateX(-100%)';
+            const imageUrlsToPreload = [];
+            imageBoxes.forEach(box => {
+                const style = window.getComputedStyle(box);
+                const backgroundImage = style.backgroundImage;
+                const urlMatch = backgroundImage.match(/url\(['"]?(.*?)['"]?\)/); 
+                if (urlMatch && urlMatch[1]) {
+                    imageUrlsToPreload.push(urlMatch[1]);
+                }
+            });
+            
+            let imagesLoadedCount = 0;
+            const totalImagesToPreload = imageUrlsToPreload.length;
+            function onImagePreloaded() {
+                imagesLoadedCount++;
+                if (imagesLoadedCount === totalImagesToPreload) {
+                    imageBoxes.forEach(box => {
+                        originalWidths[box] = box.offsetWidth;
+                        const horizontalTextElement = box.querySelector('.horizontal-text');
+                        if (horizontalTextElement) {
+                            horizontalTextElement.style.opacity = '0';
+                            horizontalTextElement.style.transform = horizontalTextInitialTransform;
+                        }
+                    });
+                }
+            }
+            if (totalImagesToPreload > 0) {
+                imageUrlsToPreload.forEach(url => {
+                    const img = new Image();
+                    img.onload = onImagePreloaded;
+                    img.onerror = onImagePreloaded; 
+                    img.src = url;
+                });
+            } else {
+                imageBoxes.forEach(box => {
+                    originalWidths[box] = box.offsetWidth;
+                    const horizontalTextElement = box.querySelector('.horizontal-text');
+                    if (horizontalTextElement) {
+                        horizontalTextElement.style.opacity = '0';
+                        horizontalTextElement.style.transform = horizontalTextInitialTransform;
+                    }
+                });
+            }
+            
+            imageBoxes.forEach(box => {
+                const horizontalTextElement = box.querySelector('.horizontal-text');
+                const verticalTextElement = box.querySelector('.vertical-text');
+                box.addEventListener('dblclick', function(event) {
+                    event.stopPropagation(); 
+                    if (this === activeBox) { 
+                        this.classList.remove('open');
+                        if (verticalTextElement) {
+                            verticalTextElement.style.opacity = '1';
+                        }
+                        if (horizontalTextElement) {
+                            horizontalTextElement.style.opacity = '0';
+                            horizontalTextElement.style.transform = horizontalTextInitialTransform;
+                        }
+                        if (originalWidths[this] !== undefined) {
+                            this.style.width = originalWidths[this] + 'px';
+                        }
+                        activeBox = null; 
+                    }
+                });
+                box.addEventListener('click', function(event) {
+                    event.stopPropagation();
+                    if (this === activeBox) {
+                        this.classList.remove('open');
+                        if (verticalTextElement) {
+                            verticalTextElement.style.opacity = '1';
+                        }
+                        if (horizontalTextElement) {
+                            horizontalTextElement.style.opacity = '0';
+                            horizontalTextElement.style.transform = horizontalTextInitialTransform;
+                        }
+                        if (originalWidths[this] !== undefined) {
+                            this.style.width = originalWidths[this] + 'px';
+                        }
+                        activeBox = null;
+                    } else {
+                        if (activeBox) {
+                            activeBox.classList.remove('open');
+                            const prevVerticalText = activeBox.querySelector('.vertical-text');
+                            const prevHorizontalText = activeBox.querySelector('.horizontal-text');
+                            if (prevVerticalText) {
+                                prevVerticalText.style.opacity = '1';
+                            }
+                            if (prevHorizontalText) {
+                                prevHorizontalText.style.opacity = '0';
+                                prevHorizontalText.style.transform = horizontalTextInitialTransform;
+                            }
+                            if (originalWidths[activeBox] !== undefined) {
+                                activeBox.style.width = originalWidths[activeBox] + 'px';
+                            }
+                        }
+                        this.classList.add('open');
+                        if (verticalTextElement) {
+                            verticalTextElement.style.opacity = '0';
+                        }
+                        if (horizontalTextElement) {
+                            horizontalTextElement.style.opacity = '1';
+                            horizontalTextElement.style.transform = 'translateX(0)';
+                        }
+                        activeBox = this;
+                    }
+                });
+                box.addEventListener('mouseenter', function() {
+                    if (!this.classList.contains('open')) {
+                        this.style.width = expandedWidth;
+                        this.classList.add('hovered');
+                    }
+                });
+                box.addEventListener('mouseleave', function() {
+                    if (!this.classList.contains('open')) {
+                        if (originalWidths[this] !== undefined) {
+                            this.style.width = originalWidths[this] + 'px';
+                        }
+                        this.classList.remove('hovered');
+                    }
+                });
+            });
+            
+            document.addEventListener('click', function(event) {
+                if (activeBox && !activeBox.contains(event.target)) {
+                    activeBox.classList.remove('open');
+                    if (originalWidths[activeBox] !== undefined) {
+                        activeBox.style.width = originalWidths[activeBox] + 'px';
+                    }
+                    const verticalText = activeBox.querySelector('.vertical-text');
+                    const horizontalText = activeBox.querySelector('.horizontal-text');
+                    if (verticalText) {
+                        verticalText.style.opacity = '1';
+                    }
+                    if (horizontalText) {
+                        horizontalText.style.opacity = '0';
+                        horizontalText.style.transform = horizontalTextInitialTransform;
+                    }
+                    activeBox = null;
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
+    

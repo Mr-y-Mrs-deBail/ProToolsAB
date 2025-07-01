@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/gh/paveldogreat/theme-change@v2.0.3/theme-change.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>       
+        <link href="css/animate.min.css" rel="stylesheet"> 
+        <link rel="stylesheet" href="style.css">
+        <title>ProToolsAB</title>
+  </head>
+
+<body>
+    <!--header-->
+    
+    <header id="site-header" class="fixed-top">
+      <div class="container">
+          <nav class="navbar navbar-expand-lg stroke px-0 pt-lg-0">
+              <a class="navbar-brand" href="index.html">
+                  <h1>
+                      ProToolsAB
+                  </h1>
+                  <img src="..." alt="logo" style="height:35px;" />
+              </a>
+
+              <!-- menu hamburguesa -->
+              
+              <div class="mobile-position"> 
+                  <input type="checkbox" id="btn-menu" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false">
+                  <label for="btn-menu" class="lbl-menu navbar-toggler"> 
+                      <span id="spn1"></span>
+                      <span id="spn2"></span>
+                      <span id="spn3"></span>
+                  </label>
+              </div>             
+              
+              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                  <ul class="navbar-nav mx-lg-auto">
+                      <li class="nav-item active">
+                          <a class="nav-link" href="index.html">Home<span class="visually-hidden">(current)</span></a>
+                      </li>
+
+                      <li class="nav-item">
+                          <a class="nav-link" href="#Offers">New & Offers</a>
+                      </li>
+
+                      <li class="nav-item">
+                          <a class="nav-link" href="#products">Products</a>
+                      </li>
+
+                      <li class="nav-item">
+                          <a class="nav-link" href="#services">Services</a>
+                      </li>
+                      
+                      <li class="nav-item @@contact__active">
+                          <a class="nav-link" href="contact.html">Contact</a>
+                      </li>
+                  </ul>
+
+                  <ul class="nav-item @@carrito__active">
+                      <li>
+                          <a class="nav-link" href="carrito.html">
+                              <img class="car" src="img/carrito.png" alt="Carrito de compras">
+                              <span id="cantidad-carrito" class="carrito-cantidad">0</span> </a>
+                      </li>
+                  </ul>
+                  
+                  
+                  <div class="search-right">
+                      <a href="#search" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
+                      <div id="search" class="pop-overlay">
+                          <div class="popup">
+                              <form action="error.html" method="GET" class="search-box">
+                                  <input type="search" placeholder="Enter Keyword" name="search" required="required" autofocus="">
+                                  <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
+                              </form>
+                          </div>
+                          <a class="close" href="#close">×</a>
+                      </div>
+                  </div>
+                  
+                  <div class="top-quote mr-lg-3 mt-lg-0 btn-buynow">
+                      <div class="text-button">
+                              <span class="side front-text">Buy Now</span>
+                              <span class="side top-text"><i class="carwhite bi bi-cart3"></i></span>
+                      </div>
+                  </div>
+              </div>
+              
+              <div class="mobile-position">
+                  <nav class="navigation">
+                      <div class="theme-switch-wrapper">
+                          <label class="theme-switch" for="checkbox">
+                              <input type="checkbox" id="checkbox">
+                              <div class="mode-container">
+                                  <i class="gg-sun"></i>
+                                  <i class="bi bi-moon-stars"></i>
+                              </div>
+                          </label>
+                      </div>
+                  </nav>
+              </div>
+          </nav>
+      </div>
+  </header>
+
+<!-- Titulo______________________________________________________________________________________________________ -->
+ 
+  <section class="w3l-about-breadcrumb">
+    <div class="breadcrumb-bg breadcrumb-bg-about py-5">
+        <div class="container py-lg-4 py-md-3">
+            <h2 class="title">Contact us</h2>
+        </div>
+    </div>
+</section>
+
+<!-- Información_________________________________________________________________________________________________________ -->
+
+  <div class="w3l-contact-info py-5" id="contact">
+    <div class="container py-lg-5 py-md-4">
+        <div class="align-self mt-lg-0 mt-md-5 mt-4">
+            <div class="contact-infos">
+                <div class="single-contact-infos">
+                    <div class="icon-box"> <span class="fa fa-map-marker"></span></div>
+                    <div class="text-box">
+                        <h3 class="mb-3">Address</h3>
+                        <p><i class="fas fa-map-marker-alt"></i>Los Angeles, CA, USA</p>
+                    </div>
+                </div>
+        
+                <div class="single-contact-infos">
+                    <div class="icon-box"> <span class="fa fa-envelope"></span></div>
+                    <div class="text-box">
+                        <h3 class="mb-3">Contact info</h3>
+                        <p><i class="fas fa-phone-alt"></i>+1 510-444-4444</p>
+                        <p><i class="fas fa-envelope"></i> AlexBail@ProToolsAB.com</p>
+                    </div>
+                </div>
+                <div class="single-contact-infos">
+                  <div class="icon-box"> <span class="fa fa-clock-o"></span></div>
+                  <div class="text-box">
+                    <h3>Horarios</h3>
+                <p>Lunes - Sábado 08:00 am - 08:00 pm <br>
+                   Domingo 08:00 am - 12:00 pm</p>
+                      
+                  </div>
+              </div>
+            </div>
+        </div>
+        <div class="row mt-5">
+            <div class="col-lg-6 map">
+                <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3001161.424489281!2d-78.01909140705047!3d42.72866436845163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4ccc4bf0f123a5a9%3A0xddcfc6c1de189567!2sNew%20York%2C%20USA!5e0!3m2!1sen!2sin!4v1570786994395!5m2!1sen!2sin"
+                    frameborder="0" allowfullscreen=""></iframe>
+            </div>
+            <div class="col-lg-6 form-inner-cont mt-lg-0 mt-sm-5 mt-4">
+                <form action="https://sendmail.AmnaCode.com/submitForm" method="post" class="signin-form">
+                    <div class="form-input">
+                        <input type="text" name="w3lName" id="w3lName" placeholder="Your name">
+                    </div>
+                    <div class="form-input">
+                        <input type="email" name="w3lSender" id="w3lSender" placeholder="Your email address"
+                            required="">
+                    </div>
+                    <div class="form-input">
+                        <textarea name="w3lMessage" id="w3lMessage" placeholder="Your message" required=""></textarea>
+                    </div>
+                    <div class="text-right">
+                        <button type="submit" class="btn btn-style btn-primary">Submit</button>
+                    </div>
+
+<button class="enviar">
+  <div class="svg-wrapper-1">
+    <div class="svg-wrapper">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        width="24"
+        height="24"
+      >
+        <path fill="none" d="M0 0h24v24H0z"></path>
+        <path
+          fill="currentColor"
+          d="M1.946 9.315c-.522-.174-.527-.455.01-.634l19.087-6.362c.529-.176.832.12.684.638l-5.454 19.086c-.15.529-.455.547-.679.045L12 14l6-8-8 6-8.054-2.685z"
+        ></path>
+      </svg>
+    </div>
+  </div>
+  <span>Send</span>
+</button>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- footer _____________________________________________________________________________________________________________________________ -->
+   
+   
+ <section class="w3l-footer-29-main">
+  <div class="footer-29 py-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-12 text-center mb-3">
+                  <div class="col-md-4 d-flex align-items-center justify-content-md-start justify-content-center mb-md-0 mb-3">
+                  <h2>
+                      <a href="index.html" class="">
+                          ProToolsAB <img src="..." alt="logo" style="height:35px;" />
+                      </a>
+                  </h2>
+                  </div>
+              </div>
+          </div>
+          <div class="row">
+              <div class="col-12 text-center">
+                  <ul class="social-icon list-unstyled d-flex justify-content-center flex-wrap">
+                      <li><a href="#" class="icon"><ion-icon name="logo-youtube"></ion-icon></a></li>
+                      <li><a href="#" class="icon"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+                      <li><a href="#" class="icon"><i class="bi bi-envelope-at"></i></a></li>
+                      <li><a href="#" class="icon"><ion-icon name="logo-facebook"></ion-icon></a></li>
+                      <li><a href="#" class="icon"><ion-icon name="logo-instagram"></ion-icon></a></li>
+                      <li><a href="#" class="icon"><i class="bi bi-twitter-x"></i></a></li>
+                  </ul>
+                  <ul class="menu list-unstyled d-flex justify-content-center flex-wrap">
+                      <li><a href="#" class="menu-icon">Home</a></li>
+                      <li><a href="#" class="menu-icon">New & Offers</a></li>
+                      <li><a href="#" class="menu-icon">Products</a></li>
+                      <li><a href="#" class="menu-icon">Contact</a></li>
+                  </ul>
+<p class="text mt-3">&copy; 2025 All Rights Reserved ProToolsAB</p>                
+</div>
+          </div>
+      </div>
+  </div>
+</section>
+
+<script
+type="module"
+src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
+></script>
+<script
+nomodule
+src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
+></script>
+
+ 
+  <script>
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () {
+      scrollFunction()
+    };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        document.getElementById("movetop").style.display = "block";
+      } else {
+        document.getElementById("movetop").style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+  <!-- //move top -->
+</section>
+
+<!-- Template JavaScript -->
+
+
+
+<!-- js for portfolio lightbox -->
+<script src="java.js"></script>
+<!--light-box-files -->
+<script type="text/javascript ">
+  $(function () {
+    $('.w3_agile_portfolio_grid a').Chocolat();
+  });
+</script>
+<!-- /js for portfolio lightbox -->
+
+<script>
+  $(document).ready(function () {
+    $('.popup-with-zoom-anim').magnificPopup({
+      type: 'inline',
+
+      fixedContentPos: false,
+      fixedBgPos: true,
+
+      overflowY: 'auto',
+
+      closeBtnInside: true,
+      preloader: false,
+
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-zoom-in'
+    });
+
+    $('.popup-with-move-anim').magnificPopup({
+      type: 'inline',
+
+      fixedContentPos: false,
+      fixedBgPos: true,
+
+      overflowY: 'auto',
+
+      closeBtnInside: true,
+      preloader: false,
+
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'my-mfp-slide-bottom'
+    });
+  });
+</script>
+
+<!-- script for testimonials -->
+<script>
+  $(document).ready(function () {
+    $('.owl-testimonial').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: true,
+      dots: false,
+      responsiveClass: true,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: true
+        },
+        480: {
+          items: 1,
+          nav: true
+        },
+        667: {
+          items: 1,
+          nav: true
+        },
+        1000: {
+          items: 1,
+          nav: true
+        }
+      }
+    })
+  })
+</script>
+<!-- //script for testimonials -->
+
+<!-- script for blog slider -->
+<script>
+  $(document).ready(function () {
+    $('.owl-two').owlCarousel({
+      loop: true,
+      margin: 30,
+      nav: false,
+      responsiveClass: true,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        480: {
+          items: 1,
+          nav: false
+        },
+        992: {
+          items: 2,
+          nav: false
+        }
+      }
+    })
+  })
+</script>
+<!-- //script for blog slider -->
+
+
+<!-- script for banner slider-->
+<script>
+  $(document).ready(function () {
+    $('.owl-one').owlCarousel({
+      loop: true,
+      margin: 0,
+      nav: false,
+      responsiveClass: true,
+      autoplay: false,
+      autoplayTimeout: 5000,
+      autoplaySpeed: 1000,
+      autoplayHoverPause: false,
+      responsive: {
+        0: {
+          items: 1,
+          nav: false
+        },
+        480: {
+          items: 1,
+          nav: false
+        },
+        667: {
+          items: 1,
+          nav: false
+        },
+        1000: {
+          items: 1,
+          nav: false
+        }
+      }
+    })
+  })
+</script>
+<!-- //script -->
+
+
+<!-- disable body scroll which navbar is in active -->
+<script>
+  $(function () {
+    $('.navbar-toggler').click(function () {
+      $('body').toggleClass('noscroll');
+    })
+  });
+</script>
+<!-- disable body scroll which navbar is in active -->
+
+<!--/MENU-JS-->
+<script>
+  $(window).on("scroll", function () {
+    var scroll = $(window).scrollTop();
+
+    if (scroll >= 80) {
+      $("#site-header").addClass("nav-fixed");
+    } else {
+      $("#site-header").removeClass("nav-fixed");
+    }
+  });
+
+  //Main navigation Active Class Add Remove
+  $(".navbar-toggler").on("click", function () {
+    $("header").toggleClass("active");
+  });
+  $(document).on("ready", function () {
+    if ($(window).width() > 991) {
+      $("header").removeClass("active");
+    }
+    $(window).on("resize", function () {
+      if ($(window).width() > 991) {
+        $("header").removeClass("active");
+      }
+    });
+  });
+</script>
+<!--//MENU-JS-->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<script src="java.js"></script>
+</body>
+
+</html>
