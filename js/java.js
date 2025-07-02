@@ -13,8 +13,7 @@ function switchTheme(e) {
     if (e.target.checked) {
         document.documentElement.setAttribute('data-theme', 'dark');
         localStorage.setItem('theme', 'dark');
-    }
-    else {
+    } else {
         document.documentElement.setAttribute('data-theme', 'light');
         localStorage.setItem('theme', 'light');
     }
@@ -26,12 +25,13 @@ toggleSwitch.addEventListener('change', switchTheme, false);
 document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.querySelector('.navbar-toggler');
     const menu = document.querySelector('#navbartogglermv');
-    const iconExpand = document.querySelector('.icon-expand');
-    const iconClose = document.querySelector('.icon-close');
+    // Obtenemos la referencia al checkbox directamente
+    const menuCheckbox = document.querySelector('#btn-menu'); 
 
     const navLinks = document.querySelectorAll('#navbartogglermv .navbar-nav .nav-link');
 
     menuToggle.addEventListener('click', () => {
+        // Obtenemos el estado actual desde el atributo aria-expanded para decidir si abrir o cerrar
         const isExpanded = menuToggle.getAttribute('aria-expanded') === 'true';
 
         if (isExpanded) {
@@ -44,22 +44,24 @@ document.addEventListener('DOMContentLoaded', () => {
     const abrirMenu = () => {
         menu.classList.add('show');
         menuToggle.setAttribute('aria-expanded', 'true');
+        // Sincroniza el estado checked del checkbox con la apertura del menú
+        if (menuCheckbox) {
+            menuCheckbox.checked = true;
+        }
         agregarOverlay();
-        if (iconExpand) iconExpand.style.display = 'none';
-        if (iconClose) iconClose.style.display = 'block';
+        // NOTA: Eliminamos las líneas que controlaban directamente iconExpand e iconClose aquí.
+        // El CSS se encargará de la transformación de la hamburguesa a la X basándose en el estado del checkbox.
     };
 
     const cerrarMenu = () => {
         menu.classList.remove('show');
         menuToggle.setAttribute('aria-expanded', 'false');
-        eliminarOverlay();
-        if (iconExpand) iconExpand.style.display = 'block';
-        if (iconClose) iconClose.style.display = 'none';
-
-        const menuCheckbox = document.querySelector('#btn-menu');
+        // Sincroniza el estado checked del checkbox con el cierre del menú
         if (menuCheckbox) {
             menuCheckbox.checked = false;
         }
+        eliminarOverlay();
+        // NOTA: Eliminamos las líneas que controlaban directamente iconExpand e iconClose aquí.
     };
 
     const agregarOverlay = () => {
@@ -67,6 +69,7 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.add('pantalla-completa');
         document.body.appendChild(overlay);
 
+        // Agregamos el event listener al overlay para cerrar el menú
         overlay.addEventListener('click', cerrarMenu);
     };
 

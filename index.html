@@ -48,14 +48,13 @@
                     </h1>
                 </a>
                 
-                <div class="mobile-position"> 
-                    <input type="checkbox" id="btn-menu" data-toggle="collapse" data-target="#navbartogglermv" aria-controls="navbartogglermv" aria-expanded="false">
-                    <label for="btn-menu" class="lbl-menu navbar-toggler"> 
-                        <span id="spn1"></span>
-                        <span id="spn2"></span>
-                        <span id="spn3"></span>
-                    </label>
-                </div>          
+              <div class="mobile-position"> 
+    <input type="checkbox" id="btn-menu" data-toggle="collapse" data-target="#navbartogglermv" aria-controls="navbartogglermv" aria-expanded="false" class="d-none"> <label for="btn-menu" class="lbl-menu navbar-toggler"> 
+        <span id="spn1" class="icon-bar"></span>
+        <span id="spn2" class="icon-bar"></span>
+        <span id="spn3" class="icon-bar"></span>
+        </label>
+</div>        
                 
                 <div class="collapse navbar-collapse" id="navbartogglermv">
                     <ul class="navbar-nav mx-lg-auto">
@@ -880,6 +879,7 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/principal.js"></script>
+    <script src="js/boton.js"></script>
     <script src="js/java.js"></script>
     <script src="js/animation.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -949,111 +949,6 @@
             });
             owl.on('touchend', function() {
                 owl.trigger('play.owl.autoplay'); 
-            });
-        });
-    </script>
-    
-    <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const moveTopButton = document.getElementById("movetop");
-            const sections = ["home", "Offers", "products", "services", "footer"];
-            let currentSectionIndex = 0;
-            let isClicking = false;
-            let navigationDirection = 1; 
-            let lastScrollY = 0; 
-            function scrollToSection(sectionId) {
-                const section = document.getElementById(sectionId);
-                if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
-                }
-            }
-            function updateButtonVisibility() {
-                if (moveTopButton) {
-                    moveTopButton.style.display = "block";
-                }
-            }
-            function navigateSections(direction) {
-                currentSectionIndex += direction;
-                if (currentSectionIndex < 0) {
-                    currentSectionIndex = 0;
-                } else if (currentSectionIndex >= sections.length) {
-                    currentSectionIndex = sections.length - 1;
-                }
-                scrollToSection(sections[currentSectionIndex]);
-                updateButtonIcon(navigationDirection); 
-            }
-            function updateButtonIcon(direction) {
-                if (moveTopButton) {
-                    if (direction === -1) {
-                        moveTopButton.innerHTML = '<i class="bi bi-chevron-up"></i>';
-                    } else if (direction === 1) {
-                        moveTopButton.innerHTML = '<i class="bi bi-chevron-down"></i>';
-                    }
-                }
-            }
-            updateButtonVisibility();
-            updateButtonIcon(navigationDirection); 
-            if (moveTopButton) {
-                moveTopButton.addEventListener('click', function() {
-                    if (isClicking) {
-                        return;
-                    }
-                    isClicking = true;
-                    const isAtFooter = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50;
-                    const isAtHome = window.scrollY < document.getElementById("Offers").offsetTop / 2; 
-                    if (isAtFooter) {
-                        navigationDirection = -1; 
-                    } else if (isAtHome) {
-                        navigationDirection = 1; 
-                    }
-                    navigateSections(navigationDirection);
-                    setTimeout(() => {
-                        isClicking = false;
-                    }, 300);
-                });
-            }
-            window.addEventListener('scroll', function() {
-                updateButtonVisibility(); 
-                const currentScrollY = window.scrollY;
-                if (currentScrollY > lastScrollY) {
-                    if (navigationDirection !== 1) {
-                        navigationDirection = 1;
-                        updateButtonIcon(navigationDirection);
-                    }
-                } else if (currentScrollY < lastScrollY) {
-                    if (navigationDirection !== -1) {
-                        navigationDirection = -1;
-                        updateButtonIcon(navigationDirection);
-                    }
-                }
-                lastScrollY = currentScrollY;
-                const isAtFooter = (window.innerHeight + window.scrollY) >= document.body.offsetHeight - 50;
-                const isAtHome = window.scrollY < document.getElementById("Offers").offsetTop / 2;
-                if (isAtFooter) {
-                    currentSectionIndex = sections.length - 1;
-                    if (navigationDirection !== -1) { 
-                        navigationDirection = -1;
-                        updateButtonIcon(navigationDirection);
-                    }
-                } else if (isAtHome) {
-                    currentSectionIndex = 0;
-                    if (navigationDirection !== 1) { 
-                        navigationDirection = 1;
-                        updateButtonIcon(navigationDirection);
-                    }
-                } else {
-                    for (let i = 0; i < sections.length; i++) {
-                        const section = document.getElementById(sections[i]);
-                        if (section) {
-                            const sectionTop = section.offsetTop;
-                            const sectionHeight = section.offsetHeight;
-                            if (currentScrollY >= sectionTop && currentScrollY < (sectionTop + sectionHeight)) {
-                                currentSectionIndex = i;
-                                break;
-                            }
-                        }
-                    }
-                }
             });
         });
     </script>
