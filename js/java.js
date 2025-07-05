@@ -1,28 +1,81 @@
-const toggleSwitch = document.querySelector('.theme-switch input[type="checkbox"]');
-const currentTheme = localStorage.getItem('theme');
+const modeToggleContainer = document.getElementById('mode-toggle-container');
+const sunIcon = document.getElementById('sun-icon');
+const moonIcon = document.getElementById('moon-icon');
+const autoIconImg = document.getElementById('auto-icon-img');
 
-if (currentTheme) {
-    document.documentElement.setAttribute('data-theme', currentTheme);
+const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
-    if (currentTheme === 'dark') {
-        toggleSwitch.checked = true;
-    }
-}
+const themeModes = ['light', 'dark', 'auto'];
+let currentThemeIndex = 0;
 
-function switchTheme(e) {
-    if (e.target.checked) {
-        document.documentElement.setAttribute('data-theme', 'dark');
-        localStorage.setItem('theme', 'dark');
-    } else {
+/**
+ * @param {string} theme - El tema a aplicar ('light', 'dark', 'auto').
+ */
+
+function applyThemeAndShowIcon(theme) {
+    [sunIcon, moonIcon, autoIconImg].forEach(icon => {
+        if (icon) icon.classList.remove('visible');
+    });
+
+    if (theme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
-        localStorage.setItem('theme', 'light');
+        if (sunIcon) sunIcon.classList.add('visible');
+        if (autoIconImg) autoIconImg.src = 'img/diaynoche.png';
+        currentThemeIndex = themeModes.indexOf('light');
+    } else if (theme === 'dark') {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        if (moonIcon) moonIcon.classList.add('visible');
+        if (autoIconImg) autoIconImg.src = 'img/diaynoche.png'; 
+        currentThemeIndex = themeModes.indexOf('dark');
+    } else if (theme === 'auto') {
+        const systemPreference = prefersDarkScheme.matches ? 'dark' : 'light';
+        document.documentElement.setAttribute('data-theme', systemPreference);
+        if (autoIconImg) {
+            autoIconImg.classList.add('visible');
+            if (systemPreference === 'dark') {
+                autoIconImg.src = 'img/diaynoche2.png'; 
+            } else {
+                autoIconImg.src = 'img/diaynoche.png'; 
+            }
+        }
+        currentThemeIndex = themeModes.indexOf('auto');
     }
 }
 
-toggleSwitch.addEventListener('change', switchTheme, false);
+function toggleNextTheme() {
+    currentThemeIndex = (currentThemeIndex + 1) % themeModes.length;
+    const nextTheme = themeModes[currentThemeIndex];
 
+    applyThemeAndShowIcon(nextTheme);
+
+    if (nextTheme === 'auto') {
+        localStorage.removeItem('theme');
+    } else {
+        localStorage.setItem('theme', nextTheme);
+    }
+}
+
+if (modeToggleContainer) {
+    modeToggleContainer.addEventListener('click', toggleNextTheme, false);
+}
 
 document.addEventListener('DOMContentLoaded', () => {
+    const storedTheme = localStorage.getItem('theme');
+
+    if (storedTheme) {
+        applyThemeAndShowIcon(storedTheme);
+    } else {
+        applyThemeAndShowIcon('auto');
+    }
+
+    prefersDarkScheme.addEventListener('change', () => {
+        const currentLocalStorageTheme = localStorage.getItem('theme');
+        if (currentLocalStorageTheme === null || currentLocalStorageTheme === 'auto') {
+            applyThemeAndShowIcon('auto'); 
+        }
+    });
+
+    // menú
     const menu = document.querySelector('#navbartogglermv');
     const navLinks = document.querySelectorAll('#navbartogglermv .navbar-nav .nav-link');
 
@@ -30,7 +83,7 @@ document.addEventListener('DOMContentLoaded', () => {
         link.addEventListener('click', () => {
             const menuToggle = document.querySelector('.navbar-toggler[data-bs-toggle="collapse"]');
             if (menuToggle && menu.classList.contains('show')) {
-                menuToggle.click(); 
+                menuToggle.click();
             }
             eliminarOverlay();
         });
@@ -41,13 +94,13 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.add('pantalla-completa');
         document.body.appendChild(overlay);
 
-        overlay.addEventListener('click', () => {
+        overlay.addEventListener('click', () => { 
             const menuToggle = document.querySelector('.navbar-toggler[data-bs-toggle="collapse"]');
             if (menuToggle && menu.classList.contains('show')) {
                 menuToggle.click();
             }
-            eliminarOverlay(); 
-        });
+            eliminarOverlay();
+        }); 
     };
 
     const eliminarOverlay = () => {
@@ -57,8 +110,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    menu.addEventListener('shown.bs.collapse', agregarOverlay);
-    menu.addEventListener('hidden.bs.collapse', eliminarOverlay);
+    if (menu) {
+        menu.addEventListener('shown.bs.collapse', agregarOverlay);
+        menu.addEventListener('hidden.bs.collapse', eliminarOverlay);
+    }
 });
 
 // JS para el carrito

@@ -621,26 +621,44 @@ a.read:hover span.fa, a.read:hover span.fas {
 
 /* modo oscuro y claro _________________________________________________________________________________________________________________ */
 
-.mode-container {
-  width: 24px;
-  height: 24px;
-  padding: 1px 0;
-  margin-top: 5px;
+.mode-container i,
+.mode-container img {
+  display: none;
 }
 
-.gg-sun {
+.mode-container i.visible,
+.mode-container img.visible {
+  display: block;
+}
+
+header:not(.nav-fixed) .gg-sun {
   position: relative;
   transform: scale(var(--ggs, 1));
   height: 24px;
-  background: linear-gradient(180deg, white 4px, transparent 0) no-repeat 5px -6px/2px 6px, 
-              linear-gradient(180deg, white 4px, transparent 0) no-repeat 5px 14px/2px 6px, 
-              linear-gradient(180deg, white 4px, transparent 0) no-repeat -8px 5px/6px 2px, 
+  background: linear-gradient(180deg, white 4px, transparent 0) no-repeat 5px -6px/2px 6px,
+              linear-gradient(180deg, white 4px, transparent 0) no-repeat 5px 14px/2px 6px,
+              linear-gradient(180deg, white 4px, transparent 0) no-repeat -8px 5px/6px 2px,
               linear-gradient(180deg, white 4px, transparent 0) no-repeat 14px 5px/6px 2px;
   border-radius: 100px;
-  box-shadow: inset 0 0 0 2px; 
+  box-shadow: inset 0 0 0 2px;
   border: 6px solid transparent;
   left: 9px;
-  color: white; 
+  color: white;
+}
+
+.nav-fixed .gg-sun {
+  position: relative;
+  transform: scale(var(--ggs, 1));
+  height: 24px;
+  background: linear-gradient(180deg, var(--heading-color) 4px, transparent 0) no-repeat 5px -6px/2px 6px,
+              linear-gradient(180deg, var(--heading-color) 4px, transparent 0) no-repeat 5px 14px/2px 6px,
+              linear-gradient(180deg, var(--heading-color) 4px, transparent 0) no-repeat -8px 5px/6px 2px,
+              linear-gradient(180deg, var(--heading-color) 4px, transparent 0) no-repeat 14px 5px/6px 2px;
+  border-radius: 100px;
+  box-shadow: inset 0 0 0 2px;
+  border: 6px solid transparent;
+  left: 9px;
+  color: var(--heading-color);
 }
 
 .bi-moon-stars {
@@ -684,21 +702,13 @@ a.read:hover span.fa, a.read:hover span.fas {
   transform: rotate(45deg);
 }
 
-.mode-container i.gg-sun {
-  display: none;
+.predeterminado {
+  position: relative;
+  width: 30px;
+  height: 30px;
+  left: 9px;
 }
 
-.mode-container i.bi-moon-stars {
-  display: block;
-}
-
-input:checked + .mode-container i.gg-sun {
-  display: block;
-}
-
-input:checked + .mode-container i.bi-moon-stars {
-  display: none;
-}
 
 /* menu hamburguesa y barra__________________________________________________________________________________________________________________ */
 

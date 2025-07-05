@@ -21,11 +21,9 @@
         <meta property="twitter:image" content="https:" /> -->
 
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
-        <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/paveldogreat/theme-change@v2.0.3/theme-change.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css"> 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>       
@@ -108,13 +106,11 @@
             <div class="mobile-position">
                 <nav class="navigation">
                     <div class="theme-switch-wrapper">
-                        <label class="theme-switch" for="checkbox">
-                            <input type="checkbox" id="checkbox">
-                            <div class="mode-container">
-                                <i class="gg-sun"></i>
-                                <i class="bi bi-moon-stars"></i>
-                            </div>
-                        </label>
+                        <div class="mode-container" id="mode-toggle-container">
+                            <i class="gg-sun" id="sun-icon"></i>
+                            <i class="bi bi-moon-stars" id="moon-icon"></i>
+                            <img class="predeterminado" src="img/diaynoche.png" alt="Modo Automático" id="auto-icon-img">
+                        </div>
                     </div>
                 </nav>
             </div>
@@ -162,7 +158,7 @@
                                         <div class="row">
                                             <div class="col-log-8"> 
                                                 <h5 class="title1 display-4 text-white">Carpentry Tools</h5> 
-                                                <p class="mt-4 text-white"> Discover our extensive selection of carpentry tools, designed for both experienced professionals and enthusiastic hobbyists. </p> 
+                                                <p class="mt-4 text-white"> Discover our extensive selection of carpentry tools, <br> designed for both experienced professionals and enthusiastic hobbyists. </p> 
                                                 <div class="more wow fadeInUp" data-wow-duration="1000ms" data-wow-delay="300ms"> 
                                                     <a class="btn btnbuy mt-sm-5 mt-4 hvr-curl-bottom-right" id="leerMasCarpinteria" href="#products"> Read More</a> 
                                                 </div>
