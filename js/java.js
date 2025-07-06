@@ -2,14 +2,43 @@ const modeToggleContainer = document.getElementById('mode-toggle-container');
 const sunIcon = document.getElementById('sun-icon');
 const moonIcon = document.getElementById('moon-icon');
 const autoIconImg = document.getElementById('auto-icon-img');
+const header = document.querySelector('header'); 
 
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 const themeModes = ['light', 'dark', 'auto'];
 let currentThemeIndex = 0;
 
+function updateAutoIconImage() {
+    if (!autoIconImg) return;
+
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const isNavFixed = header && header.classList.contains('nav-fixed');
+
+    if (currentTheme === 'dark') {
+        autoIconImg.src = 'img/diaynoche2.png';
+    } else if (currentTheme === 'light') {
+        if (isNavFixed) {
+            autoIconImg.src = 'img/diaynoche.png';
+        } else {
+            autoIconImg.src = 'img/diaynoche2.png';
+        }
+    } else if (currentTheme === 'auto') {
+        const systemPreference = prefersDarkScheme.matches ? 'dark' : 'light';
+        if (systemPreference === 'dark') {
+            autoIconImg.src = 'img/diaynoche2.png';
+        } else {
+            if (isNavFixed) {
+                autoIconImg.src = 'img/diaynoche.png';
+            } else {
+                autoIconImg.src = 'img/diaynoche2.png';
+            }
+        }
+    }
+}
+
 /**
- * @param {string} theme - El tema a aplicar ('light', 'dark', 'auto').
+ * @param {string} theme
  */
 
 function applyThemeAndShowIcon(theme) {
@@ -20,26 +49,21 @@ function applyThemeAndShowIcon(theme) {
     if (theme === 'light') {
         document.documentElement.setAttribute('data-theme', 'light');
         if (sunIcon) sunIcon.classList.add('visible');
-        if (autoIconImg) autoIconImg.src = 'img/diaynoche.png';
         currentThemeIndex = themeModes.indexOf('light');
     } else if (theme === 'dark') {
         document.documentElement.setAttribute('data-theme', 'dark');
         if (moonIcon) moonIcon.classList.add('visible');
-        if (autoIconImg) autoIconImg.src = 'img/diaynoche.png'; 
         currentThemeIndex = themeModes.indexOf('dark');
     } else if (theme === 'auto') {
         const systemPreference = prefersDarkScheme.matches ? 'dark' : 'light';
         document.documentElement.setAttribute('data-theme', systemPreference);
         if (autoIconImg) {
             autoIconImg.classList.add('visible');
-            if (systemPreference === 'dark') {
-                autoIconImg.src = 'img/diaynoche2.png'; 
-            } else {
-                autoIconImg.src = 'img/diaynoche.png'; 
-            }
         }
         currentThemeIndex = themeModes.indexOf('auto');
     }
+
+    updateAutoIconImage();
 }
 
 function toggleNextTheme() {
@@ -68,14 +92,28 @@ document.addEventListener('DOMContentLoaded', () => {
         applyThemeAndShowIcon('auto');
     }
 
+    updateAutoIconImage();
+
     prefersDarkScheme.addEventListener('change', () => {
         const currentLocalStorageTheme = localStorage.getItem('theme');
         if (currentLocalStorageTheme === null || currentLocalStorageTheme === 'auto') {
-            applyThemeAndShowIcon('auto'); 
+            applyThemeAndShowIcon('auto');
         }
     });
 
-    // menú
+    const observer = new MutationObserver(mutations => {
+        mutations.forEach(mutation => {
+            if (mutation.attributeName === 'class') {
+                updateAutoIconImage(); 
+            }
+        });
+    });
+
+    if (header) {
+        observer.observe(header, { attributes: true });
+    }
+
+    // Menú
     const menu = document.querySelector('#navbartogglermv');
     const navLinks = document.querySelectorAll('#navbartogglermv .navbar-nav .nav-link');
 
@@ -94,13 +132,13 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.classList.add('pantalla-completa');
         document.body.appendChild(overlay);
 
-        overlay.addEventListener('click', () => { 
+        overlay.addEventListener('click', () => {
             const menuToggle = document.querySelector('.navbar-toggler[data-bs-toggle="collapse"]');
             if (menuToggle && menu.classList.contains('show')) {
                 menuToggle.click();
             }
             eliminarOverlay();
-        }); 
+        });
     };
 
     const eliminarOverlay = () => {
