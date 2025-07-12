@@ -17,98 +17,89 @@
   </head>
 
 <body>
-    <!--header-->
+  
+  <!--header-->
     
-    <header id="site-header" class="fixed-top">
-      <div class="container">
-          <nav class="navbar navbar-expand-lg stroke px-0 pt-lg-0">
-              <a class="navbar-brand" href="index.html">
-                  <h1>
-                      ProToolsAB
-                  </h1>
-                  <img src="..." alt="logo" style="height:35px;" />
-              </a>
+     <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke px-0 pt-lg-0">
+                <a class="navbar-brand logo001" href="#">
+                    <h1 class="logo01">
+                        ProToolsAB<img src="img/logo.png" alt="logo"/>
+                    </h1>
+                </a>
 
-              <!-- menu hamburguesa -->
-              
-              <div class="mobile-position"> 
-                  <input type="checkbox" id="btn-menu" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false">
-                  <label for="btn-menu" class="lbl-menu navbar-toggler"> 
-                      <span id="spn1"></span>
-                      <span id="spn2"></span>
-                      <span id="spn3"></span>
-                  </label>
-              </div>             
-              
-              <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                  <ul class="navbar-nav mx-lg-auto">
-                      <li class="nav-item active">
-                          <a class="nav-link" href="index.html">Home<span class="visually-hidden">(current)</span></a>
-                      </li>
-
-                      <li class="nav-item">
-                          <a class="nav-link" href="#Offers">New & Offers</a>
-                      </li>
-
-                      <li class="nav-item">
-                          <a class="nav-link" href="#products">Products</a>
-                      </li>
-
-                      <li class="nav-item">
-                          <a class="nav-link" href="#services">Services</a>
-                      </li>
-                      
-                      <li class="nav-item @@contact__active">
-                          <a class="nav-link" href="contact.html">Contact</a>
-                      </li>
-                  </ul>
-
-                  <ul class="nav-item @@carrito__active">
-                      <li>
-                          <a class="nav-link" href="carrito.html">
-                              <img class="car" src="img/carrito.png" alt="Carrito de compras">
-                              <span id="cantidad-carrito" class="carrito-cantidad">0</span> </a>
-                      </li>
-                  </ul>
-                  
-                  
-                  <div class="search-right">
-                      <a href="#search" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
-                      <div id="search" class="pop-overlay">
-                          <div class="popup">
-                              <form action="error.html" method="GET" class="search-box">
-                                  <input type="search" placeholder="Enter Keyword" name="search" required="required" autofocus="">
-                                  <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
-                              </form>
-                          </div>
-                          <a class="close" href="#close">×</a>
-                      </div>
-                  </div>
-                  
-                  <div class="top-quote mr-lg-3 mt-lg-0 btn-buynow">
-                      <div class="text-button">
-                              <span class="side front-text">Buy Now</span>
-                              <span class="side top-text"><i class="carwhite bi bi-cart3"></i></span>
-                      </div>
-                  </div>
-              </div>
-              
-              <div class="mobile-position">
-                  <nav class="navigation">
-                      <div class="theme-switch-wrapper">
-                          <label class="theme-switch" for="checkbox">
-                              <input type="checkbox" id="checkbox">
-                              <div class="mode-container">
-                                  <i class="gg-sun"></i>
-                                  <i class="bi bi-moon-stars"></i>
-                              </div>
-                          </label>
-                      </div>
-                  </nav>
-              </div>
-          </nav>
-      </div>
-  </header>
+                <div class="mobile-position"> 
+                    <ul class="nav-item carrito001 @@carrito__active"> 
+                        <li>
+                            <a class="nav-link" href="carrito.html">
+                                <img class="car" src="img/carrito.png" alt="Carrito de compras">
+                                <span id="cantidad-carrito" class="carrito-cantidad"> 0</span> 
+                            </a>
+                        </li> 
+                    </ul>
+                    
+                    <input type="checkbox" id="btn-menu" aria-controls="navbartogglermv" aria-expanded="false" class="d-none"> 
+                    <label for="btn-menu" class="lbl-menu navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbartogglermv" aria-controls="navbartogglermv" aria-expanded="false"> 
+                        <span id="spn1" class="icon-bar"></span>
+                        <span id="spn2" class="icon-bar"></span>
+                        <span id="spn3" class="icon-bar"></span>
+                    </label>
+                </div>
+                
+                <div class="collapse navbar-collapse" id="navbartogglermv">
+                    <ul class="navbar-nav mx-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home<span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href="#Offers">New & Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item @@contact__active">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="search-right">
+                        <a href="#" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
+                        <div id="search" class="pop-overlay">
+                            <div class="popup">
+                                <form action="error.html" method="GET" class="search-box">
+                                    <input type="search" id="search-input" placeholder="Search" name="search" required="required" autofocus="">
+                                    <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
+                                    <ul id="suggestions" class="search-suggestions"></ul>
+                                </form>
+                                <div id="search-results" class="search-results-container"></div> 
+                            </div>
+                            <a class="close" href="#close">X</a>
+                        </div>
+                    </div> 
+                    <button class="buynow">
+                        <span class="front-text">Buy Now</span>
+                        <span class="car-icon"><i class="bi bi-cart3"></i></span>
+                    </button>
+                </div>
+                
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <div class="mode-container" id="mode-toggle-container">
+                                <i class="gg-sun" id="sun-icon"></i>
+                                <i class="bi bi-moon-stars" id="moon-icon"></i>
+                                <img class="predeterminado" src="img/diaynoche.png" alt="Modo Automático" id="auto-icon-img">
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </nav>
+        </div>
+    </header>
 
 <!-- Titulo______________________________________________________________________________________________________ -->
  
@@ -467,8 +458,8 @@ src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
 <!--//MENU-JS-->
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-
 <script src="java.js"></script>
+
 </body>
 
 </html>

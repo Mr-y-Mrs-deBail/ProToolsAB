@@ -167,4 +167,3 @@ const limpiarHtml = (contenedor) => {
 };
 
 productos();
-

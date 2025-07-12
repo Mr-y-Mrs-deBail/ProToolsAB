@@ -5,6 +5,22 @@ document.addEventListener('DOMContentLoaded', function() {
     const totalElement = document.querySelector('#total');
     const productContainer = document.querySelector('.gallery_agile.row');
     const updateCartButton = document.getElementById('update-cart-button');
+    const couponInput = document.getElementById('coupon');
+    const applyCouponButton = document.getElementById('apply-coupon-button');
+    const discountRow = document.getElementById('discount-row');
+    const discountAmountElement = document.getElementById('discount-amount');
+    const proceedToCheckoutButton = document.getElementById('proceed-to-checkout-button');
+    const continueShoppingContainer = document.querySelector('.continuarshop');
+
+    let discountApplied = false;
+    const couponCode = "SeñorUvita";
+    const discountPercentage = 0.20;
+
+    function toggleContinueShoppingLink(show) {
+        if (continueShoppingContainer) {
+            continueShoppingContainer.style.display = show ? 'block' : 'none';
+        }
+    }
 
     function updateCartQuantity() {
         const cartItems = localStorage.getItem('cartItems');
@@ -24,7 +40,13 @@ document.addEventListener('DOMContentLoaded', function() {
         let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         const existingItem = cartItems.find(item => item.id === productId);
         if (existingItem) {
-            console.log(`El producto "${productName}" ya está en el carrito.`);
+            Swal.fire({
+                icon: 'info',
+                title: 'Product already in cart',
+                text: `"${productName}" is already in your cart.`,
+                showConfirmButton: false,
+                timer: 1500
+            });
             return;
         } else {
             cartItems.push({
@@ -34,19 +56,61 @@ document.addEventListener('DOMContentLoaded', function() {
                 productImage: productImage,
                 quantity: 1
             });
+            Swal.fire({
+                icon: 'success',
+                title: 'Product Added!',
+                text: `"${productName}" has been added to your cart.`,
+                showConfirmButton: false,
+                timer: 1500
+            });
         }
         localStorage.setItem('cartItems', JSON.stringify(cartItems));
         updateCartQuantity();
-        renderCart();
+        if (cartTableBody) {
+            renderCart();
+        }
     }
 
-    function renderCart() {
-        if (!cartTableBody) return;
+    window.renderCart = function() {
+        if (!cartTableBody) return; 
+
         cartTableBody.innerHTML = '';
         let subtotal = 0;
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+
+        if (cartItems.length === 0) {
+            const emptyRow = cartTableBody.insertRow();
+            emptyRow.innerHTML = `
+            <td colspan="4" class="text-center py-5">
+                <p class="lead text-muted mb-3">Your cart is empty.</p>
+                <p class="text-muted small mb-4">Add some products to start shopping!</p>
+                <a href="index.html" class="shop-now-btn">
+                    <span class="toreturn"><i class="bi bi-shop me-2"></i>Shop Now</span>
+                </a>
+            </td>
+            `;
+            if (subtotalElement) {
+                subtotalElement.textContent = '$0.00';
+            }
+            if (totalElement) {
+                totalElement.textContent = '$0.00';
+            }
+            if (discountRow) {
+                discountRow.style.display = 'none';
+            }
+            if (discountAmountElement) {
+                discountAmountElement.textContent = '-$0.00';
+            }
+            updateCartQuantity();
+            toggleContinueShoppingLink(false);
+            return;
+        }
+
+        toggleContinueShoppingLink(true);
+
         cartItems.forEach(item => {
             const row = cartTableBody.insertRow();
+
             const imageCell = row.insertCell();
             const img = document.createElement('img');
             img.src = item.productImage;
@@ -54,15 +118,19 @@ document.addEventListener('DOMContentLoaded', function() {
             img.classList.add('img-fluid', 'img-thumbnail');
             imageCell.appendChild(img);
             imageCell.classList.add('product-thumbnail', 'text-center');
+
             const infoCell = row.insertCell();
             const nameElement = document.createElement('span');
             nameElement.textContent = item.name;
+            nameElement.classList.add('h5', 'text-black');
+
             const priceElement = document.createElement('div');
             priceElement.textContent = '$' + item.price.toFixed(2);
+            priceElement.classList.add('price-display');
+
             infoCell.appendChild(nameElement);
-            infoCell.appendChild(document.createElement('br'));
-            infoCell.appendChild(priceElement);
             infoCell.classList.add('product-info', 'text-center');
+
             const quantityRemoveCell = row.insertCell();
             quantityRemoveCell.classList.add('product-quantity-remove', 'text-center');
             const quantityContainer = document.createElement('div');
@@ -81,6 +149,7 @@ document.addEventListener('DOMContentLoaded', function() {
             quantityContainer.appendChild(decreaseButton);
             quantityContainer.appendChild(quantityDisplay);
             quantityContainer.appendChild(increaseButton);
+
             const removeButton = document.createElement('button');
             removeButton.classList.add('bin-button');
             removeButton.dataset.productId = item.id;
@@ -103,20 +172,48 @@ document.addEventListener('DOMContentLoaded', function() {
             `;
             quantityRemoveCell.appendChild(quantityContainer);
             quantityRemoveCell.appendChild(removeButton);
+
             const totalCell = row.insertCell();
             const itemTotal = item.price * item.quantity;
             totalCell.textContent = '$' + itemTotal.toFixed(2);
             totalCell.classList.add('product-total', 'text-center');
             subtotal += itemTotal;
         });
+
         if (subtotalElement) {
             subtotalElement.textContent = '$' + subtotal.toFixed(2);
         }
-        if (totalElement) {
-            totalElement.textContent = '$' + subtotal.toFixed(2);
+
+        let finalTotal = subtotal;
+        if (discountApplied) {
+            const discountAmount = subtotal * discountPercentage;
+            finalTotal = subtotal - discountAmount;
+            if (discountRow) discountRow.style.display = 'flex';
+            if (discountAmountElement) discountAmountElement.textContent = '-$' + discountAmount.toFixed(2);
+        } else {
+            if (discountRow) discountRow.style.display = 'none';
+            if (discountAmountElement) discountAmountElement.textContent = '-$0.00';
         }
+
+        if (totalElement) {
+            totalElement.textContent = '$' + finalTotal.toFixed(2);
+        }
+
         updateCartQuantity();
-    }
+    };
+
+    window.clearCartAndResetTotals = function() {
+        localStorage.removeItem('cartItems');
+        discountApplied = false; 
+        if (couponInput) {
+            couponInput.value = ''; 
+        }
+        window.updateCartQuantity(); 
+        if (cartTableBody) { 
+            window.renderCart();
+        } 
+    };
+
 
     if (cartTableBody) {
         cartTableBody.addEventListener('click', function(event) {
@@ -126,15 +223,8 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (button && button.dataset.productId) {
                     const productIdToRemove = button.dataset.productId;
                     let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-                    const itemToRemove = cartItems.find(item => item.id === productIdToRemove);
-                    if (itemToRemove) {
-                        if (itemToRemove.quantity > 1) {
-                            itemToRemove.quantity--;
-                        } else {
-                            cartItems = cartItems.filter(item => item.id !== productIdToRemove);
-                        }
-                        localStorage.setItem('cartItems', JSON.stringify(cartItems));
-                    }
+                    cartItems = cartItems.filter(item => item.id !== productIdToRemove);
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
                     updateCartQuantity();
                     renderCart();
                 }
@@ -162,15 +252,21 @@ document.addEventListener('DOMContentLoaded', function() {
                             totalCell.textContent = '$' + (itemToUpdate.price * itemToUpdate.quantity).toFixed(2);
                         }
                     }
-                    let subtotal = 0;
+                    let newSubtotal = 0;
                     cartItems.forEach(item => {
-                        subtotal += item.price * item.quantity;
+                        newSubtotal += item.price * item.quantity;
                     });
                     if (subtotalElement) {
-                        subtotalElement.textContent = '$' + subtotal.toFixed(2);
+                        subtotalElement.textContent = '$' + newSubtotal.toFixed(2);
+                    }
+                    let newFinalTotal = newSubtotal;
+                    if (discountApplied) {
+                        const discountAmount = newSubtotal * discountPercentage;
+                        newFinalTotal = newSubtotal - discountAmount;
+                        if (discountAmountElement) discountAmountElement.textContent = '-$' + discountAmount.toFixed(2);
                     }
                     if (totalElement) {
-                        totalElement.textContent = '$' + subtotal.toFixed(2);
+                        totalElement.textContent = '$' + newFinalTotal.toFixed(2);
                     }
                 }
             }
@@ -197,5 +293,76 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    renderCart();
+    if (applyCouponButton) {
+        applyCouponButton.addEventListener('click', function() {
+            const enteredCoupon = couponInput.value.trim();
+
+            if (enteredCoupon === couponCode) {
+                if (!discountApplied) {
+                    discountApplied = true;
+                    Swal.fire({
+                        icon: 'success',
+                        title: '¡Code Confirmed!',
+                        text: `You got a ${discountPercentage * 100}% discount on your purchase.`,
+                        confirmButtonText: '¡Great!',
+                        customClass: {
+                            confirmButton: 'confirmbutton'
+                        }
+                    });
+                    renderCart();
+                } else {
+                    Swal.fire({
+                        icon: 'info',
+                        title: 'Coupon Already Applied',
+                        text: 'This coupon has already been used for your current purchase.',
+                        confirmButtonText: 'Got It',
+                        customClass: {
+                            confirmButton: 'confirmbutton'
+                        }
+                    });
+                }
+            } else {
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Invalid Code',
+                    text: 'The coupon code entered is not valid. Please try again.',
+                    confirmButtonText: 'Ok',
+                    customClass: {
+                        confirmButton: 'confirmbutton'
+                    }
+                });
+                discountApplied = false;
+                renderCart();
+            }
+        });
+    }
+
+    if (proceedToCheckoutButton) {
+        proceedToCheckoutButton.addEventListener('click', function() {
+            Swal.fire({
+                title: '¡Thank You For Your Purchase!',
+                html: `
+                <div class="myhtml"><p>Your order has been processed successfully.</p>
+                <p>Soon, we'll be enabling direct payment and shipping options from our platform.</p>
+                <p>Come back soon for new offers and products!</p></div>`,
+                icon: 'success',
+                confirmButtonText: 'Got It',
+                allowOutsideClick: false,
+                allowEscapeKey: false,
+                customClass: {
+                confirmButton: 'confirmbutton'
+            }
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    window.clearCartAndResetTotals();
+                }
+            });
+        });
+    }
+
+    if (cartTableBody) {
+        window.renderCart();
+    } else {
+        window.updateCartQuantity();
+    }
 });

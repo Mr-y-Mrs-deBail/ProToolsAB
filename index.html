@@ -37,86 +37,87 @@
 
     <!--header_____________________________________________________________________-->
     
-   <header id="site-header" class="fixed-top">
-    <div class="container">
-        <nav class="navbar navbar-expand-lg stroke px-0 pt-lg-0">
-            <a class="navbar-brand logo001" href="#">
-                <h1 class="logo01">
-                    ProToolsAB<img src="img/logo.png" alt="logo"/>
-                </h1>
-            </a>
-            
-            <div class="mobile-position"> 
-                <ul class="nav-item carrito001 @@carrito__active"> <li>
-                        <a class="nav-link" href="#">
-                            <img class="car" src="img/carrito.png" alt="Carrito de compras">
-                            <span id="cantidad-carrito" class="carrito-cantidad"> 0</span> 
-                        </a>
-                    </li> 
-                </ul>
+    <header id="site-header" class="fixed-top">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg stroke px-0 pt-lg-0">
+                <a class="navbar-brand logo001" href="#">
+                    <h1 class="logo01">
+                        ProToolsAB<img src="img/logo.png" alt="logo"/>
+                    </h1>
+                </a>
+
+                <div class="mobile-position"> 
+                    <ul class="nav-item carrito001 @@carrito__active"> 
+                        <li>
+                            <a class="nav-link" href="carrito.html">
+                                <img class="car" src="img/carrito.png" alt="Carrito de compras">
+                                <span id="cantidad-carrito" class="carrito-cantidad"> 0</span> 
+                            </a>
+                        </li> 
+                    </ul>
+                    
+                    <input type="checkbox" id="btn-menu" aria-controls="navbartogglermv" aria-expanded="false" class="d-none"> 
+                    <label for="btn-menu" class="lbl-menu navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbartogglermv" aria-controls="navbartogglermv" aria-expanded="false"> 
+                        <span id="spn1" class="icon-bar"></span>
+                        <span id="spn2" class="icon-bar"></span>
+                        <span id="spn3" class="icon-bar"></span>
+                    </label>
+                </div>
                 
-                <input type="checkbox" id="btn-menu" aria-controls="navbartogglermv" aria-expanded="false" class="d-none"> 
-                
-                <label for="btn-menu" class="lbl-menu navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbartogglermv" aria-controls="navbartogglermv" aria-expanded="false"> 
-                    <span id="spn1" class="icon-bar"></span>
-                    <span id="spn2" class="icon-bar"></span>
-                    <span id="spn3" class="icon-bar"></span>
-                </label>
-            </div>
-            
-            <div class="collapse navbar-collapse" id="navbartogglermv">
-                <ul class="navbar-nav mx-lg-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="index.html">Home<span class="visually-hidden">(current)</span></a>
-                    </li>
-                    <li class="nav-item text-center">
-                        <a class="nav-link" href="#Offers">New & Offers</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#products">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
-                    </li>
-                    <li class="nav-item @@contact__active">
-                        <a class="nav-link" href="#">Contact</a>
-                    </li>
-                </ul>
-                
-                <div class="search-right">
-                    <a href="#" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
-                    <div id="search" class="pop-overlay">
-                        <div class="popup">
-                            <form action="error.html" method="GET" class="search-box">
-                                <input type="search" id="search-input" placeholder="Search" name="search" required="required" autofocus="">
-                                <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
-                                <ul id="suggestions" class="search-suggestions"></ul>
-                            </form>
-                            <div id="search-results" class="search-results-container"></div> 
+                <div class="collapse navbar-collapse" id="navbartogglermv">
+                    <ul class="navbar-nav mx-lg-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">Home<span class="visually-hidden">(current)</span></a>
+                        </li>
+                        <li class="nav-item text-center">
+                            <a class="nav-link" href="#Offers">New & Offers</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#products">Products</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#services">Services</a>
+                        </li>
+                        <li class="nav-item @@contact__active">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    
+                    <div class="search-right">
+                        <a href="#" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
+                        <div id="search" class="pop-overlay">
+                            <div class="popup">
+                                <form action="error.html" method="GET" class="search-box">
+                                    <input type="search" id="search-input" placeholder="Search" name="search" required="required" autofocus="">
+                                    <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
+                                    <ul id="suggestions" class="search-suggestions"></ul>
+                                </form>
+                                <div id="search-results" class="search-results-container"></div> 
+                            </div>
+                            <a class="close" href="#close">X</a>
                         </div>
-                        <a class="close" href="#close">X</a>
-                    </div>
-                </div> 
-                <button class="buynow">
-                    <span class="front-text">Buy Now</span>
-                    <span class="car-icon"><i class="bi bi-cart3"></i></span>
-                </button>
-            </div>
-            
-            <div class="mobile-position">
-                <nav class="navigation">
-                    <div class="theme-switch-wrapper">
-                        <div class="mode-container" id="mode-toggle-container">
-                            <i class="gg-sun" id="sun-icon"></i>
-                            <i class="bi bi-moon-stars" id="moon-icon"></i>
-                            <img class="predeterminado" src="img/diaynoche.png" alt="Modo Automático" id="auto-icon-img">
+                    </div> 
+                    <button class="buynow" id="buynow">
+                        <span class="front-text">Buy Now</span>
+                        <span class="car-icon"><i class="bi bi-cart3"></i></span>
+                    </button>
+                </div>
+                
+                <div class="mobile-position">
+                    <nav class="navigation">
+                        <div class="theme-switch-wrapper">
+                            <div class="mode-container" id="mode-toggle-container">
+                                <i class="gg-sun" id="sun-icon"></i>
+                                <i class="bi bi-moon-stars" id="moon-icon"></i>
+                                <img class="predeterminado" src="img/diaynoche.png" alt="Modo Automático" id="auto-icon-img">
+                            </div>
                         </div>
-                    </div>
-                </nav>
-            </div>
-        </nav>
-    </div>
+                    </nav>
+                </div>
+            </nav>
+        </div>
     </header>
+
     <!-- Banner____________________________________________________________________________________________________________________________ -->
     
     <section class="w3l-main-slider" id="home">
@@ -243,9 +244,7 @@
                                 <a href="#foldable" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
                                 <div class="d-flex flex-row flex-md-row justify-content-center gap-2 mt-md-4 mt-3">
                                     <button class="btn btn-style btnbuy btnCarrito">Buy Now</button>
-                                    <a id="add-to-cart-1" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="31.99">
-                                        Add to Cart <i class="buycar bi bi-cart3"></i>
-                                    </a>
+                                    <a id="add-to-cart-producto-8" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-image="img/nivelador1.webp" data-product-id="8" data-product-name="Foldable Level" data-product-price="31.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -260,15 +259,13 @@
                                 <img src="img/circuit1.png" class="img-fluid imgOferta" alt="Circuit Breaker Finder kit" />
                             </div>
                             <div class="col-lg-6 align-self mt-lg-0 mt-md-5 mt-4">
-                                <h4 class="productosOffer01">Circuit Breaker Finder kit
+                                <h4 class="productosOffer01">Circuit Tester Kit
                                     <span class="mt-md-3 mt-2">$79.99</span>
                                 </h4>
                                 <a href="#circuit" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
                                 <div class="d-flex flex-row flex-md-row justify-content-center gap-2 mt-md-4 mt-3">
                                     <button class="btn btn-style btnbuy btnCarrito">Buy Now</button>
-                                    <a id="add-to-cart-2" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="79.99">
-                                        Add to Cart <i class="buycar bi bi-cart3"></i>
-                                    </a>
+                                    <a id="add-to-cart-producto-1" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-image="img/circuit1.png" data-product-id="1" data-product-name="Circuit Tester Kit" data-product-price="79.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -290,9 +287,7 @@
                                 <a href="#garlopa" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>                
                                 <div class="d-flex flex-row flex-md-row justify-content-center gap-2 mt-md-4 mt-3">                
                                     <button class="btn btn-style btnbuy btnCarrito">Buy Now</button>                
-                                    <a id="add-to-cart-3" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="163.99">                
-                                        Add to Cart <i class="buycar bi bi-cart3"></i>                
-                                    </a>                
+                                    <a id="add-to-cart-producto-9" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-image="img/garlopa1.webp" data-product-id="9" data-product-name="Brushless planer" data-product-price="163.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
                                 </div>                
                             </div>                
                         </div>                
@@ -313,9 +308,7 @@
                                 <a href="#jardin" class="infoProduct" id="scroll-to-circuit-card">More information <i class="bi bi-arrow-right-circle"></i></a>
                                 <div class="d-flex flex-row flex-md-row justify-content-center gap-2 mt-md-4 mt-3">
                                     <button class="btn btn-style btnbuy btnCarrito">Buy Now</button>
-                                    <a id="add-to-cart-4" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-id="4" data-product-name="Producto 4" data-product-price="27.99">                
-                                        Add to Cart <i class="buycar bi bi-cart3"></i>
-                                    </a>
+                                    <a id="add-to-cart-producto-12" class="btn btn-style btnbuy add-to-cart-btn btnCarrito" data-product-image="img/jardineria1.webp" data-product-id="12" data-product-name="Garden Tool Set" data-product-price="27.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
                                 </div>
                             </div>
                         </div>
@@ -363,7 +356,7 @@
                         <div class="offer-container">
                             <div class="offert-ribbon offer-badge">Offer</div> 
                         </div>
-                        <h5 class="card-title pt-2 text-center textoCard">Circuit Breaker Finder Kit</h5>
+                        <h5 class="card-title pt-2 text-center textoCard">Circuit Tester Kit</h5>
                     <div class="owl-carousel owl-theme imgcarrusel">
                         <div class="item img-productos"><img src="img/circuit1.png" class="img-fluid" alt="Circuit Image 1"></div>
                         <div class="item img-productos"><img src="img/circuit2.webp" class="img-fluid" alt="Circuit Image 2"></div>
@@ -384,7 +377,7 @@
                         </h5>
                         <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
                             <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
-                            <a id="add-to-cart-producto-1" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/circuit1.png" data-product-id="1" data-product-name="Circuit Breaker Finder Kit" data-product-price="79.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                            <a id="add-to-cart-producto-1" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/circuit1.png" data-product-id="1" data-product-name="Circuit Tester Kit" data-product-price="79.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
                         </div>
                     </div>
                 </div>
@@ -801,10 +794,10 @@
    
    
     <section class="w3l-footer-29-main" id="footer">
-        <div class="footer-29 py-4">
+        <div class="footer-29 py-3">
             <div class="container wow fadeInUp" data-wow-duration="500ms" data-wow-delay="300ms">
                 <div class="row">
-                    <div class="col-12 mb-4 text-lg-start">
+                    <div class="col-12 mb-1 text-lg-start">
                         <a href="#" class="logofooter">
                             <h1>
                                 ProToolsAB<img src="img/logo.png" alt="logo"/>
@@ -871,9 +864,11 @@
     <!-- Js / Scripts______________________________________________________________________________________________________________________ -->
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
     <script src="js/principal.js"></script>
     <!-- <script src="js/boton.js"></script> -->
     <script src="js/java.js"></script>
+    <script src="js/buynow.js"></script>
     <script src="js/animation.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>

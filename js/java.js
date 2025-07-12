@@ -3,7 +3,6 @@ const sunIcon = document.getElementById('sun-icon');
 const moonIcon = document.getElementById('moon-icon');
 const autoIconImg = document.getElementById('auto-icon-img');
 const header = document.querySelector('header'); 
-
 const prefersDarkScheme = window.matchMedia("(prefers-color-scheme: dark)");
 
 const themeModes = ['light', 'dark', 'auto'];
@@ -157,75 +156,75 @@ document.addEventListener('DOMContentLoaded', () => {
 // JS para el carrito
 
 document.addEventListener('DOMContentLoaded', function() {
-  const cartQuantitySpan = document.getElementById('cantidad-carrito');
+    const cartQuantitySpan = document.getElementById('cantidad-carrito');
 
-  window.updateCartQuantity = function() {
-      const cartItems = localStorage.getItem('cartItems');
-      const quantity = cartItems ? JSON.parse(cartItems).reduce((sum, item) => sum + item.quantity, 0) : 0;
-      if (cartQuantitySpan) {
-          cartQuantitySpan.textContent = quantity;
-      }
-  };
+    window.updateCartQuantity = function() {
+        const cartItems = localStorage.getItem('cartItems');
+        const quantity = cartItems ? JSON.parse(cartItems).reduce((sum, item) => sum + item.quantity, 0) : 0;
+        if (cartQuantitySpan) {
+            cartQuantitySpan.textContent = quantity;
+        }
+    };
 
-  window.updateCartQuantity();
+    window.updateCartQuantity();
 
-  const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
-  addToCartButtons.forEach(button => {
-      button.addEventListener('click', function(event) {
-          event.preventDefault();
-          const productId = this.dataset.productId;
-          const productName = this.dataset.productName;
-          const productPrice = parseFloat(this.dataset.productPrice);
+    const addToCartButtons = document.querySelectorAll('.add-to-cart-btn');
+    addToCartButtons.forEach(button => {
+        button.addEventListener('click', function(event) {
+            event.preventDefault();
+            const productId = this.dataset.productId;
+            const productName = this.dataset.productName;
+            const productPrice = parseFloat(this.dataset.productPrice);
+            const productImage = this.dataset.productImage; 
 
-          let cartItems = localStorage.getItem('cartItems');
-          cartItems = cartItems ? JSON.parse(cartItems) : [];
+            let cartItems = localStorage.getItem('cartItems');
+            cartItems = cartItems ? JSON.parse(cartItems) : [];
 
-          const existingItemIndex = cartItems.findIndex(item => item.id === productId);
+            const existingItemIndex = cartItems.findIndex(item => item.id === productId);
 
-          if (existingItemIndex > -1) {
-              cartItems[existingItemIndex].quantity++;
-          } else {
-              cartItems.push({
-                  id: productId,
-                  name: productName,
-                  price: productPrice,
-                  quantity: 1
-              });
-          }
+            if (existingItemIndex > -1) {
+                cartItems[existingItemIndex].quantity++;
+            } else {
+                cartItems.push({
+                    id: productId,
+                    name: productName,
+                    price: productPrice,
+                    productImage: productImage, 
+                    quantity: 1
+                });
+            }
 
-          localStorage.setItem('cartItems', JSON.stringify(cartItems));
-          window.updateCartQuantity(); 
+            localStorage.setItem('cartItems', JSON.stringify(cartItems));
+            window.updateCartQuantity();
 
-          const originalHTML = this.innerHTML;
-          this.classList.add('adding-to-cart');
-          this.textContent = 'Added!';
-          setTimeout(() => {
-              this.classList.remove('adding-to-cart');
-              this.innerHTML = originalHTML;
-          }, 1500);
-      });
-  });
-});
+            const originalHTML = this.innerHTML;
+            this.classList.add('adding-to-cart');
+            this.textContent = 'Added!';
+            setTimeout(() => {
+                this.classList.remove('adding-to-cart');
+                this.innerHTML = originalHTML;
+            }, 1500);
+        });
+    });
 
-document.addEventListener('DOMContentLoaded', function() {
-  const cartTableBody = document.querySelector('#carrito-table');
+    const cartTableBody = document.querySelector('#carrito-table');
 
-  if (cartTableBody) {
-      cartTableBody.addEventListener('click', function(event) {
-          const target = event.target;
-          if (target.classList.contains('bin-button') || target.closest('.bin-button')) {
-              const button = target.closest('.bin-button');
-              if (button && button.dataset.productId) {
-                  const productIdToRemove = button.dataset.productId;
-                  let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-                  cartItems = cartItems.filter(item => item.id !== productIdToRemove);
-                  localStorage.setItem('cartItems', JSON.stringify(cartItems));
-                  window.updateCartQuantity(); 
-                  if (typeof renderCart === 'function') {
-                       renderCart();
-                  }
-              }
-          }
-      });
-  }
+    if (cartTableBody) {
+        cartTableBody.addEventListener('click', function(event) {
+            const target = event.target;
+            if (target.classList.contains('bin-button') || target.closest('.bin-button')) {
+                const button = target.closest('.bin-button');
+                if (button && button.dataset.productId) {
+                    const productIdToRemove = button.dataset.productId;
+                    let cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+                    cartItems = cartItems.filter(item => item.id !== productIdToRemove);
+                    localStorage.setItem('cartItems', JSON.stringify(cartItems));
+                    window.updateCartQuantity();
+                    if (typeof renderCart === 'function') {
+                        renderCart();
+                    }
+                }
+            }
+        });
+    }
 });

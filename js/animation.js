@@ -22,5 +22,8 @@ document.addEventListener('DOMContentLoaded', function() {
         removalDelay: 300,
         mainClass: 'my-mfp-slide-bottom'
     });
-    new WOW().init();
+
+    setTimeout(function() {
+        new WOW().init();
+    }, 100);
 });
