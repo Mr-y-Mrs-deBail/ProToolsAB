@@ -84,7 +84,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <td colspan="4" class="text-center py-5">
                 <p class="lead text-muted mb-3">Your cart is empty.</p>
                 <p class="text-muted small mb-4">Add some products to start shopping!</p>
-                <a href="index.html" class="shop-now-btn">
+                <a href="index.html#products" class="shop-now-btn">
                     <span class="toreturn"><i class="bi bi-shop me-2"></i>Shop Now</span>
                 </a>
             </td>
@@ -344,7 +344,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 html: `
                 <div class="myhtml"><p>Your order has been processed successfully.</p>
                 <p>Soon, we'll be enabling direct payment and shipping options from our platform.</p>
-                <p>Come back soon for new offers and products!</p></div>`,
+                <p><img src="img/gracias.png" alt="Gracias" style="margin-left: 0px; height: 30px; vertical-align: middle;">Come back soon! <br> for new offers and products.</p></div>`,
                 icon: 'success',
                 confirmButtonText: 'Got It',
                 allowOutsideClick: false,
