@@ -328,14 +328,16 @@
     const couponSectionMobile = document.getElementById('coupon-section-mobile');
     const couponTotalsSection = document.getElementById('coupon-totals-section');
     const footerSection = document.getElementById('footer');
-    const couponInput = document.getElementById('coupon'); 
+    const couponInput = document.getElementById('coupon');
+
+    let couponSectionManuallyOpened = false; 
 
     const getCartItemCount = () => {
         const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
         return cartItems.length;
     };
 
-    if (showCouponButton && couponSectionMobile && couponTotalsSection && footerSection && couponInput) { 
+    if (showCouponButton && couponSectionMobile && couponTotalsSection && footerSection && couponInput) {
         const isMobile = () => window.matchMedia("(max-width: 767.98px)").matches;
 
         if (isMobile()) {
@@ -346,6 +348,12 @@
         }
 
         const updateCouponButtonVisibility = () => {
+            if (isMobile() && couponSectionManuallyOpened) {
+                showCouponButton.style.display = 'none'; 
+                couponSectionMobile.classList.remove('coupon-hidden'); 
+                return; 
+            }
+
             if (!isMobile()) {
                 showCouponButton.style.display = 'none';
                 return;
@@ -358,11 +366,13 @@
                 showCouponButton.style.display = 'none';
                 return;
             }
+
             const couponTotalsRect = couponTotalsSection.getBoundingClientRect();
             const footerRect = footerSection.getBoundingClientRect();
             const isCouponTotalsVisible = couponTotalsRect.top < window.innerHeight && couponTotalsRect.bottom >= 0;
             const footerThreshold = footerObserverOptions.threshold || 0;
             const isFooterBeyondThreshold = (window.innerHeight - footerRect.top) / footerRect.height > footerThreshold;
+
             if (isCouponTotalsVisible && !isFooterBeyondThreshold) {
                 showCouponButton.style.display = 'block';
             } else {
@@ -394,25 +404,34 @@
         }, footerObserverOptions);
         footerObserver.observe(footerSection);
 
-        updateCouponButtonVisibility();
+        updateCouponButtonVisibility(); 
 
         showCouponButton.addEventListener('click', function() {
             if (isMobile()) {
                 couponSectionMobile.classList.toggle('coupon-hidden');
-                updateCouponButtonVisibility();
+                couponSectionManuallyOpened = !couponSectionMobile.classList.contains('coupon-hidden'); 
+                updateCouponButtonVisibility(); 
             }
         });
 
         couponInput.addEventListener('click', function(event) {
-            event.stopPropagation(); 
+            event.stopPropagation();
         });
+
+        const applyCouponButton = document.getElementById('apply-coupon-button');
+        if (applyCouponButton) {
+            applyCouponButton.addEventListener('click', function() {
+            });
+        }
+
 
         window.addEventListener('resize', function() {
             if (!isMobile()) {
                 showCouponButton.style.display = 'none';
                 couponSectionMobile.classList.remove('coupon-hidden');
+                couponSectionManuallyOpened = false; 
             } else {
-                if (!couponSectionMobile.classList.contains('coupon-hidden')) {
+                if (!couponSectionManuallyOpened && !couponSectionMobile.classList.contains('coupon-hidden')) {
                     couponSectionMobile.classList.add('coupon-hidden');
                 }
             }
