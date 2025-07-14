@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>       
         <link href="css/animate.min.css" rel="stylesheet"> 
         <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="img/logo2.png">
         <title>ProToolsAB</title>
   </head>
 
@@ -321,92 +322,105 @@
         });
     </script>
 
-    <script>
+   <script>
         document.addEventListener('DOMContentLoaded', function() {
-            const showCouponButton = document.getElementById('show-coupon-button');
-            const couponSectionMobile = document.getElementById('coupon-section-mobile');
-            const couponTotalsSection = document.getElementById('coupon-totals-section');
-            const footerSection = document.getElementById('footer');
+    const showCouponButton = document.getElementById('show-coupon-button');
+    const couponSectionMobile = document.getElementById('coupon-section-mobile');
+    const couponTotalsSection = document.getElementById('coupon-totals-section');
+    const footerSection = document.getElementById('footer');
+    const couponInput = document.getElementById('coupon'); 
 
-            const getCartItemCount = () => {
-                const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
-                return cartItems.length;
-            };
-            if (showCouponButton && couponSectionMobile && couponTotalsSection && footerSection) {
-                const isMobile = () => window.matchMedia("(max-width: 767.98px)").matches;
-                if (isMobile()) {
-                    couponSectionMobile.classList.add('coupon-hidden');
-                } else {
-                    couponSectionMobile.classList.remove('coupon-hidden');
-                    showCouponButton.style.display = 'none'; 
-                }
-                const updateCouponButtonVisibility = () => {
-                    if (!isMobile()) {
-                        showCouponButton.style.display = 'none'; 
-                        return;
-                    }
-                    if (getCartItemCount() === 0) {
-                        showCouponButton.style.display = 'none';
-                        return;
-                    }
-                    if (!couponSectionMobile.classList.contains('coupon-hidden')) {
-                        showCouponButton.style.display = 'none';
-                        return;
-                    }
-                    const couponTotalsRect = couponTotalsSection.getBoundingClientRect();
-                    const footerRect = footerSection.getBoundingClientRect();
-                    const isCouponTotalsVisible = couponTotalsRect.top < window.innerHeight && couponTotalsRect.bottom >= 0;
-                    const footerThreshold = footerObserverOptions.threshold || 0; 
-                    const isFooterBeyondThreshold = (window.innerHeight - footerRect.top) / footerRect.height > footerThreshold;
-                    if (isCouponTotalsVisible && !isFooterBeyondThreshold) {
-                        showCouponButton.style.display = 'block';
-                    } else {
-                        showCouponButton.style.display = 'none';
-                    }
-                };
-                const totalsObserverOptions = {
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.1
-                };
-                const totalsObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        updateCouponButtonVisibility();
-                    });
-                }, totalsObserverOptions);
-                totalsObserver.observe(couponTotalsSection);
-                const footerObserverOptions = {
-                    root: null,
-                    rootMargin: '0px',
-                    threshold: 0.9 
-                };
-                const footerObserver = new IntersectionObserver((entries) => {
-                    entries.forEach(entry => {
-                        updateCouponButtonVisibility();
-                    });
-                }, footerObserverOptions);
-                footerObserver.observe(footerSection);
+    const getCartItemCount = () => {
+        const cartItems = JSON.parse(localStorage.getItem('cartItems')) || [];
+        return cartItems.length;
+    };
+
+    if (showCouponButton && couponSectionMobile && couponTotalsSection && footerSection && couponInput) { 
+        const isMobile = () => window.matchMedia("(max-width: 767.98px)").matches;
+
+        if (isMobile()) {
+            couponSectionMobile.classList.add('coupon-hidden');
+        } else {
+            couponSectionMobile.classList.remove('coupon-hidden');
+            showCouponButton.style.display = 'none';
+        }
+
+        const updateCouponButtonVisibility = () => {
+            if (!isMobile()) {
+                showCouponButton.style.display = 'none';
+                return;
+            }
+            if (getCartItemCount() === 0) {
+                showCouponButton.style.display = 'none';
+                return;
+            }
+            if (!couponSectionMobile.classList.contains('coupon-hidden')) {
+                showCouponButton.style.display = 'none';
+                return;
+            }
+            const couponTotalsRect = couponTotalsSection.getBoundingClientRect();
+            const footerRect = footerSection.getBoundingClientRect();
+            const isCouponTotalsVisible = couponTotalsRect.top < window.innerHeight && couponTotalsRect.bottom >= 0;
+            const footerThreshold = footerObserverOptions.threshold || 0;
+            const isFooterBeyondThreshold = (window.innerHeight - footerRect.top) / footerRect.height > footerThreshold;
+            if (isCouponTotalsVisible && !isFooterBeyondThreshold) {
+                showCouponButton.style.display = 'block';
+            } else {
+                showCouponButton.style.display = 'none';
+            }
+        };
+
+        const totalsObserverOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1
+        };
+        const totalsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
                 updateCouponButtonVisibility();
-                showCouponButton.addEventListener('click', function() {
-                    if (isMobile()) {
-                        couponSectionMobile.classList.toggle('coupon-hidden');
-                        updateCouponButtonVisibility();
-                    }
-                });
-                window.addEventListener('resize', function() {
-                    if (!isMobile()) {
-                        showCouponButton.style.display = 'none';
-                        couponSectionMobile.classList.remove('coupon-hidden'); 
-                    } else {
-                        if (!couponSectionMobile.classList.contains('coupon-hidden')) {
-                            couponSectionMobile.classList.add('coupon-hidden');
-                        }
-                    }
-                    updateCouponButtonVisibility(); 
-                });
-            } 
+            });
+        }, totalsObserverOptions);
+        totalsObserver.observe(couponTotalsSection);
+
+        const footerObserverOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.9
+        };
+        const footerObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                updateCouponButtonVisibility();
+            });
+        }, footerObserverOptions);
+        footerObserver.observe(footerSection);
+
+        updateCouponButtonVisibility();
+
+        showCouponButton.addEventListener('click', function() {
+            if (isMobile()) {
+                couponSectionMobile.classList.toggle('coupon-hidden');
+                updateCouponButtonVisibility();
+            }
         });
-    </script>
+
+        couponInput.addEventListener('click', function(event) {
+            event.stopPropagation(); 
+        });
+
+        window.addEventListener('resize', function() {
+            if (!isMobile()) {
+                showCouponButton.style.display = 'none';
+                couponSectionMobile.classList.remove('coupon-hidden');
+            } else {
+                if (!couponSectionMobile.classList.contains('coupon-hidden')) {
+                    couponSectionMobile.classList.add('coupon-hidden');
+                }
+            }
+            updateCouponButtonVisibility();
+        });
+    }
+});
+   </script>
 
 </body>
 </html>
