@@ -27,7 +27,7 @@
         <title>ProToolsAB</title>
     </head>
     
-    <body>
+<body>
 
     <!--header_____________________________________________________________________-->
     
@@ -73,28 +73,36 @@
                             <a class="nav-link" href="#services">Services</a>
                         </li>
                         <li class="nav-item @@contact__active">
-                            <a class="nav-link" href="#">Contact</a>
+                            <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                     </ul>
-                    
-                    <div class="search-right">
-                        <a href="#" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
-                        <div id="search" class="pop-overlay">
-                            <div class="popup">
-                                <form action="error.html" method="GET" class="search-box">
-                                    <input type="search" id="search-input" placeholder="Search" name="search" required="required" autofocus="">
-                                    <button type="submit" class="btn"><span class="fa fa-search" aria-hidden="true"></span></button>
-                                    <ul id="suggestions" class="search-suggestions"></ul>
-                                </form>
-                                <div id="search-results" class="search-results-container"></div> 
-                            </div>
-                            <a class="close" href="#close">X</a>
-                        </div>
-                    </div> 
+
                     <button class="buynow" id="buynow">
                         <span class="front-text">Buy Now</span>
                         <span class="car-icon"><i class="bi bi-cart3"></i></span>
                     </button>
+                </div>
+
+                 <div class="search-right">
+                    <a href="#" title="search"><span class="fa fa-search" aria-hidden="true"></span></a>
+                    <div id="search" class="pop-overlay">
+                        <div class="popup">
+                            <form action="error.html" method="GET" class="search-box">
+                                <span class="ripple-circle"></span>
+                                <button type="submit" class="btn search-btn-left">
+                                    <span class="fa fa-search" aria-hidden="true"></span>
+                                </button>
+                                <input type="search" id="search-input" placeholder="Search" name="search" required="required" autofocus="" autocomplete="off">
+                                <div class="border"></div>
+                                <button type="button" class="btn mic-btn-right">
+                                    <span class="fa fa-microphone" aria-hidden="true"></span>
+                                </button>
+                            </form>
+                            <ul id="suggestions" class="search-suggestions"></ul>
+                            <div id="search-results" class="search-results-container"></div> 
+                        </div>
+                        <a class="close" href="#close" translate="no">X</a>
+                    </div>
                 </div>
                 
                 <div class="mobile-position">
@@ -429,7 +437,7 @@
             
     <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="electricidad">
         <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div class="card shadow-sm" style="width: 20rem;">
+            <div id="crimper-stripper" class="card shadow-sm" style="width: 20rem;">
                 <h5 class="card-title pt-2 text-center textoCard">Crimper + Stripper Kit</h5>
                 <div class="owl-carousel owl-theme">
                     <div class="item img-productos"><img src="img/pelacables1.webp" class="img-fluid img-thumbnail" alt="Pelacables Image 1"></div>
@@ -457,7 +465,7 @@
 
     <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
         <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div class="card shadow-sm" style="width: 20rem;">
+            <div id="tape-measure" class="card shadow-sm" style="width: 20rem;">
                 <h5 class="card-title pt-2 text-center textoCard">Tape Measure</h5>
                 <div class="owl-carousel owl-theme img-productos">
                     <div class="item"><img src="img/metro1.webp" class="img-fluid img-thumbnail" alt="Metro Image 1"></div>
@@ -484,7 +492,7 @@
             
     <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
         <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div class="card shadow-sm" style="width: 20rem;">
+            <div id="hand-tool-set" class="card shadow-sm" style="width: 20rem;">
                 <h5 class="card-title pt-2 text-center textoCard">Hand Tool Set</h5>
                 <div class="owl-carousel owl-theme img-productos">
                     <div class="item"><img src="img/caja1.png" class="img-fluid img-thumbnail" alt="Caja Image 1"></div>
@@ -513,7 +521,7 @@
 
     <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
         <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div class="card shadow-sm" style="width: 20rem;">
+            <div id="drill-bit-set" class="card shadow-sm" style="width: 20rem;">
                 <h5 class="card-title pt-2 text-center textoCard">Drill Bit Set TItanium</h5>
                 <div class="owl-carousel owl-theme img-productos">
                     <div class="item"><img src="img/drill1.webp" class="img-fluid img-thumbnail" alt="Drill Image 1"></div>
@@ -612,7 +620,7 @@
     
     <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="carpinteria">
         <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div class="card shadow-sm" style="width: 20rem;">
+            <div id="trimmer" class="card shadow-sm" style="width: 20rem;">
                 <h5 class="card-title pt-2 text-center textoCard">Trimmer</h5>
                 <div class="owl-carousel owl-theme">
                     <div class="item"><img src="img/recortadora1.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 1"></div>
@@ -645,7 +653,7 @@
             
     <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="carpinteria">
         <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div class="card shadow-sm" style="width: 20rem;">
+            <div id="ruler-3d" class="card shadow-sm" style="width: 20rem;">
                 <h5 class="card-title pt-2 text-center textoCard">3D Milti-Angle Measuring Ruler</h5>
                 <div class="owl-carousel owl-theme">
                     <div class="item"><img src="img/regla1.webp" class="img-fluid img-thumbnail" alt="Regla Image 1"></div>
@@ -720,8 +728,7 @@
                     <h3 class="title-big mx-0 wow fadeInLeft" data-wow-duration="700ms" data-wow-delay="500ms">Consulting and Construction</h3>
                     <p class="mt-lg-4 mt-3 wow fadeInLeft" data-wow-duration="800ms" data-wow-delay="600ms">I specialize in transforming houses into unique spaces that reflect your style and needs. As a renovation expert, I not only offer personalized consulting but also take action to build, repair, and bring to life every detail of your home. With tailored solutions, I help you create the perfect place you've always dreamed of.</p>
                     <br>
-                    <!-- <a href="contact.html" class="infoService-link"> -->
-                    <a href="#services" class="infoService-link">
+                    <a href="contact.html" class="infoService-link">
                         <span class="infoService">Contact us for more information <i class="bi bi-arrow-right-circle"></i></span>
                     </a><br><br>
                     <a href="tel:+15104444444" class="btncontact learn-more" data-bs-toggle="tooltip" data-bs-placement="bottom" data-bs-title="+1 510-444-4444" id="callButton" tabindex="0">
@@ -732,7 +739,7 @@
                     </a>
                 </div>
     
-                <div class="col-lg-6 d-flex justify-content-center">
+                <div class="col-lg-6 d-flex justify-content-center" id="galeria">
                     <div class="gallery-vertical" style="flex-direction: column; align-items: flex-start;">
                         <div style="display: flex; margin-bottom: 10px;">
                             <div class="img-box-vertical" style="background-image: url('img/servicio1.jpg');" data-horizontal-text="Remodeling">
@@ -827,13 +834,6 @@
                         <div class="info text-center text-md-start small-text-mobile">
                             <h3>Delivery Methods</h3>
                             <p>Home delivery <i class="pago bi bi-truck"></i></p>
-                            <ul class="social-icon list-unstyled justify-content-center">
-                                <!-- <li class="icon-elem">
-                                    <a href="#footer" class="icon entrega">
-                                        <i class="bi bi-truck"></i>
-                                    </a>
-                                </li> -->
-                            </ul>
                         </div>
                     </div>
                     <div class="row mt-2">
@@ -863,6 +863,8 @@
     <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
     <script src="js/principal.js"></script>
     <script src="js/java.js"></script>
+    <script src="js/searchData.js"></script>
+    <script src="js/search.js"></script>
     <script src="js/buynow.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     
