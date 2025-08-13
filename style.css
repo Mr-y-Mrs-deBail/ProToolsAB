@@ -1469,7 +1469,7 @@ input[type="search"]::-ms-clear {
   }
   .navbar .search-right {
     margin-top: -8px;
-    margin-right: 32%;
+    margin-right: 35%;
   }
   .search-suggestions {
     width: 86%;
@@ -2878,9 +2878,9 @@ button.owl-next {
 
 [data-theme="dark"] .swal2-textarea,
 [data-theme="dark"] .swal2-input {
-    background-color: var(--bg-lightgrey);
-    color: var(--font-color);
-    border: 1px solid var(--border-color);
+  background-color: var(--bg-lightgrey);
+  color: var(--font-color);
+  border: 1px solid var(--border-color);
 }
 
 /* Responsivo______________________________________________________________________ */
