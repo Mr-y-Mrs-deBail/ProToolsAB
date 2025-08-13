@@ -418,5 +418,41 @@ const allSearchableItems = [
             en: "Support & Services",
             es: "Soporte y Servicios"
         }
-    }
+    },
+    {
+        id: "service-area",
+        url: "contact.html#contact",
+        title: {
+            en: "Service Area",
+            es: "Área de Servicio"
+        },
+        type: {
+            en: "Information",
+            es: "Información"
+        }
+    },
+    {
+        id: "location",
+        url: "contact.html#contact",
+        title: {
+            en: "Our Location",
+            es: "Nuestra Ubicación"
+        },
+        type: {
+            en: "Information",
+            es: "Información"
+        }
+    },
+    {
+        id: "send-message",
+        url: "contact.html#contact",
+        title: {
+            en: "Send Us a Message",
+            es: "Envíanos un Mensaje"
+        },
+        type: {
+            en: "Form",
+            es: "Formulario"
+        }
+    },
 ];

@@ -1425,7 +1425,7 @@ input[type="search"]::-ms-clear {
 
 @media (max-width: 576px) {
   .navbar .navbar-brand {
-      font-size: 20px;
+    font-size: 20px;
   }
 }
 
@@ -1469,7 +1469,7 @@ input[type="search"]::-ms-clear {
   }
   .navbar .search-right {
     margin-top: -8px;
-    margin-right: 45%;
+    margin-right: 32%;
   }
   .search-suggestions {
     width: 86%;
@@ -2040,7 +2040,7 @@ button.owl-next {
   color: #fff;
   background-color: var(--bg-color);
   box-shadow: 0 25px 98px 0 rgba(0, 0, 0, 0.03);
-  border: none;
+  border: 2px solid transparent;
   margin: 0 8px;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -2062,7 +2062,7 @@ button.owl-next {
   color: #fff;
   background-color: var(--primary-color);
   box-shadow: 0 25px 98px 0 rgba(0, 0, 0, 0.1);
-  border: 2px solid var(--primary-color);
+  border: var(--primary-color);
 }
 
 #productCarousel .carousel-inner {
@@ -2098,10 +2098,21 @@ button.owl-next {
   line-height: 40px;
 }
 
+.img-container {
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .imgOferta {
-  width: 55%;
+  max-height: 100%;
+  max-width: 100%;
+  width: auto;
+  height: auto;
   display: block;
   margin: 0 auto;
+  object-fit: contain; /* Esto asegura que la imagen se ajuste sin cortarse ni deformarse */
 }
 
 .infoProduct {
@@ -2232,6 +2243,9 @@ button.owl-next {
     padding-top: 20px;
     padding-bottom: 20px;
   }
+  .img-container {
+    height: 250px;
+  }
   .container.py-lg-3.py-md-3.py-2 {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -2265,6 +2279,9 @@ button.owl-next {
   h4.productosOffer01 {
     font-size: 23px;
     line-height: 35px;
+  }
+  .img-container {
+    height: 200px;
   }
   h4.productosOffer01 span {
     font-size: 18px;
@@ -2735,6 +2752,35 @@ button.owl-next {
   transform: translateX(5px);
 }
 
+.icono-info {
+ position: absolute;
+ top: 10px;
+ right: 10px;
+ color: white;
+ background-color: rgba(0, 0, 0, 0.5);
+ border-radius: 50%;
+ padding: 5px;
+ font-size: 1.5rem;
+ transition: all 0.3s ease;
+ z-index: 10;
+ opacity: 0;
+ width: 30px;
+ height: 30px;
+ display: flex;
+ justify-content: center;
+ align-items: center;
+}
+
+.img-box-vertical:hover .icono-info {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+.img-box-vertical.open .icono-info {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
 
 /* Especialidades__________________________________________________________________________________________________________________ */
 
@@ -2813,12 +2859,28 @@ button.owl-next {
 }
 
 .img-box-vertical.open .horizontal-text {
-    opacity: 1;
-    transform: translateX(0); 
+  opacity: 1;
+  transform: translateX(0); 
 }
 
 .img-box-vertical.open .vertical-text {
-    opacity: 0; 
+  opacity: 0; 
+}
+
+[data-theme="dark"] .dark-theme-popup {
+  background-color: var(--bg-color);
+  color: var(--font-color);
+}
+
+[data-theme="dark"] .dark-theme-title {
+  color: var(--heading-color);
+}
+
+[data-theme="dark"] .swal2-textarea,
+[data-theme="dark"] .swal2-input {
+    background-color: var(--bg-lightgrey);
+    color: var(--font-color);
+    border: 1px solid var(--border-color);
 }
 
 /* Responsivo______________________________________________________________________ */
