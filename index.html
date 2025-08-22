@@ -1119,7 +1119,7 @@
                     customClass: {
                         popup: isDarkMode ? 'dark-theme-popup' : '',
                         title: isDarkMode ? 'dark-theme-title' : '',
-                        container: 'custom-swal-container' // Clase para el contenedor principal
+                        container: 'custom-swal-container'
                     },
                     preConfirm: () => {
                         const name = Swal.getPopup().querySelector('#swal-name').value;
@@ -1195,6 +1195,26 @@
         }
     });
 </script>
+<style>
+    /* Estilos para centrar los campos del formulario dentro de la alerta de SweetAlert2 */
+    .swal2-form-fields {
+        display: flex;
+        flex-direction: column;
+        align-items: center; /* Esto es lo que centra los elementos horizontalmente */
+    }
+
+    /* Opcional: Para asegurar que los inputs y textareas se adapten al ancho del contenedor */
+    .swal2-form-fields .swal2-input,
+    .swal2-form-fields .swal2-textarea {
+        width: 100%; /* Ocupa el 100% del contenedor */
+        max-width: 400px; /* Ancho máximo para que no se vean muy anchos en pantallas grandes */
+    }
+
+    /* Opcional: para centrar el párrafo superior */
+    .swal2-text-centered {
+        text-align: center;
+    }
+</style>
 
 <script>
         document.addEventListener('DOMContentLoaded', () => {

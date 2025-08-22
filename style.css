@@ -1700,7 +1700,7 @@ input[type="search"]::-ms-clear {
 
 @media (max-width: 768px) {
   .w3l-main-slider .banner-view {
-    min-height: 75vh;
+    min-height: 95vh;
     padding: 2em 0;
   }
 }
