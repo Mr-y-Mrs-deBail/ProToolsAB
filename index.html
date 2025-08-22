@@ -131,7 +131,7 @@
     <!-- Banner____________________________________________________________________________________________________________________________ -->
     
     <section class="w3l-main-slider" id="home">
-        <div class="companies20-content">
+        <div class="content-banner">
             <div class="owl-banner owl-carousel owl-theme">
     
                 <div class="item">
@@ -1088,7 +1088,7 @@
     </script>
     
 
- <script>
+<script>
     document.addEventListener('DOMContentLoaded', function() {
         const actionIcons = document.querySelectorAll('.icono-info');
         actionIcons.forEach(icon => {
@@ -1101,10 +1101,14 @@
                 const { value: formValues } = await Swal.fire({
                     title: 'Need more information?',
                     html: `
-                        <p style="text-align: left; margin-bottom: 20px;">Please complete the form below and we'll contact you to discuss ${serviceName}.</p>
-                        <input id="swal-name" class="swal2-input" placeholder="Your name">
-                        <input id="swal-email" class="swal2-input" type="email" placeholder="Your email address">
-                        <textarea id="swal-message" class="swal2-textarea" placeholder="Write your inquiry here..."></textarea>
+                        <div class="swal2-content-container">
+                            <p class="swal2-text-centered">Please complete the form below and we'll contact you to discuss ${serviceName}.</p>
+                            <div class="swal2-form-fields">
+                                <input id="swal-name" class="swal2-input" placeholder="Your name">
+                                <input id="swal-email" class="swal2-input" type="email" placeholder="Your email address">
+                                <textarea id="swal-message" class="swal2-textarea" placeholder="Write your inquiry here..."></textarea>
+                            </div>
+                        </div>
                     `,
                     focusConfirm: false,
                     showCancelButton: true,
@@ -1115,26 +1119,22 @@
                     customClass: {
                         popup: isDarkMode ? 'dark-theme-popup' : '',
                         title: isDarkMode ? 'dark-theme-title' : '',
-                        input: 'custom-swal-input', 
-                        textarea: 'custom-swal-textarea' 
+                        container: 'custom-swal-container' // Clase para el contenedor principal
                     },
                     preConfirm: () => {
                         const name = Swal.getPopup().querySelector('#swal-name').value;
                         const email = Swal.getPopup().querySelector('#swal-email').value;
                         const message = Swal.getPopup().querySelector('#swal-message').value;
-
                         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
                         if (!name || !email || !message) {
                             Swal.showValidationMessage('Please complete all fields.');
                             return false;
                         }
-
                         if (!emailRegex.test(email)) {
                             Swal.showValidationMessage('Please enter a valid email address.');
                             return false;
                         }
-
                         return { name, email, message };
                     }
                 });
