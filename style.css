@@ -390,7 +390,8 @@ select {
   height: auto;
   margin: 0;
   overflow: visible;
-  clip: auto; }
+  clip: auto; 
+}
 
 /* Estilos ________________________________________________________________________________________________________________________________________*/
 
@@ -627,6 +628,7 @@ header:not(.nav-fixed) .gg-sun {
 
 .predeterminado {
   position: relative;
+  cursor: pointer;
   width: 28px;
   height: 28px;
   left: 9px;
@@ -1254,8 +1256,7 @@ input[type="search"]::-ms-clear {
     border-radius: var(--border-radius);
     box-shadow: 0 6px 19px rgba(0, 0, 0, 0.05);
     z-index: 1000;
-        animation: fadeOut 0.3s ease-in-out forwards;
-
+    animation: fadeOut 0.3s ease-in-out forwards;
   }
   .carrito-texto {
     color: var(--primary-color); 
@@ -1744,7 +1745,6 @@ h2.title {
 
 .tab-pane {
   transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
-  /* transform: translateX(100%); */
   opacity: 0;
 }
 
@@ -2989,6 +2989,22 @@ button.owl-next {
   font-size: 14px; 
 }
 
+.swal2-form-fields {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.swal2-form-fields .swal2-input,
+.swal2-form-fields .swal2-textarea {
+  width: 100%; 
+  max-width: 400px;
+}
+
+.swal2-text-centered {
+  text-align: center;
+}
+
 @media (max-width: 991px) {
   .tranding-slider-control .swiper-button-prev,
   .tranding-slider-control .swiper-button-next {
@@ -3053,6 +3069,15 @@ button.owl-next {
   } 
 }
 
+.fancybox__container.is-closing .f-button {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.fancybox__container.is-closing .fancybox__toolbar button {
+  pointer-events: none !important;
+  visibility: hidden;
+}
 
         
 /* Footer_____________________________________________________________________________________________________________________________________ */
@@ -3902,7 +3927,7 @@ button.owl-next {
 
 .state--sent {
   display: none;
-  margin-left: -20px;
+  margin-left: -5px;
 }
 
 .state--sent svg {
@@ -4102,11 +4127,10 @@ button.owl-next {
 }
 
 .connecting {
+  text-transform: uppercase;
   font-size: 20px;
   opacity: 0.8;
 }
-
-
 
 @media (max-width: 768px) {
   .text-direccion {

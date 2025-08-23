@@ -19,7 +19,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
-    <link href="css/animate.min.css" rel="stylesheet">
+<link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.css"
+          />    <link href="css/animate.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">    
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
@@ -342,7 +345,7 @@
 
    <!--  card de Productos ___________________________________________________________________________________________________ -->
 
-   <section class="w3l-homeblock py-4" id="products">
+    <section class="w3l-homeblock py-4" id="products">
         <div class="py-3">
             <div class="container py-lg-3 py-md-3 py-2">
                 <div class="title-content">
@@ -372,367 +375,465 @@
         </div>
     
         <div class="gallery_agile row">
+            <div class="gallery_agile row">
+                
+                <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="electricidad">
+                    <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+                        <div id="circuit" class="card shadow-sm">
+                            <div class="offer-container">
+                                <div class="offert-ribbon offer-badge">Offer</div>
+                            </div>
+                            <h5 class="card-title pt-2 text-center textoCard">Circuit Tester Kit</h5>
+                            
+                            <div class="owl-carousel owl-theme imgcarrusel">
+                                <div class="item img-productos">
+                                    <img src="img/circuit1.png" class="img-fluid" alt="Circuit Image 1" data-index="0" data-full-src="img/circuit1.png">
+                                </div>
+                                <div class="item img-productos">
+                                    <img src="img/circuit2.webp" class="img-fluid" alt="Circuit Image 2" data-index="1" data-full-src="img/circuit2.webp">
+                                </div>
+                                <div class="item img-productos">
+                                    <img src="img/circuit3.webp" class="img-fluid" alt="Circuit Image 3" data-index="2" data-full-src="img/circuit3.webp">
+                                </div>
+                            </div>
+                            
+                            <div class="card-body">
+                                <p class="card-text text-gray-50 description">
+                                    GFCI Outlet and Receptacle Tester Kit, Multimeter, NCVT, Outlet Tester, Wires, 6-Piece
+                                </p>
+                                <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                                <h5 class="textPrecio text-dark text-center">
+                                    <span class="precio-principal">
+                                        <span class="dolar small" translate="no">US$</span>79<span class="centavos small"><sup>99</sup></span>
+                                    </span>
+                                    <span class="precio-descuento">
+                                        <span class="text-decoration-line-through text-muted me-2" translate="no">US$99<sup>99</sup></span>
+                                    </span>
+                                </h5>
+                                <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                    <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                                    <a id="add-to-cart-producto-1" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/circuit1.png" data-product-id="1" data-product-name="Circuit Tester Kit" data-product-price="79.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="electricidad">
-
                 <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-                    <div id="circuit" class="card shadow-sm">
+                    <div id="destornillador" class="card shadow-sm">
+                        <h5 class="card-title pt-2 text-center textoCard">13-Piece Insulated Screwdriver Set</h5>
+
+                        <div class="owl-carousel owl-theme imgcarrusel">
+                            <div class="item img-productos">
+                                <img src="img/destornillador1.webp" class="img-fluid img-thumbnail" alt="Destornillador Image 1" data-index="0" data-full-src="img/destornillador1.webp">
+                            </div>
+                            <div class="item img-productos">
+                                    <img src="img/destornillador2.webp" class="img-fluid img-thumbnail" alt="Destornillador Image 2" data-index="1" data-full-src="img/destornillador2.webp">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-gray-50 description">Hurricane 1000V Insulated Electrician Screwdriver Set, All-in-One Premium Professional 13-pieces CR-V Magnetic Phillips Slotted Pozidriv Torx Screwdriver.</p>
+                            <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                            <h5 class="textPrecio text-dark text-center">
+                                <span class="precio-principal">
+                                    <span class="dolar small" translate="no">US$</span>23<span class="centavos small"><sup>69</sup></span>
+                                </span>
+                            </h5>
+                            <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                                <a id="add-to-cart-producto-2" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/destornillador1.webp" data-product-id="2" data-product-name="13-Piece Insulated Screwdriver Set" data-product-price="23.69">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="electricidad">
+                <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+                    <div id="multimeter" class="card shadow-sm">
+                        <h5 class="card-title pt-2 text-center textoCard">Multimeter Kit</h5>
+
+                        <div class="owl-carousel owl-theme imgcarrusel">
+                            <div class="item img-productos">
+                                <img src="img/kit1.webp" class="img-fluid img-thumbnail" alt="Kit Image 1" data-index="0" data-full-src="img/kit1.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/kit2.webp" class="img-fluid img-thumbnail" alt="Kit Image 2" data-index="1" data-full-src="img/kit2.webp">
+                            </div>
+                        </div>
+
+                        <div class="card-body">
+                            <p class="card-text text-gray-50 description">Electrical Test Kit with Digital Multimeter, Non-Contact Voltage Tester and Electrical Outlet Tester, Leads and Batteries.</p>
+                            <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                            <h5 class="textPrecio text-dark text-center">
+                                <span class="precio-principal">
+                                    <span class="dolar small" translate="no">US$</span>39<span class="centavos small"><sup>97</sup></span>
+                                </span>
+                            </h5>
+                            <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                                <a id="add-to-cart-producto-3" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/kit1.webp" data-product-id="3" data-product-name="Multimeter Kit" data-product-price="39.97">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="electricidad">
+                <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+                    <div id="crimper-stripper" class="card shadow-sm">
+                        <h5 class="card-title pt-2 text-center textoCard">Crimper + Stripper Kit</h5>
+
+                        <div class="owl-carousel owl-theme imgcarrusel">
+                            <div class="item img-productos">
+                                <img src="img/pelacables1.webp" class="img-fluid img-thumbnail" alt="Pelacables Image 1" data-index="0" data-full-src="img/pelacables1.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/pelacables2.webp" class="img-fluid img-thumbnail" alt="Pelacables Image 2" data-index="1" data-full-src="img/pelacables2.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/pelacables3.webp" class="img-fluid img-thumbnail" alt="Pelacables Image 3" data-index="2" data-full-src="img/pelacables3.webp">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-gray-50 description">Klein Tools 80013 Wire Stripper / Ratcheting Crimper, Electrical Crimping Tool Kit with Automatic Wire Stripper and Ratcheting Insulated Terminal Crimper, 2-Piece.</p>
+                            <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                            <h5 class="textPrecio text-dark text-center">
+                                <span class="precio-principal">
+                                    <span class="dolar small" translate="no">US$</span>41<span class="centavos small"><sup>99</sup></span>
+                                </span>
+                            </h5>
+                            <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                                <a id="add-to-cart-producto-4" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/pelacables1.webp" data-product-id="4" data-product-name="Crimper + Stripper Kit" data-product-price="41.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Herramientas -->
+             
+            <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
+                <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+                    <div id="tape-measure" class="card shadow-sm">
+                        <h5 class="card-title pt-2 text-center textoCard">Tape Measure</h5>
+
+                        <div class="owl-carousel owl-theme imgcarrusel">
+                            <div class="item img-productos">
+                                <img src="img/metro1.webp" class="img-fluid img-thumbnail" alt="Metro Image 1" data-index="0" data-full-src="img/metro1.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/metro2.webp" class="img-fluid img-thumbnail" alt="Metro Image 2" data-index="1" data-full-src="img/metro2.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/metro3.webp" class="img-fluid img-thumbnail" alt="Metro Image 3" data-index="2" data-full-src="img/metro3.webp">
+                            </div>
+                        </div>
+                        
+                        <div class="card-body">
+                            <p class="card-text text-gray-50 description">
+                                DEWALT Atomic Compact Series 30 ft. Tape Measure (DWHT381305).
+                            </p>
+                            <h5 class="textPrecio text-dark text-center">
+                                <span class="precio-principal">
+                                    <span class="dolar small" translate="no">US$</span>23<span class="centavos small"><sup>96</sup></span>
+                                </span>
+                            </h5>
+                            <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                                <a id="add-to-cart-producto-5" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/metro1.webp" data-product-id="5" data-product-name="Tape Measure" data-product-price="23.96">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
+                <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+                    <div id="hand-tool-set" class="card shadow-sm">
+                        <h5 class="card-title pt-2 text-center textoCard">Hand Tool Set</h5>
+                        <div class="owl-carousel owl-theme imgcarrusel">
+                            <div class="item img-productos">
+                                <img src="img/caja1.png" class="img-fluid img-thumbnail" alt="Caja Image 1" data-index="0" data-full-src="img/caja1.png">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/caja2.webp" class="img-fluid img-thumbnail" alt="Caja Image 2" data-index="1" data-full-src="img/caja2.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/caja3.webp" class="img-fluid img-thumbnail" alt="Caja Image 3" data-index="2" data-full-src="img/caja3.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/caja4.webp" class="img-fluid img-thumbnail" alt="Caja Image 4" data-index="3" data-full-src="img/caja4.webp">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-gray-50 description">
+                                168 piese Professional Household Hand Tool Set with Plastic Storage Toolbox, Portable Complete Repair Tool Box fot Home Maintenance and DIY Projects (14*10*3in).
+                            </p>
+                            <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                            <h5 class="textPrecio text-dark text-center">
+                                <span class="precio-principal">
+                                    <span class="dolar small" translate="no">US$</span>37<span class="centavos small"><sup>89</sup></span>
+                                </span>
+                            </h5>
+                            <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                                <a id="add-to-cart-producto-6" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/caja1.png" data-product-id="6" data-product-name="Hand Tool Set" data-product-price="37.89">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
+                <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+                    <div id="drill-bit-set" class="card shadow-sm">
+                        <h5 class="card-title pt-2 text-center textoCard">Drill Bit Set TItanium</h5>
+                        <div class="owl-carousel owl-theme imgcarrusel">
+                            <div class="item img-productos">
+                                <img src="img/drill1.webp" class="img-fluid img-thumbnail" alt="Drill Image 1" data-index="0" data-full-src="img/drill1.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/drill2.webp" class="img-fluid img-thumbnail" alt="Drill Image 2" data-index="1" data-full-src="img/drill2.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/drill3.webp" class="img-fluid img-thumbnail" alt="Drill Image 3" data-index="2" data-full-src="img/drill3.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/drill4.webp" class="img-fluid img-thumbnail" alt="Drill Image 4" data-index="3" data-full-src="img/drill4.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/drill5.webp" class="img-fluid img-thumbnail" alt="Drill Image 5" data-index="4" data-full-src="img/drill5.webp">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-gray-50 description">
+                                6Pcs 1/4 Inch HEx Shank HSS Combination Tap and Drill Bit Set Titanium Coated Screw Tap Drill Bit M3 M4 M5 M6 M8 M10.
+                            </p>
+                            <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                            <h5 class="textPrecio text-dark text-center">
+                                <span class="precio-principal">
+                                    <span class="dolar small" translate="no">US$</span>8<span class="centavos small"><sup>59</sup></span>
+                                </span>
+                            </h5>
+                            <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                                <a id="add-to-cart-producto-7" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/drill1.webp" data-product-id="7" data-product-name="Drill Bit Set TItanium" data-product-price="8.59">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
+                <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+                    <div id="foldable" class="card shadow-sm">
                         <div class="offer-container">
                             <div class="offert-ribbon offer-badge">Offer</div> 
                         </div>
-                        <h5 class="card-title pt-2 text-center textoCard">Circuit Tester Kit</h5>
-                    <div class="owl-carousel owl-theme imgcarrusel">
-                        <div class="item img-productos"><img src="img/circuit1.png" class="img-fluid" alt="Circuit Image 1"></div>
-                        <div class="item img-productos"><img src="img/circuit2.webp" class="img-fluid" alt="Circuit Image 2"></div>
-                        <div class="item img-productos"><img src="img/circuit3.webp" class="img-fluid" alt="Circuit Image 3"></div>
-                    </div>
-                    <div class="card-body">
-                        <p class="card-text text-gray-50 description">
-                            GFCI Outlet and Receptacle Tester Kit, Multimeter, NCVT, Outlet Tester, Wires, 6-Piece
-                        </p>
-                        <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>                                
-                        <h5 class="textPrecio text-dark text-center">
-                            <span class="precio-principal">
-                                <span class="dolar small" translate="no">US$</span>79<span class="centavos small"><sup>99</sup></span>
-                            </span>
-                            <span class="precio-descuento">
-                                <span class="text-decoration-line-through text-muted me-2" translate="no">US$99<sup>99</sup></span>
-                            </span>
-                        </h5>
-                        <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
-                            <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
-                            <a id="add-to-cart-producto-1" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/circuit1.png" data-product-id="1" data-product-name="Circuit Tester Kit" data-product-price="79.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                        <h5 class="card-title pt-2 text-center textoCard">Foldable Level</h5>
+                        <div class="owl-carousel owl-theme imgcarrusel">
+                            <div class="item img-productos">
+                                <img src="img/nivelador1.webp" class="img-fluid img-thumbnail" alt="Nivelador Image 1" data-index="0" data-full-src="img/nivelador1.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/nivelador2.webp" class="img-fluid img-thumbnail" alt="Nivelador Image 2" data-index="1" data-full-src="img/nivelador2.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/nivelador3.webp" class="img-fluid img-thumbnail" alt="Nivelador Image 3" data-index="2" data-full-src="img/nivelador3.webp">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-gray-50 description">
+                                Saker Multi-funtion FOldable Level 28-Inch Leveler Tool, Gifts for Men, Multi-Angle Measurement Woodworking Tools, Precise Leveling in Any Position, Folding Level Tool To Save Your Precious Time.
+                            </p>
+                            <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                            <h5 class="textPrecio text-dark text-center">
+                                <span class="precio-principal">
+                                    <span class="dolar small" translate="no">US$</span>31<span class="centavos small"><sup>99</sup></span>
+                                </span>
+                                <span class="precio-descuento">
+                                    <span class="text-decoration-line-through text-muted me-2" translate="no">US$39<sup>99</sup></span>
+                                </span>
+                            </h5>
+                            <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                                <a id="add-to-cart-producto-8" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/nivelador1.webp" data-product-id="8" data-product-name="Foldable Level" data-product-price="31.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="electricidad">
-        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div id="destornillador" class="card shadow-sm">
-                <h5 class="card-title pt-2 text-center textoCard">13-Piece Insulated Screwdriver Set</h5>
-                <div class="owl-carousel owl-theme">
-                    <div class="item img-productos"><img src="img/destornillador1.webp" class="img-fluid img-thumbnail" alt="Destornillador Image 1"></div>
-                    <div class="item img-productos"><img src="img/destornillador2.webp" class="img-fluid img-thumbnail" alt="Destornillador Image 2"></div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text text-gray-50 description">Hurricane 1000V Insulated Electrician Screwdriver Set, All-in-One Premium Professional 13-pieces CR-V Magnetic Phillips Slotted Pozidriv Torx Screwdriver.</p>
-                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>                                <h5 class="textPrecio text-dark text-center">
-                        <span class="precio-principal">
-                            <span class="dolar small" translate="no">US$</span>23<span class="centavos small"><sup>69</sup></span>
-                        </span>
-                    </h5>
-                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
-                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
-                        <a id="add-to-cart-producto-2" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/destornillador1.webp" data-product-id="2" data-product-name="13-Piece Insulated Screwdriver Set" data-product-price="23.69">Add to Cart <i class="buycar bi bi-cart3"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
             
-    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="electricidad">
-        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div id="multimeter" class="card shadow-sm">
-                <h5 class="card-title pt-2 text-center textoCard">Multimeter Kit</h5>
-                <div class="owl-carousel owl-theme">
-                    <div class="item img-productos"><img src="img/kit1.webp" class="img-fluid img-thumbnail" alt="Kit Image 1"></div>
-                    <div class="item img-productos"><img src="img/kit2.webp" class="img-fluid img-thumbnail" alt="Kit Image 2"></div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text text-gray-50 description">Electrical Test Kit with Digital Multimeter, Non-Contact Voltage Tester and Electrical Outlet Tester, Leads and Batteries.</p>
-                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>                                <h5 class="textPrecio text-dark text-center">
-                        <span class="precio-principal">
-                            <span class="dolar small" translate="no">US$</span>39<span class="centavos small"><sup>97</sup></span>
-                        </span>
-                    </h5>
-                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
-                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
-                        <a id="add-to-cart-producto-3" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/kit1.webp" data-product-id="3" data-product-name="Multimeter Kit" data-product-price="39.97">Add to Cart <i class="buycar bi bi-cart3"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+            <!-- Carpinteria -->
             
-    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="electricidad">
-        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div id="crimper-stripper" class="card shadow-sm">
-                <h5 class="card-title pt-2 text-center textoCard">Crimper + Stripper Kit</h5>
-                <div class="owl-carousel owl-theme">
-                    <div class="item img-productos"><img src="img/pelacables1.webp" class="img-fluid img-thumbnail" alt="Pelacables Image 1"></div>
-                    <div class="item img-productos"><img src="img/pelacables2.webp" class="img-fluid img-thumbnail" alt="Pelacables Image 2"></div>
-                    <div class="item img-productos"><img src="img/pelacables3.webp" class="img-fluid img-thumbnail" alt="Pelacables Image 3"></div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text text-gray-50 description">Klein Tools 80013 Wire Stripper / Ratcheting Crimper, Electrical Crimping Tool Kit with Automatic Wire Stripper and Ratcheting Insulated Terminal Crimper, 2-Piece.</p>
-                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>                                
-                    <h5 class="textPrecio text-dark text-center">
-                        <span class="precio-principal">
-                            <span class="dolar small" translate="no">US$</span>41<span class="centavos small"><sup>99</sup></span>
-                        </span>
-                    </h5>
-                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
-                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
-                        <a id="add-to-cart-producto-4" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/pelacables1.webp" data-product-id="4" data-product-name="Crimper + Stripper Kit" data-product-price="41.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <!-- Herramientas -->
+            <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="carpinteria">
+                <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+                    <div id="garlopa" class="card shadow-sm">
+                        <h5 class="card-title pt-2 text-center textoCard">Brushless planer</h5>
+                        <div class="best position-absolute bg-warning text-dark px-2 py-1">Best Seller</div>
 
-    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
-        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div id="tape-measure" class="card shadow-sm">
-                <h5 class="card-title pt-2 text-center textoCard">Tape Measure</h5>
-                <div class="owl-carousel owl-theme img-productos">
-                    <div class="item"><img src="img/metro1.webp" class="img-fluid img-thumbnail" alt="Metro Image 1"></div>
-                    <div class="item"><img src="img/metro2.webp" class="img-fluid img-thumbnail" alt="Metro Image 2"></div>
-                    <div class="item"><img src="img/metro3.webp" class="img-fluid img-thumbnail" alt="Metro Image 3"></div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text text-gray-50 description">
-                        DEWALT Atomic Compact Series 30 ft. Tape Measure (DWHT381305).
-                    </p>
-                    <h5 class="textPrecio text-dark text-center">
-                        <span class="precio-principal">
-                            <span class="dolar small" translate="no">US$</span>23<span class="centavos small"><sup>96</sup></span>
-                        </span>
-                    </h5>
-                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
-                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
-                        <a id="add-to-cart-producto-5" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/metro1.webp" data-product-id="5" data-product-name="Tape Measure" data-product-price="23.96">Add to Cart <i class="buycar bi bi-cart3"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-            
-    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
-        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div id="hand-tool-set" class="card shadow-sm">
-                <h5 class="card-title pt-2 text-center textoCard">Hand Tool Set</h5>
-                <div class="owl-carousel owl-theme img-productos">
-                    <div class="item"><img src="img/caja1.png" class="img-fluid img-thumbnail" alt="Caja Image 1"></div>
-                    <div class="item"><img src="img/caja2.webp" class="img-fluid img-thumbnail" alt="Caja Image 2"></div>
-                    <div class="item"><img src="img/caja3.webp" class="img-fluid img-thumbnail" alt="Caja Image 3"></div>
-                    <div class="item"><img src="img/caja4.webp" class="img-fluid img-thumbnail" alt="Caja Image 4"></div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text text-gray-50 description">
-                        168 piese Professional Household Hand Tool Set with Plastic Storage Toolbox, Portable Complete Repair Tool Box fot Home Maintenance and DIY Projects (14*10*3in).
-                    </p>
-                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
-                    <h5 class="textPrecio text-dark text-center">
-                        <span class="precio-principal">
-                            <span class="dolar small" translate="no">US$</span>37<span class="centavos small"><sup>89</sup></span>
-                        </span>
-                    </h5>
-                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
-                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
-                        <a id="add-to-cart-producto-6" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/caja1.png" data-product-id="6" data-product-name="Hand Tool Set" data-product-price="37.89">Add to Cart <i class="buycar bi bi-cart3"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+                        <div class="owl-carousel owl-theme imgcarrusel">
+                            <div class="item img-productos">
+                                <img src="img/garlopa1.webp" class="img-fluid img-thumbnail" alt="Garlopa Image 1" data-index="0" data-full-src="img/garlopa1.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/garlopa2.webp" class="img-fluid img-thumbnail" alt="Garlopa Image 2" data-index="1" data-full-src="img/garlopa2.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/garlopa3.webp" class="img-fluid img-thumbnail" alt="Garlopa Image 3" data-index="2" data-full-src="img/garlopa3.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/garlopa4.webp" class="img-fluid img-thumbnail" alt="Garlopa Image 4" data-index="3" data-full-src="img/garlopa4.webp">
+                            </div>
+                        </div>
 
-    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
-        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div id="drill-bit-set" class="card shadow-sm">
-                <h5 class="card-title pt-2 text-center textoCard">Drill Bit Set TItanium</h5>
-                <div class="owl-carousel owl-theme img-productos">
-                    <div class="item"><img src="img/drill1.webp" class="img-fluid img-thumbnail" alt="Drill Image 1"></div>
-                    <div class="item"><img src="img/drill2.webp" class="img-fluid img-thumbnail" alt="Drill Image 2"></div>
-                    <div class="item"><img src="img/drill3.webp" class="img-fluid img-thumbnail" alt="Drill Image 3"></div>
-                    <div class="item"><img src="img/drill4.webp" class="img-fluid img-thumbnail" alt="Drill Image 4"></div>
-                    <div class="item"><img src="img/drill5.webp" class="img-fluid img-thumbnail" alt="Drill Image 4"></div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text text-gray-50 description">
-                        6Pcs 1/4 Inch HEx Shank HSS Combination Tap and Drill Bit Set Titanium Coated Screw Tap Drill Bit M3 M4 M5 M6 M8 M10.
-                    </p>
-                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
-                    <h5 class="textPrecio text-dark text-center">
-                        <span class="precio-principal">
-                            <span class="dolar small" translate="no">US$</span>8<span class="centavos small"><sup>59</sup></span>
-                        </span>
-                    </h5>
-                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
-                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
-                        <a id="add-to-cart-producto-7" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/drill1.webp" data-product-id="7" data-product-name="Drill Bit Set TItanium" data-product-price="8.59">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                        <div class="card-body">
+                            <p class="card-text text-gray-50 description">
+                                DEWALT 20V MAX Planer, 30,000 Cuts PEr Minute, 2 mm Cut Depth, Brushless Motor, Bare Tool Only (DCP580B).
+                            </p>
+                            <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                            <h5 class="textPrecio text-dark text-center">
+                                <span class="precio-principal">
+                                    <span class="dolar small" translate="no">US$</span>163<span class="centavos small"><sup>99</sup></span>
+                                </span>
+                                <span class="precio-descuento">
+                                    <span class="text-decoration-line-through text-muted me-2" translate="no">US$249<sup>99</sup></span>
+                                </span>
+                            </h5>
+                            <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                                <a id="add-to-cart-producto-9" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/garlopa1.webp" data-product-id="9" data-product-name="Brushless planer" data-product-price="163.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="herramientas">
-        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div id="foldable" class="card shadow-sm">
-                <div class="offer-container">
-                    <div class="offert-ribbon offer-badge">Offer</div> 
-                </div>
-                <h5 class="card-title pt-2 text-center textoCard">Foldable Level</h5>
-                <div class="owl-carousel owl-theme">
-                    <div class="item"><img src="img/nivelador1.webp" class="img-fluid img-thumbnail" alt="Nivelador Image 1"></div>
-                    <div class="item"><img src="img/nivelador2.webp" class="img-fluid img-thumbnail" alt="Nivelador Image 2"></div>
-                    <div class="item"><img src="img/nivelador3.webp" class="img-fluid img-thumbnail" alt="Nivelador Image 3"></div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text text-gray-50 description">
-                        Saker Multi-funtion FOldable Level 28-Inch Leveler Tool, Gifts for Men, Multi-Angle Measurement Woodworking Tools, Precise Leveling in Any Position, Folding Level Tool To Save Your Precious Time.
-                    </p>
-                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
-                    <h5 class="textPrecio text-dark text-center">
-                        <span class="precio-principal">
-                            <span class="dolar small" translate="no">US$</span>31<span class="centavos small"><sup>99</sup></span>
-                        </span>
-                        <span class="precio-descuento">
-                            <span class="text-decoration-line-through text-muted me-2" translate="no">US$39<sup>99</sup></span>
-                        </span>
-                    </h5>
-                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
-                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
-                        <a id="add-to-cart-producto-8" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/nivelador1.webp" data-product-id="8" data-product-name="Foldable Level" data-product-price="31.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
             
-    <!-- Carpinteria -->
-    
-    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="carpinteria">
-        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div id="garlopa" class="card shadow-sm">
-                <h5 class="card-title pt-2 text-center textoCard">Brushless planer</h5>
-                <div class="best position-absolute bg-warning text-dark px-2 py-1">Best Seller</div>
-                <div class="owl-carousel owl-theme">
-                    <div class="item"><img src="img/garlopa1.webp" class="img-fluid img-thumbnail" alt="Garlopa Image 1"></div>
-                    <div class="item"><img src="img/garlopa2.webp" class="img-fluid img-thumbnail" alt="Garlopa Image 2"></div>
-                    <div class="item"><img src="img/garlopa3.webp" class="img-fluid img-thumbnail" alt="Garlopa Image 3"></div>
-                    <div class="item"><img src="img/garlopa4.webp" class="img-fluid img-thumbnail" alt="Garlopa Image 4"></div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text text-gray-50 description">
-                        DEWALT 20V MAX Planer, 30,000 Cuts PEr Minute, 2 mm Cut Depth, Brushless Motor, Bare Tool Only (DCP580B).
-                    </p>
-                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
-                    <h5 class="textPrecio text-dark text-center">
-                        <span class="precio-principal">
-                            <span class="dolar small" translate="no">US$</span>163<span class="centavos small"><sup>99</sup></span>
-                        </span>
-                        <span class="precio-descuento">
-                            <span class="text-decoration-line-through text-muted me-2" translate="no">US$249<sup>99</sup></span>
-                        </span>
-                    </h5>
-                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
-                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
-                        <a id="add-to-cart-producto-9" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/garlopa1.webp" data-product-id="9" data-product-name="Brushless planer" data-product-price="163.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+            <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="carpinteria">
+                <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+                    <div id="trimmer" class="card shadow-sm">
+                        <h5 class="card-title pt-2 text-center textoCard">Trimmer</h5>
+                        <div class="owl-carousel owl-theme imgcarrusel">
+                            <div class="item img-productos">
+                                <img src="img/recortadora1.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 1" data-index="0" data-full-src="img/recortadora1.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/recortadora2.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 2" data-index="1" data-full-src="img/recortadora2.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/recortadora3.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 3" data-index="2" data-full-src="img/recortadora3.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/recortadora4.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 4" data-index="3" data-full-src="img/recortadora4.webp">
+                            </div>                       
+                            <div class="item img-productos">
+                                <img src="img/recortadora5.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 5" data-index="4" data-full-src="img/recortadora5.webp">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-gray-50 description">
+                                Edge Banding Trimmer -2025 Upgraded Mini Edge Band Trimmer & Cutter, Stainless Steel Blade Veneer Edge Trimmer for Wooodworking, Durable Edgebanding Trimming Tool for Wood, Veneer, PVC, ABS.
+                            </p>
+                            <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                            <h5 class="textPrecio text-dark text-center">
+                                <span class="precio-principal">
+                                    <span class="dolar small" translate="no">US$</span>7<span class="centavos small"><sup>99</sup></span>
+                                </span>
+                                <span class="precio-descuento">
+                                    <span class="text-decoration-line-through text-muted me-2" translate="no">US$9<sup>99</sup></span>
+                                </span>
+                            </h5>
+                            <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                                <a id="add-to-cart-producto-10" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/recortadora.webp" data-product-id="10" data-product-name="Trimmer" data-product-price="7.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    
-    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="carpinteria">
-        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div id="trimmer" class="card shadow-sm">
-                <h5 class="card-title pt-2 text-center textoCard">Trimmer</h5>
-                <div class="owl-carousel owl-theme">
-                    <div class="item"><img src="img/recortadora1.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 1"></div>
-                    <div class="item"><img src="img/recortadora2.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 2"></div>
-                    <div class="item"><img src="img/recortadora3.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 3"></div>
-                    <div class="item"><img src="img/recortadora4.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 4"></div>
-                    <div class="item"><img src="img/recortadora5.webp" class="img-fluid img-thumbnail" alt="Recortadora Image 5"></div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text text-gray-50 description">
-                        Edge Banding Trimmer -2025 Upgraded Mini Edge Band Trimmer & Cutter, Stainless Steel Blade Veneer Edge Trimmer for Wooodworking, Durable Edgebanding Trimming Tool for Wood, Veneer, PVC, ABS.
-                    </p>
-                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
-                    <h5 class="textPrecio text-dark text-center">
-                        <span class="precio-principal">
-                            <span class="dolar small" translate="no">US$</span>7<span class="centavos small"><sup>99</sup></span>
-                        </span>
-                        <span class="precio-descuento">
-                            <span class="text-decoration-line-through text-muted me-2" translate="no">US$9<sup>99</sup></span>
-                        </span>
-                    </h5>
-                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
-                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
-                        <a id="add-to-cart-producto-10" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/recortadora.webp" data-product-id="10" data-product-name="Trimmer" data-product-price="7.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
             
-    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="carpinteria">
-        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div id="ruler-3d" class="card shadow-sm">
-                <h5 class="card-title pt-2 text-center textoCard">3D Milti-Angle Measuring Ruler</h5>
-                <div class="owl-carousel owl-theme">
-                    <div class="item"><img src="img/regla1.webp" class="img-fluid img-thumbnail" alt="Regla Image 1"></div>
-                    <div class="item"><img src="img/regla2.webp" class="img-fluid img-thumbnail" alt="Regla Image 2"></div>
-                    <div class="item"><img src="img/regla3.webp" class="img-fluid img-thumbnail" alt="Regla Image 3"></div>
-                    <div class="item"><img src="img/regla4.webp" class="img-fluid img-thumbnail" alt="Regla Image 4"></div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text text-gray-50 description">
-                        45/90 Degree Aluminum Alloy Woodworking Square Protractor, Drawing Line Ruler, Miter Triangle Ruler High Precision Layout Measuring Tool for Engineer Carpenter, R.
-                    </p>
-                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
-                    <h5 class="textPrecio text-dark text-center">
-                        <span class="precio-principal">
-                            <span class="dolar small" translate="no">US$</span>13<span class="centavos small"><sup>99</sup></span>
-                        </span>
-                    </h5>
-                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
-                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
-                        <a id="add-to-cart-producto-11" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/regla1.webp" data-product-id="11" data-product-name="3D Milti-Angle Measuring Ruler" data-product-price="13.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+            <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="carpinteria">
+                <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+                    <div id="ruler-3d" class="card shadow-sm">
+                        <h5 class="card-title pt-2 text-center textoCard">3D Milti-Angle Measuring Ruler</h5>
+                        <div class="owl-carousel owl-theme imgcarrusel">
+                            <div class="item img-productos">
+                                <img src="img/regla1.webp" class="img-fluid img-thumbnail" alt="Regla Image 1" data-index="0" data-full-src="img/regla1.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/regla2.webp" class="img-fluid img-thumbnail" alt="Regla Image 2" data-index="1" data-full-src="img/regla2.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/regla3.webp" class="img-fluid img-thumbnail" alt="Regla Image 3" data-index="2" data-full-src="img/regla3.webp">
+                            </div>                                
+                            <div class="item img-productos">
+                                <img src="img/regla4.webp" class="img-fluid img-thumbnail" alt="Regla Image 4" data-index="3" data-full-src="img/regla4.webp">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-gray-50 description">
+                                45/90 Degree Aluminum Alloy Woodworking Square Protractor, Drawing Line Ruler, Miter Triangle Ruler High Precision Layout Measuring Tool for Engineer Carpenter, R.
+                            </p>
+                            <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                            <h5 class="textPrecio text-dark text-center">
+                                <span class="precio-principal">
+                                    <span class="dolar small" translate="no">US$</span>13<span class="centavos small"><sup>99</sup></span>
+                                </span>
+                            </h5>
+                            <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                                <a id="add-to-cart-producto-11" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/regla1.webp" data-product-id="11" data-product-name="3D Milti-Angle Measuring Ruler" data-product-price="13.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-                
-    <!-- Jardineria -->
-     
-    <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="jardineria">
-        <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
-            <div id="jardin" class="card shadow-sm">
-                <h5 class="card-title pt-2 text-center textoCard">Garden Tool Set</h5>
-                <div class="badges-container">
-                    <div class="badge-ribbon new-badge">New</div>
-                </div>
-                <div class="owl-carousel owl-theme">
-                    <div class="item"><img src="img/jardineria1.webp" class="img-fluid img-thumbnail" alt="Jardineria Image 1"></div>
-                    <div class="item"><img src="img/jardineria2.webp" class="img-fluid img-thumbnail" alt="Jardineria Image 2"></div>
-                    <div class="item"><img src="img/jardineria3.webp" class="img-fluid img-thumbnail" alt="Jardineria Image 3"></div>
-                    <div class="item"><img src="img/jardineria4.webp" class="img-fluid img-thumbnail" alt="Jardineria Image 4"></div>
-                </div>
-                <div class="card-body">
-                    <p class="card-text text-gray-50 description">
-                        YAUNGEL Gardening Tools - 10 Pcs Garden Tool Set Heavy Duty Stainless Steel Garden Supplies Hand Tools with Wooden Handle, Storage Tote Bag, Gardening Gifts for Women and Men.
-                    </p>
-                    <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
-                    <h5 class="textPrecio text-dark text-center">
-                        <span class="precio-principal">
-                            <span class="dolar small" translate="no">US$</span>27<span class="centavos small"><sup>99</sup></span>
-                        </span>
-                        <span class="precio-descuento">
-                            <span class="text-decoration-line-through text-muted me-2" translate="no">US$40<sup>99</sup></span>
-                        </span>
-                    </h5>
-                    <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
-                        <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
-                        <a id="add-to-cart-producto-12" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/jardineria1.webp" data-product-id="12" data-product-name="Garden Tool Set" data-product-price="27.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
-                    </div>
+            
+            <!-- Jardineria -->
+             
+            <div class="col-12 col-md-6 col-lg-4 mb-4 producto" data-producto="jardineria">
+                <div class="w3_agile_portfolio_grid col d-flex justify-content-center mb-4">
+                    <div id="jardin" class="card shadow-sm">
+                        <h5 class="card-title pt-2 text-center textoCard">Garden Tool Set</h5>
+                        <div class="badges-container">
+                            <div class="badge-ribbon new-badge">New</div>
+                        </div>
+                        <div class="owl-carousel owl-theme imgcarrusel">
+                            <div class="item img-productos">
+                                <img src="img/jardineria1.webp" class="img-fluid img-thumbnail" alt="Jardineria Image 1" data-index="0" data-full-src="img/jardineria1.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/jardineria2.webp" class="img-fluid img-thumbnail" alt="Jardineria Image 2" data-index="1" data-full-src="img/jardineria2.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/jardineria3.webp" class="img-fluid img-thumbnail" alt="Jardineria Image 3" data-index="2" data-full-src="img/jardineria3.webp">
+                            </div>
+                            <div class="item img-productos">
+                                <img src="img/jardineria4.webp" class="img-fluid img-thumbnail" alt="Jardineria Image 4" data-index="3" data-full-src="img/jardineria4.webp">
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <p class="card-text text-gray-50 description">
+                                YAUNGEL Gardening Tools - 10 Pcs Garden Tool Set Heavy Duty Stainless Steel Garden Supplies Hand Tools with Wooden Handle, Storage Tote Bag, Gardening Gifts for Women and Men.
+                            </p>
+                            <button class="btn btn-link btn-sm read-more-btn">Read more <i class="bi bi-arrow-down-circle"></i></button>
+                            <h5 class="textPrecio text-dark text-center">
+                                <span class="precio-principal">
+                                    <span class="dolar small" translate="no">US$</span>27<span class="centavos small"><sup>99</sup></span>
+                                </span>
+                                <span class="precio-descuento">
+                                    <span class="text-decoration-line-through text-muted me-2" translate="no">US$40<sup>99</sup></span>
+                                </span>
+                            </h5>
+                            <div class="d-flex flex-column flex-md-row justify-content-center gap-2">
+                                <button class="btn btnbuy btn-lg btnCarrito">Buy Now</button>
+                                <a id="add-to-cart-producto-12" class="btn btnbuy add-to-cart-btn btnCarrito" data-product-image="img/jardineria1.webp" data-product-id="12" data-product-name="Garden Tool Set" data-product-price="27.99">Add to Cart <i class="buycar bi bi-cart3"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -762,7 +863,7 @@
                 </div>
                 
                 <div class="col-lg-6 d-flex justify-content-center" id="galeria">
-                    <div class="swiper tranding-slider">
+                    <div class="swiper tranding-slider wow slideInLeft" data-wow-duration="400ms" data-wow-delay="200ms">
                         <div class="swiper-wrapper">
                             <div class="swiper-slide tranding-slide">
                                 <div class="tranding-slide-img" style="background-image: url('img/servicio1.jpg');"></div>
@@ -946,6 +1047,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.all.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>    
     <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@6.0/dist/fancybox/fancybox.umd.js"></script>
     <script src="js/principal.js"></script>
     <script src="js/java.js"></script>
     <script src="js/searchData.js"></script>
@@ -1195,26 +1297,6 @@
         }
     });
 </script>
-<style>
-    /* Estilos para centrar los campos del formulario dentro de la alerta de SweetAlert2 */
-    .swal2-form-fields {
-        display: flex;
-        flex-direction: column;
-        align-items: center; /* Esto es lo que centra los elementos horizontalmente */
-    }
-
-    /* Opcional: Para asegurar que los inputs y textareas se adapten al ancho del contenedor */
-    .swal2-form-fields .swal2-input,
-    .swal2-form-fields .swal2-textarea {
-        width: 100%; /* Ocupa el 100% del contenedor */
-        max-width: 400px; /* Ancho máximo para que no se vean muy anchos en pantallas grandes */
-    }
-
-    /* Opcional: para centrar el párrafo superior */
-    .swal2-text-centered {
-        text-align: center;
-    }
-</style>
 
 <script>
         document.addEventListener('DOMContentLoaded', () => {
