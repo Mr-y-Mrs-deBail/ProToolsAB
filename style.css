@@ -1511,7 +1511,7 @@ input[type="search"]::-ms-clear {
   .navbar .lupas {
     position: fixed;
     top: 32px;
-    right: 255px;
+    right: 235px;
     margin: 0;
     z-index: 1000;
   }
