@@ -339,7 +339,7 @@ select {
   box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
-  moz-osx-font-smoothing: grayscale;
+  -moz-osx-font-smoothing: grayscale;
   position: relative;
 }
 
@@ -356,6 +356,7 @@ select {
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-property: width, height;
+  transition-property: width, height;
 }
 
 .hvr-curl-bottom-right:hover:before, .hvr-curl-bottom-right:focus:before, .hvr-curl-bottom-right:active:before {
@@ -406,8 +407,10 @@ input,
 select,
 li,
 span {
-  -webkit-appearance: none;
-  outline: none;
+-webkit-appearance: none;
+-moz-appearance: none;
+appearance: none;   
+outline: none;
 }
 
 a,
@@ -1770,6 +1773,7 @@ h2.title {
   position: relative;
   touch-action: manipulation;
   -moz-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .owl-carousel .owl-stage:after {
@@ -1785,18 +1789,22 @@ h2.title {
   position: relative;
   overflow: hidden;
   -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .owl-carousel .owl-item,
 .owl-carousel .owl-wrapper {
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
 }
 
 .owl-carousel .owl-item {
   min-height: 1px;
   float: left;
   -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
   -webkit-touch-callout: none;
 }
 
@@ -2011,6 +2019,7 @@ h2.title {
   opacity: .4;
   display: block;
   -webkit-backface-visibility: visible;
+  backface-visibility: hidden;
   transition: opacity .2s ease;
   border-radius: 30px;
   position: relative;
@@ -3020,8 +3029,8 @@ button.owl-next {
   .text-container .title-small {
     font-size: 10px;
   }
-  .text-container .title-big {
-    font-size: 38px;
+  .title-big {
+    font-size: 35px;
     line-height: 48px;
   }
   .text-container p {
@@ -3078,7 +3087,6 @@ button.owl-next {
   pointer-events: none !important;
   visibility: hidden;
 }
-
         
 /* Footer_____________________________________________________________________________________________________________________________________ */
 
@@ -3932,7 +3940,7 @@ button.owl-next {
 
 .state--sent svg {
   transform: scale(0.85);
-  margin: 0px 0px 2px;
+  margin: 0px 0px -2px;
 }
 
 .button:focus .state--default {
@@ -4137,8 +4145,14 @@ button.owl-next {
     flex-direction: column; 
     align-items: center;
   }
+  .us {
+    font-size: 32px;
+  }
   .connecting {
-    font-size: 15px;
+    font-size: 10px;
+  }
+  .const {
+    font-size: 30px;
   }
   .card-peeking {
     width: 250px;
