@@ -1507,6 +1507,16 @@ input[type="search"]::-ms-clear {
   }
 }
 
+@media only screen and (max-width: 932px) and (orientation: landscape) {
+  .navbar .lupas {
+    position: fixed;
+    top: 32px;
+    right: 255px;
+    margin: 0;
+    z-index: 1000;
+  }
+}
+
 /* banner__________________________________________________________________________________________________________________________ */
 
 .w3l-main-slider li {
@@ -3711,10 +3721,6 @@ button.owl-next {
   color: #555;
 }
 
-.cardcontact .blue {
-  color: royalblue;
-}
-
 .button {
   --radius: 50px;
   cursor: pointer;
@@ -4136,8 +4142,14 @@ button.owl-next {
 
 .connecting {
   text-transform: uppercase;
-  font-size: 20px;
+  font-size: 13px;
   opacity: 0.8;
+}
+
+@media (min-width: 992px) {
+  .text-direccion {
+    justify-content: flex-start !important;
+  }
 }
 
 @media (max-width: 768px) {
@@ -4145,14 +4157,11 @@ button.owl-next {
     flex-direction: column; 
     align-items: center;
   }
-  .us {
-    font-size: 32px;
-  }
   .connecting {
     font-size: 10px;
   }
   .const {
-    font-size: 30px;
+    font-size: 33px;
   }
   .card-peeking {
     width: 250px;
