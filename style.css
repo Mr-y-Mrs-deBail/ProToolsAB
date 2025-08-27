@@ -1277,6 +1277,7 @@ input[type="search"]::-ms-clear {
     z-index: 1000;
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
+    animation: fadeOut 0.3s ease-in-out forwards;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1324,6 +1325,13 @@ input[type="search"]::-ms-clear {
     margin: 0 !important;
     padding: 0 !important;
   }
+  .bi-moon-stars {
+    margin-top: -20px;
+  }
+  .gg-sun,
+  .predeterminado {
+    margin-top: -15px;
+  }
   .search-right a,
   .carrito001 a,
   .menu-and-modes-group a {
@@ -1339,7 +1347,7 @@ input[type="search"]::-ms-clear {
   .menu-and-modes-group {
     display: flex;
     align-items: center;
-    gap: 5px;
+    gap: 3px;
     margin: 0 !important;
     padding: 0 !important;
   }
