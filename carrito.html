@@ -31,7 +31,7 @@
 
     <!--header________________________________________________________________________________________________________________-->
     
-    <header id="site-header" class="navcarrito fixed-top">
+ <header id="site-header" class="fixed-top">
         <div class="container">
             <nav class="navbar navbar-expand-lg stroke px-0 pt-lg-0">
                 <a class="navbar-brand logo001" href="#">
@@ -39,16 +39,6 @@
                         ProToolsAB<img src="img/logo.png" alt="logo"/>
                     </h1>
                 </a>
-
-                <div class="mobile-position"> 
-                    
-                    <input type="checkbox" id="btn-menu" aria-controls="navbartogglermv" aria-expanded="false" class="d-none"> 
-                    <label for="btn-menu" class="lbl-menu navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbartogglermv" aria-controls="navbartogglermv" aria-expanded="false"> 
-                        <span id="spn1" class="icon-bar"></span>
-                        <span id="spn2" class="icon-bar"></span>
-                        <span id="spn3" class="icon-bar"></span>
-                    </label>
-                </div>
                 
                 <div class="collapse navbar-collapse" id="navbartogglermv">
                     <ul class="navbar-nav mx-lg-auto">
@@ -56,13 +46,13 @@
                             <a class="nav-link" href="index.html">Home<span class="visually-hidden">(current)</span></a>
                         </li>
                         <li class="nav-item text-center">
-                            <a class="nav-link" href="index.html#Offers">New & Offers</a>
+                            <a class="nav-link" href="#Offers">New & Offers</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#products">Products</a>
+                            <a class="nav-link" href="#products">Products</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="index.html#services">Services</a>
+                            <a class="nav-link" href="#services">Services</a>
                         </li>
                         <li class="nav-item d-lg-none">
                             <a class="nav-link carrito-texto" href="carrito.html">
@@ -73,15 +63,13 @@
                             <a class="nav-link" href="contact.html">Contact</a>
                         </li>
                     </ul>
-                    
                     <button class="buynow" id="buynow">
                         <span class="front-text">Buy Now</span>
                         <span class="car-icon"><i class="bi bi-cart3"></i></span>
                     </button>
                 </div>
-
-                 <div class="mobile-position iconos-car">
-                    <div class="search-right">
+                <div class="mobile-group d-flex align-items-center">
+                    <div class="search-right mobile-position">
                         <a href="#" title="search"><span class="lupas fa fa-search" aria-hidden="true"></span></a>
                         <div id="search" class="pop-overlay">
                             <div class="popup">
@@ -97,32 +85,41 @@
                                     </button>
                                 </form>
                                 <ul id="suggestions" class="search-suggestions"></ul>
-                                <div id="search-results" class="search-results-container"></div> 
+                                <div id="search-results" class="search-results-container"></div>
                             </div>
                             <a class="close" href="#close" translate="no">X</a>
                         </div>
                     </div>
-                    
-                    <ul class="nav-item carrito001 @@carrito__active"> 
+                    <ul class="nav-item carrito001 mobile-position @@carrito__active">
                         <li>
                             <a class="nav-link" href="carrito.html">
                                 <img class="car" src="img/carrito.png" alt="Carrito de compras">
-                                <span id="cantidad-carrito" class="carrito-cantidad"> 0</span> 
+                                <span id="cantidad-carrito" class="carrito-cantidad"> 0</span>
                             </a>
-                        </li> 
+                        </li>
                     </ul>
-                </div>
-                
-                <div class="mobile-position">
-                    <nav class="navigation">
-                        <div class="theme-switch-wrapper">
-                            <div class="mode-container" id="mode-toggle-container">
-                                <i class="gg-sun" id="sun-icon"></i>
-                                <i class="bi bi-moon-stars" id="moon-icon"></i>
-                                <img class="predeterminado" src="img/diaynoche.png" alt="Modo Automático" id="auto-icon-img">
-                            </div>
+                    
+                    <div class="menu-and-modes-group d-flex align-items-center">
+                        <div class="mobile-position">
+                            <input type="checkbox" id="btn-menu" aria-controls="navbartogglermv" aria-expanded="false" class="d-none">
+                            <label for="btn-menu" class="lbl-menu navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbartogglermv" aria-controls="navbartogglermv" aria-expanded="false">
+                                <span id="spn1" class="icon-bar"></span>
+                                <span id="spn2" class="icon-bar"></span>
+                                <span id="spn3" class="icon-bar"></span>
+                            </label>
                         </div>
-                    </nav>
+                        <div class="mobile-position">
+                            <nav class="navigation">
+                                <div class="theme-switch-wrapper">
+                                    <div class="mode-container" id="mode-toggle-container">
+                                        <i class="gg-sun" id="sun-icon"></i>
+                                        <i class="bi bi-moon-stars" id="moon-icon"></i>
+                                        <img class="predeterminado" src="img/diaynoche.png" alt="Modo Automático" id="auto-icon-img">
+                                    </div>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
                 </div>
             </nav>
         </div>
