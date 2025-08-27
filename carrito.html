@@ -41,15 +41,6 @@
                 </a>
 
                 <div class="mobile-position"> 
-
-                    <ul class="nav-item carrito001 @@carrito__active"> 
-                        <li>
-                            <a class="nav-link" href="carrito.html">
-                                <img class="car" src="img/carrito.png" alt="Carrito de compras">
-                                <span id="cantidad-carrito" class="carrito-cantidad"> 0</span> 
-                            </a>
-                        </li> 
-                    </ul>
                     
                     <input type="checkbox" id="btn-menu" aria-controls="navbartogglermv" aria-expanded="false" class="d-none"> 
                     <label for="btn-menu" class="lbl-menu navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbartogglermv" aria-controls="navbartogglermv" aria-expanded="false"> 
@@ -89,26 +80,37 @@
                     </button>
                 </div>
 
-                 <div class="search-right">
-                    <a href="#" title="search"><span class="lupas fa fa-search" aria-hidden="true"></span></a>
-                    <div id="search" class="pop-overlay">
-                        <div class="popup">
-                            <form action="error.html" method="GET" class="search-box">
-                                <span class="ripple-circle"></span>
-                                <button type="submit" class="btn search-btn-left">
-                                    <span class="fa fa-search" aria-hidden="true"></span>
-                                </button>
-                                <input type="search" id="search-input" placeholder="Search" name="search" required="required" autofocus="" autocomplete="off">
-                                <div class="border"></div>
-                                <button type="button" class="btn mic-btn-right">
-                                    <span class="fa fa-microphone" aria-hidden="true"></span>
-                                </button>
-                            </form>
-                            <ul id="suggestions" class="search-suggestions"></ul>
-                            <div id="search-results" class="search-results-container"></div> 
+                 <div class="mobile-position iconos-car">
+                    <div class="search-right">
+                        <a href="#" title="search"><span class="lupas fa fa-search" aria-hidden="true"></span></a>
+                        <div id="search" class="pop-overlay">
+                            <div class="popup">
+                                <form action="error.html" method="GET" class="search-box">
+                                    <span class="ripple-circle"></span>
+                                    <button type="submit" class="btn search-btn-left">
+                                        <span class="fa fa-search" aria-hidden="true"></span>
+                                    </button>
+                                    <input type="search" id="search-input" placeholder="Search" name="search" required="required" autofocus="" autocomplete="off">
+                                    <div class="border"></div>
+                                    <button type="button" class="btn mic-btn-right">
+                                        <span class="fa fa-microphone" aria-hidden="true"></span>
+                                    </button>
+                                </form>
+                                <ul id="suggestions" class="search-suggestions"></ul>
+                                <div id="search-results" class="search-results-container"></div> 
+                            </div>
+                            <a class="close" href="#close" translate="no">X</a>
                         </div>
-                        <a class="close" href="#close" translate="no">X</a>
                     </div>
+                    
+                    <ul class="nav-item carrito001 @@carrito__active"> 
+                        <li>
+                            <a class="nav-link" href="carrito.html">
+                                <img class="car" src="img/carrito.png" alt="Carrito de compras">
+                                <span id="cantidad-carrito" class="carrito-cantidad"> 0</span> 
+                            </a>
+                        </li> 
+                    </ul>
                 </div>
                 
                 <div class="mobile-position">

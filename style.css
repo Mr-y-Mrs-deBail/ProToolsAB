@@ -215,7 +215,8 @@ select {
   padding-right: 3.3em;
   cursor: pointer;
   transition: all 0.3s;
-  background: #2bcc03; 
+  background: #2bcc03;
+  margin-right: 20px;  
   box-shadow: inset 0 0 1.6em -0.6em darkgreen;
 }
 
@@ -923,6 +924,25 @@ header:not(.nav-fixed) .carrito-cantidad {
   width: 25px;
 }
 
+#cantidad-carrito.animate-pulse {
+  animation: pulse-on-update 0.5s ease-in-out;
+}
+
+@keyframes pulse-on-update {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 .nav-fixed .navbar-expand-lg .navbar-nav li.nav-item.active .nav-link {
   color: var(--primary-color); 
 }
@@ -991,8 +1011,15 @@ input[type="search"]::-ms-clear {
 
 /* Buscador ____________________________________________________________________________________________________________________________*/
 
+.iconos-car {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    gap: 5px; 
+}
+
 .navbar .search-right {
-  margin: 0 20px;
+  margin: 0;
   outline: none;
   border: none;
 }
@@ -1018,7 +1045,6 @@ input[type="search"]::-ms-clear {
 .nav-fixed .search-right a:hover {
   color: var(--heading-color);
 }
-
 
 .navbar .search-right .popup form.search-box {
   display: flex;
@@ -1455,10 +1481,13 @@ input[type="search"]::-ms-clear {
     right: 50px;
     top: -6px;
   }
+  .buynow {
+    margin-right: 0;  
+  }
   .navbar .lupas {
     position: fixed;
     top: 32px;
-    right: 150px;
+    right: 165px;
     margin: 0;
     z-index: 1000;
   }
@@ -1504,16 +1533,6 @@ input[type="search"]::-ms-clear {
   .navbar .navbar-brand img {
     max-width: 20px;
     margin-left: -8px;
-  }
-}
-
-@media only screen and (max-width: 932px) and (orientation: landscape) {
-  .navbar .lupas {
-    position: fixed;
-    top: 32px;
-    right: 235px;
-    margin: 0;
-    z-index: 1000;
   }
 }
 

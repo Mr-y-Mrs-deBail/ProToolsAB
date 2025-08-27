@@ -158,6 +158,38 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', function() {
     const cartQuantitySpan = document.getElementById('cantidad-carrito');
 
+    // This observer watches for changes in the text content of the cart count span.
+    const observer = new MutationObserver((mutations) => {
+        mutations.forEach((mutation) => {
+            if (mutation.type === 'characterData' || mutation.type === 'childList') {
+                animateCartCount();
+            }
+        });
+    });
+
+    // Start observing the cart count element for changes.
+    if (cartQuantitySpan) {
+        observer.observe(cartQuantitySpan, {
+            characterData: true, // Watch for text changes
+            childList: true,     // Watch for element changes
+            subtree: true        // Watch all descendants
+        });
+    }
+
+    // Function to handle the animation.
+    function animateCartCount() {
+        if (!cartQuantitySpan) return;
+
+        // Remove the class to reset the animation.
+        cartQuantitySpan.classList.remove('animate-pulse');
+
+        // This line forces a reflow, making the browser aware of the class removal.
+        void cartQuantitySpan.offsetWidth;
+
+        // Add the class back to trigger the animation.
+        cartQuantitySpan.classList.add('animate-pulse');
+    }
+    
     window.updateCartQuantity = function() {
         const cartItems = localStorage.getItem('cartItems');
         const quantity = cartItems ? JSON.parse(cartItems).reduce((sum, item) => sum + item.quantity, 0) : 0;
